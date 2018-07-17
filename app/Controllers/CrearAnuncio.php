@@ -1,6 +1,6 @@
 <?php
 namespace App\Controllers;
-
+/*te mamaste con el repositorio*/
 use App\Models\Ticket;
 
 
