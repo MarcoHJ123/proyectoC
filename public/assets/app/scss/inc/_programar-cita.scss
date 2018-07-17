@@ -1,0 +1,24 @@
+.box-datos-expediente {
+	display: none;
+}
+
+.box-juzgados, .box-partes, .box-buscar-parte, .box-campos-parte {
+	display: none;
+}
+
+.box-fecha,
+.box-hora {
+	display: none;
+	input[type="text"], .form-control[readonly] {
+    background-color: transparent;
+    cursor: pointer;
+	}
+}
+
+#btn-programar-cita {
+	display: none;
+}
+
+.box-mensaje-cita-enviada {
+	display: none;
+}

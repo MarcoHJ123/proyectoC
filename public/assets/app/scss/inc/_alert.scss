@@ -1,0 +1,38 @@
+.alert.icons-alert {
+	&:before {
+		top: 11px;
+	}
+}
+
+.alert {
+	button.close {
+		opacity: 0.4;
+		margin-top: 2px;
+		color: #000;
+	}
+	&.alert-default {
+		color: #777;
+		border-color: lighten(#777, 13%);
+	}
+
+	&.alert-info {
+		color: #06A3CB;
+		border-color: lighten(#06A3CB, 2%);
+	}
+
+	&.alert-success {
+		color: #147A23;
+		border-color: lighten(#147A23, 7%);
+	}
+
+	&.alert-warning {
+		color: #9A6506;
+		border-color: lighten(#9A6506, 7%);
+	}
+
+	&.alert-danger {
+		color: #A4322C;
+		border-color: lighten(#A4322C, 10%);
+	}
+
+}

@@ -1,0 +1,41 @@
+{# Estoy en messages.twig #}
+
+{% if flash.getMessage( 'success' ) %}
+	<div class="alert alert-success icons-alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <i class="fa fa-times"></i>
+    </button>
+    <p>{{ flash.getMessage( 'success' ) | first }}</p>
+  </div>
+{% endif %}
+
+{% if flash.getMessage( 'info' ) %}
+	<div class="alert alert-info icons-alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <i class="fa fa-times"></i>
+    </button>
+    <p>{{ flash.getMessage( 'info' ) | first }}</p>
+  </div>
+{% endif %}
+
+{% if flash.getMessage( 'error' ) %}
+	<div class="alert alert-danger icons-alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <i class="fa fa-times"></i>
+    </button>
+    {% for error in flash.getMessage( 'error' ) %}
+			<li>{{ error }}</li>
+		{% endfor %}
+  </div>
+{% endif %}
+
+{% if flash.getMessage( 'warning' ) %}
+	<div class="alert alert-warning icons-alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <i class="fa fa-times"></i>
+    </button>
+    {% for warning in flash.getMessage( 'warning' ) %}
+			<li>{{ warning }}</li>
+		{% endfor %}
+  </div>
+{% endif %}

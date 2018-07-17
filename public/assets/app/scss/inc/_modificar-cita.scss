@@ -1,0 +1,20 @@
+.form-modificar-cita {
+	min-height: 400px;
+	.tab-content {
+		min-height: 300px;
+	}
+	.loader-consultar-cita {
+		display: none;
+		text-align: center;
+		padding-bottom: 8px;
+	}
+
+}
+
+.form-reprogramar-cita-public {
+	.box-fecha,
+	.box-hora {
+		display: block;
+	}
+}
+

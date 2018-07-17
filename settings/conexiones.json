@@ -1,0 +1,16 @@
+{
+	"bd_personas": {
+		"driver": "odbc",
+		"dsn": "personas",
+		"database": "personas",
+		"username": "root",
+		"password": ""
+	},
+	"csjla_login": {
+		"driver": "odbc",
+		"dsn": "personas",
+		"database": "personas",
+		"username": "root",
+		"password": ""
+	}
+}

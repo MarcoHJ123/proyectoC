@@ -1,0 +1,27 @@
+Es de mucha importancia agregar una sintaxis correcta a los archivos de configuración.
+Los archivos de configuración son archivos en formato .json
+No agregar coma(,) a la última propiedad.
+Leer más: https://developer.mozilla.org/es/docs/Learn/JavaScript/Objects/JSON
+
+Esto es correcto:
+{
+	"activo": true,
+	"client_id": "86411"
+}
+
+Esto es incorrecto:
+{
+	"activo": true,
+	"client_id": "86411",
+}
+
+
+Esto es correcto:
+{
+	"en-produccion": true
+}
+
+Esto es incorrecto:
+{
+	"en-produccion": true, <--- aquí está el error
+}

@@ -1,0 +1,22 @@
+.pcoded[pcoded-device-type="desktop"] .boxed-layout {
+	max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.pcoded[pcoded-device-type="desktop"] .boxed-layout-padding {
+	max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.pcoded[pcoded-device-type="tablet"] .pcoded-content,
+.pcoded[pcoded-device-type="phone"] .pcoded-content {
+  padding-top: 0px;
+	.page-header {
+		padding-top: 20px;
+		padding-bottom: 30px;
+	}
+}

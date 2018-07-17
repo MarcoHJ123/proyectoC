@@ -1,0 +1,87 @@
+.pcoded[theme-layout="horizontal"] .pcoded-navbar {
+	z-index: 1025;//para que apareczca el border del item activo
+}
+.pcoded[theme-layout="horizontal"] .pcoded-navbar {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d04b4b+0,941212+100 */
+	background: #d04b4b; /* Old browsers */
+	background: -moz-linear-gradient(top, #d04b4b 0%, #941212 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #d04b4b 0%,#941212 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #d04b4b 0%,#941212 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d04b4b', endColorstr='#941212',GradientType=0 ); /* IE6-9 */
+}
+
+
+// .pcoded .pcoded-navbar[navbar-theme="themelight1"] .pcoded-item>li>a {
+// 	color: white;
+// }
+.pcoded[theme-layout="horizontal"] .pcoded-navbar .pcoded-item>li {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	a {
+		color: white;
+		line-height: 1.84;
+	}
+}
+
+.pcoded[theme-layout="horizontal"] .pcoded-navbar[active-item-theme="theme1"] .pcoded-item li {
+	a {
+		line-height: 37px;
+		overflow: visible;
+		opacity: 0.8;
+		font-size: 14px;
+		background: transparent !important;
+		box-shadow: none !important;
+		&:hover {
+			opacity: 1;
+			background: none !important;
+			box-shadow: none !important;
+		}
+	}
+	&.active {
+		a {
+			position: relative;
+			background: transparent !important;
+			color: white !important;
+			box-shadow: none !important;
+			border-radius: 0;
+			opacity: 1;
+			&:before {
+				position: absolute; top:-5px; left: 0px;
+				content: "";
+				background: darken(#48493F, 2%);
+				height: 5px;
+				width: 100%;
+			}
+		}
+	}
+
+}
+
+
+//Menu ul
+.pcoded[theme-layout="horizontal"][pcoded-device-type="tablet"] .pcoded-navbar .pcoded-item,
+.pcoded[theme-layout="horizontal"][pcoded-device-type="phone"] .pcoded-navbar .pcoded-item {
+	padding-bottom: 15px;
+}
+
+.pcoded[theme-layout="horizontal"][pcoded-device-type="tablet"] .pcoded-navbar .pcoded-item>li,
+.pcoded[theme-layout="horizontal"][pcoded-device-type="phone"] .pcoded-navbar .pcoded-item>li {
+	a {
+		opacity: 0.8;
+		border:0 !important;
+		&:before {
+			display: none;
+		}
+		&:hover {
+			opacity: 1;
+			background: none !important;
+			box-shadow: none !important;
+		}
+	}
+	&.active {
+		a {
+			opacity: 1;
+			font-weight: bold;
+		}
+	}
+}

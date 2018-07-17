@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicon icon -->
+  {# <link rel="icon" type="image/png" sizes="16x16" href="{{ base_url() }}/public/assets/app/images/favicon.png"> #}
+  <title>PERSONAS PERDIDAS Y DESAPARECIDAS</title>
+
+  {% include 'templates/master/inc/css-files.twig' %}
+
+</head>
+
+<body>
+
+  <!-- [ Pre-loader ] start -->
+  {% include 'templates/master/inc/preloader.twig' %}
+  <!-- [ Pre-loader ] end -->
+
+  <div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
+
+      {% include 'templates/master/inc/header.twig' %}
+
+      <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+
+          <!-- [ navigation menu ] start -->
+          {% include 'templates/master/inc/main-nav.twig' %}
+          <!-- [ navigation menu ] end -->
+
+          <div class="pcoded-content">
+
+              <!-- [ breadcrumb ] start -->
+              {% include 'templates/master/inc/breadcrumb.twig' %}
+              <!-- [ breadcrumb ] end -->
+
+              <div class="pcoded-inner-content" >
+                <div class="main-body">
+                  <div class="page-wrapper">
+                    {% block content %}
+
+                    {% endblock %}
+                <button class="btn waves-light btn-icon back-to-top"><i class="icofont icofont-caret-up" style="color:#ecf0f5; margin-right: 0px;"></i></button>
+                  </div><!-- .page-wrapper -->
+
+                </div><!-- .main-body -->
+
+              </div><!-- .pcoded-inner-content-->
+          </div><!-- .pcoded-content-->
+{# {% include 'templates/master/inc/footer.twig' %} #}
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% block scripts %}
+    <script type="text/javascript">
+    var APP = {
+      en_produccion: '{{ en_produccion }}',
+      url: {
+        inicio: '{{ base_url() }}',
+        cronograma: '{{ path_for("Anuncios") }}',
+      }
+    };
+    </script>
+    {% include 'templates/master/inc/js-files.twig' %}
+  <style type="text/css">
+.back-to-top {
+      position: fixed;
+      bottom: 2em;
+      right: 0px;
+      text-decoration: none;
+      /*color: #000000;*/
+      background-color: #233237;
+      /*font-size: 12px;*/
+      /*padding: 1em;*/
+      display: none;
+    }
+
+    .back-to-top:hover {
+      background-color: #233237;
+    }
+  </style>
+  <script>
+      jQuery(document).ready(function() {
+        var offset = 220;
+        var duration = 200;
+        jQuery(window).scroll(function() {
+          if (jQuery(this).scrollTop() > offset) {
+            jQuery('.back-to-top').fadeIn(duration);
+          } else {
+            jQuery('.back-to-top').fadeOut(duration);
+          }
+        });
+
+        jQuery('.back-to-top').click(function(event) {
+          event.preventDefault();
+          jQuery('html, body').animate({scrollTop: 0}, duration);
+          return false;
+        })
+      });
+    </script>
+  {% endblock %}
+
+</body>
+
+</html>

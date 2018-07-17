@@ -1,0 +1,68 @@
+.btn.btn-regular {
+	padding: 6px 20px;
+}
+.btn.btn-fix-top, .boton.btn-fix-top {
+	margin-top: 34px !important;
+}
+
+.boton {
+	position: relative;
+	outline: 0;
+	border: none;
+	display: inline-block;
+	padding: 6px 18px;
+	font-size: 15px;
+	font-weight: normal;
+	color: white;
+	line-height: 1.5;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	vertical-align: middle;
+	&.br-radius-2 {
+		border-radius: 2px;
+	}
+	&.br-radius-3 {
+		border-radius: 3px;
+	}
+	&.br-radius-5 {
+		border-radius: 5px;
+	}
+	&:hover {
+		text-decoration: none !important;
+	}
+
+	&.boton-small {
+		font-size: 13px;
+		padding: 5px 16px;
+	}
+
+	&.boton-red {
+		background: lighten(#C44040, 3%);
+		&:hover {
+			text-decoration: none !important;
+			background: lighten(#B02C2C, 2%);
+		}
+	}
+	&.boton-green {
+		background: lighten(#39B772, 3%);
+		color: white;
+		&:hover {
+			text-decoration: none !important;
+			background: lighten(#39B772, 5%);
+		}
+	}
+}
+
+.btn-mat {
+	border-radius: 2px;
+}
+.btn {
+	&.btn-danger {
+
+	}
+}
+
+
+
+

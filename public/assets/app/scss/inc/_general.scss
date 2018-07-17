@@ -1,0 +1,30 @@
+
+body, body[themebg-pattern="theme1"] {
+	background: $bg-body;
+	background-color: $bg-body;
+}
+.pcoded-main-container {
+	background: $bg-body;
+}
+
+.hide {
+	display: none;
+}
+
+.text-bold {
+	font-weight: bold !important;
+}
+
+
+.title-timepicker {
+	color: #222;
+	padding: 15px 15px 10px;
+	font-size: 18px;
+	text-align: center;
+	font-weight: 500;
+}
+.picker--time {
+	.picker__list {
+		padding-bottom: 40px;
+	}
+}

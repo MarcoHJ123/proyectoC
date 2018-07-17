@@ -1,0 +1,24 @@
+{
+  "name": "Nombre",
+  "description": "Descripción",
+  "main": "testmainfile",
+  "keywords": [
+    "test"
+  ],
+  "authors": [
+    "max"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "datatables.net-plugins": "1.10.10"
+  }
+}

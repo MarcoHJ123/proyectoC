@@ -1,0 +1,62 @@
+.pcoded .pcoded-header[header-theme="theme1"] {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ededeb+100 */
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #ededeb 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#ededeb 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #ffffff 0%,#ededeb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededeb',GradientType=0 ); /* IE6-9 */
+}
+
+.header-navbar .navbar-wrapper .navbar-logo {
+	position: static;
+	height: 120px;
+	width: 450px;
+	max-width: 85%;
+	padding: 15px;
+}
+
+.header-navbar .navbar-wrapper .navbar-logo-app {
+  position: relative;
+  float: right;
+  height: 120px;
+  width: 450px;
+	max-width: 100%;
+  text-align: center;
+  padding: 15px;
+  img {
+  	margin: 0 auto;
+  	padding-top: 21px;
+  }
+}
+
+@media only screen and (max-width: 992px){
+	.header-navbar .navbar-wrapper .navbar-logo {
+	  height: auto;
+	}
+	.header-navbar .navbar-wrapper .navbar-logo-app {
+	  display: none;
+	}
+	.header-navbar .navbar-wrapper .navbar-logo .mobile-menu {
+		right: 0px;
+		left: auto;
+		top: 10px;
+	}
+}
+
+.header-navbar {
+	border-bottom: 5px solid #797A6C;
+	min-height: 70px;
+}
+
+.pcoded[theme-layout="horizontal"] .page-header {
+
+}
+
+.pcoded[fream-type="theme1"][theme-layout="horizontal"] .page-header {
+	background: $bg-body;
+}
+
+
+a.mobile-menu {
+	color: #000 !important;
+}

@@ -1,0 +1,356 @@
+
+/*
+-----------------------------------------------------------------------------------------------------------
+ESTILOS PRINCIPALES
+-----------------------------------------------------------------------------------------------------------
+*/
+  body, body[themebg-pattern="theme1"] {
+    background: #F0F0EE;
+    background-color: #F0F0EE;
+    /*background-image: url(http://localhost:8080/PROYECTO-U/public/assets/app/images/fondo.jpg);*/
+
+  }
+
+  .pcoded-main-container {
+    background: #F0F0EE; }
+
+  .hide {
+    display: none; }
+
+  .text-bold {
+    font-weight: bold !important; }
+
+  .title-timepicker {
+    color: #222;
+    padding: 15px 15px 10px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500; }
+
+  .picker--time .picker__list {
+    padding-bottom: 40px; }
+
+  .pcoded[pcoded-device-type="desktop"] .boxed-layout {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto; }
+
+  .pcoded[pcoded-device-type="desktop"] .boxed-layout-padding {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  .pcoded[pcoded-device-type="tablet"] .pcoded-content,
+  .pcoded[pcoded-device-type="phone"] .pcoded-content {
+    padding-top: 0px; }
+    .pcoded[pcoded-device-type="tablet"] .pcoded-content .page-header,
+    .pcoded[pcoded-device-type="phone"] .pcoded-content .page-header {
+      padding-top: 20px;
+      padding-bottom: 30px; }
+
+  .pcoded .pcoded-header[header-theme="theme1"] {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ededeb+100 */
+    background: #ffffff;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #ededeb 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%, #ededeb 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%, #ededeb 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededeb',GradientType=0 );
+    /* IE6-9 */ }
+
+  .header-navbar .navbar-wrapper .navbar-logo {
+    position: static;
+    height: 120px;
+    width: 450px;
+    max-width: 85%;
+    padding: 15px; }
+
+  .header-navbar .navbar-wrapper .navbar-logo-app {
+    position: relative;
+    float: right;
+    height: 120px;
+    width: 450px;
+    max-width: 100%;
+    text-align: center;
+    padding: 15px; }
+    .header-navbar .navbar-wrapper .navbar-logo-app img {
+      margin: 0 auto;
+      padding-top: 21px; }
+
+  @media only screen and (max-width: 992px) {
+    .header-navbar .navbar-wrapper .navbar-logo {
+      height: auto; }
+    .header-navbar .navbar-wrapper .navbar-logo-app {
+      display: none; }
+    .header-navbar .navbar-wrapper .navbar-logo .mobile-menu {
+      right: 0px;
+      left: auto;
+      top: 10px; } }
+
+  .header-navbar {
+    border-bottom: 5px solid #797A6C;
+    min-height: 70px; }
+
+  .pcoded[fream-type="theme1"][theme-layout="horizontal"] .page-header {
+    background: #F0F0EE; }
+
+  a.mobile-menu {
+    color: #000 !important; }
+
+  .pcoded[theme-layout="horizontal"] .pcoded-navbar {
+    z-index: 1025; }
+
+  .pcoded[theme-layout="horizontal"] .pcoded-navbar {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d04b4b+0,941212+100 */
+    background: #d04b4b;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #d04b4b 0%, #941212 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #d04b4b 0%, #941212 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #d04b4b 0%, #941212 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d04b4b', endColorstr='#941212',GradientType=0 );
+    /* IE6-9 */ }
+
+  .pcoded[theme-layout="horizontal"] .pcoded-navbar .pcoded-item > li {
+    padding-top: 0px;
+    padding-bottom: 0px; }
+    .pcoded[theme-layout="horizontal"] .pcoded-navbar .pcoded-item > li a {
+      color: white;
+      line-height: 1.84; }
+
+  .pcoded[theme-layout="horizontal"] .pcoded-navbar[active-item-theme="theme1"] .pcoded-item li a {
+    line-height: 37px;
+    overflow: visible;
+    opacity: 0.8;
+    font-size: 14px;
+    background: transparent !important;
+    box-shadow: none !important; }
+    .pcoded[theme-layout="horizontal"] .pcoded-navbar[active-item-theme="theme1"] .pcoded-item li a:hover {
+      opacity: 1;
+      background: none !important;
+      box-shadow: none !important; }
+
+  .pcoded[theme-layout="horizontal"] .pcoded-navbar[active-item-theme="theme1"] .pcoded-item li.active a {
+    position: relative;
+    background: transparent !important;
+    color: white !important;
+    box-shadow: none !important;
+    border-radius: 0;
+    opacity: 1; }
+    .pcoded[theme-layout="horizontal"] .pcoded-navbar[active-item-theme="theme1"] .pcoded-item li.active a:before {
+      position: absolute;
+      top: -5px;
+      left: 0px;
+      content: "";
+      background: #43443a;
+      height: 5px;
+      width: 100%; }
+
+  .pcoded[theme-layout="horizontal"][pcoded-device-type="tablet"] .pcoded-navbar .pcoded-item,
+  .pcoded[theme-layout="horizontal"][pcoded-device-type="phone"] .pcoded-navbar .pcoded-item {
+    padding-bottom: 15px; }
+
+  .pcoded[theme-layout="horizontal"][pcoded-device-type="tablet"] .pcoded-navbar .pcoded-item > li a,
+  .pcoded[theme-layout="horizontal"][pcoded-device-type="phone"] .pcoded-navbar .pcoded-item > li a {
+    opacity: 0.8;
+    border: 0 !important; }
+    .pcoded[theme-layout="horizontal"][pcoded-device-type="tablet"] .pcoded-navbar .pcoded-item > li a:before,
+    .pcoded[theme-layout="horizontal"][pcoded-device-type="phone"] .pcoded-navbar .pcoded-item > li a:before {
+      display: none; }
+    .pcoded[theme-layout="horizontal"][pcoded-device-type="tablet"] .pcoded-navbar .pcoded-item > li a:hover,
+    .pcoded[theme-layout="horizontal"][pcoded-device-type="phone"] .pcoded-navbar .pcoded-item > li a:hover {
+      opacity: 1;
+      background: none !important;
+      box-shadow: none !important; }
+
+  .pcoded[theme-layout="horizontal"][pcoded-device-type="tablet"] .pcoded-navbar .pcoded-item > li.active a,
+  .pcoded[theme-layout="horizontal"][pcoded-device-type="phone"] .pcoded-navbar .pcoded-item > li.active a {
+    opacity: 1;
+    font-weight: bold; }
+
+  .form-control {
+    border: 1px solid #bbb; }
+
+  select.form-control {
+    border: 1px solid #bbb;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+
+  select.form-control:focus,
+  select.form-control:hover {
+    border: 1px solid #448aff;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+
+  .form-group .messages {
+    padding-top: 6px;
+    display: inline-block; }
+
+  .alert.icons-alert:before {
+    top: 11px; }
+
+  .alert button.close {
+    opacity: 0.4;
+    margin-top: 2px;
+    color: #000; }
+
+  .alert.alert-default {
+    color: #777;
+    border-color: #989898; }
+
+  .alert.alert-info {
+    color: #06A3CB;
+    border-color: #06abd5; }
+
+  .alert.alert-success {
+    color: #147A23;
+    border-color: #19992c; }
+
+  .alert.alert-warning {
+    color: #9A6506;
+    border-color: #bc7c07; }
+
+  .alert.alert-danger {
+    color: #A4322C;
+    border-color: #ca4039; }
+
+  .btn.btn-regular {
+    padding: 6px 20px; }
+
+  .btn.btn-fix-top, .boton.btn-fix-top {
+    margin-top: 34px !important; }
+
+  .boton {
+    position: relative;
+    outline: 0;
+    border: none;
+    display: inline-block;
+    padding: 6px 18px;
+    font-size: 15px;
+    font-weight: normal;
+    color: white;
+    line-height: 1.5;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle; }
+    .boton.br-radius-2 {
+      border-radius: 2px; }
+    .boton.br-radius-3 {
+      border-radius: 3px; }
+    .boton.br-radius-5 {
+      border-radius: 5px; }
+    .boton:hover {
+      text-decoration: none !important; }
+    .boton.boton-small {
+      font-size: 13px;
+      padding: 5px 16px; }
+    .boton.boton-red {
+      background: #c84c4c; }
+      .boton.boton-red:hover {
+        text-decoration: none !important;
+        background: #b82e2e; }
+    .boton.boton-green {
+      background: #3dc379;
+      color: white; }
+      .boton.boton-green:hover {
+        text-decoration: none !important;
+        background: #45c57f; }
+
+  .btn-mat {
+    border-radius: 2px; }
+
+  .box-datos-expediente {
+    display: none; }
+
+  .box-juzgados, .box-partes, .box-buscar-parte, .box-campos-parte {
+    display: none; }
+
+  .box-fecha,
+  .box-hora {
+    display: none; }
+    .box-fecha input[type="text"], .box-fecha .form-control[readonly],
+    .box-hora input[type="text"],
+    .box-hora .form-control[readonly] {
+      background-color: transparent;
+      cursor: pointer; }
+
+  #btn-programar-cita {
+    display: none; }
+
+  .box-mensaje-cita-enviada {
+    display: none; }
+
+  .fc-day-grid-event .fc-content {
+    white-space: normal;
+    overflow: hidden; }
+
+  .fc-event-container a {
+    padding: 10px 12px !important; }
+
+  .fc-list-item-title {
+    position: relative; }
+    .fc-list-item-title a {
+      color: #1a0dab;
+      font-size: 13px; }
+    .fc-list-item-title p {
+      margin-bottom: 6px; }
+    .fc-list-item-title .reprogramada {
+      background: #3FC080;
+      color: white;
+      padding: 3px 8px; }
+
+  .form-cancelar-cita-admin {
+    position: relative;
+    color: white;
+    margin-top: 10px; }
+    .form-cancelar-cita-admin > i.i-reset-cancelar-cita {
+      display: none;
+      opacity: 0.7;
+      cursor: pointer;
+      padding: 6px 6px;
+      font-size: 15px;
+      vertical-align: top;
+      color: #555; }
+      .form-cancelar-cita-admin > i.i-reset-cancelar-cita:hover {
+        opacity: 1; }
+
+  .boton.boton-enviar-cancelar-cita,
+  .input-razon-cancelacion {
+    box-sizing: border-box;
+    height: 28px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 18px;
+    padding: 6px 12px;
+    font-size: 13px; }
+
+  .input-razon-cancelacion {
+    width: 65%;
+    display: none;
+    padding-left: 10px;
+    border: 1px solid #AAA;
+    border-left: 0; }
+    @media screen and (max-width: 728px) {
+      .input-razon-cancelacion {
+        width: 75%; } }
+
+  .form-modificar-cita {
+    min-height: 400px; }
+    .form-modificar-cita .tab-content {
+      min-height: 300px; }
+    .form-modificar-cita .loader-consultar-cita {
+      display: none;
+      text-align: center;
+      padding-bottom: 8px; }
+
+  .form-reprogramar-cita-public .box-fecha,
+  .form-reprogramar-cita-public .box-hora {
+    display: block; }
