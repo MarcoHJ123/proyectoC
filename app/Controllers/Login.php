@@ -13,7 +13,7 @@ class Login extends Controller {
 	*/
 	public function get_codigo_usuario(){
 		if( $this->esta_conectado() ){
-			return $this->session->user_login['c_usuario'];
+			return $this->session->user_login['id_usuario_login'];
 		}
 		return null;
 	}
@@ -25,7 +25,7 @@ class Login extends Controller {
 	*/
 	public function get_nombre_usuario(){
 		if( $this->esta_conectado() ){
-			return $this->session->user_login['nombre_usuario'];
+			return $this->session->user_login['nombres'];
 		}
 		return null;
 	}
@@ -36,7 +36,7 @@ class Login extends Controller {
 	|---------------------------------------------------------------------------------------------------
 	*/
 	public function esta_conectado(){
-		return isset( $this->session->user_login ) && ! empty( $this->session->user_login['c_usuario'] );
+		return isset( $this->session->user_login ) && ! empty( $this->session->user_login['id_usuario_login'] );
 	}
 
 	/*
@@ -62,7 +62,7 @@ class Login extends Controller {
 		$settings = get_settings_file( 'conexiones.js' );
 		$login_settings = $settings[CONNECTION_LOGIN];
 		$login_settings['username'] = trim( strtoupper( $usuario ) );
-		$login_settings['password'] = encriptar_password( strtoupper( $password ) );
+		$login_settings['password'] =  trim(strtoupper( $password ));
 
 		//Agregamos la conexión
 		$this->connections->addConnection( CONNECTION_LOGIN, $login_settings );
@@ -78,7 +78,7 @@ class Login extends Controller {
 			//Si existe usuario y es el perfil permitido, entonces creamos la sesión
 			if( $resultado['status'] && ! empty( $resultado['usuario'] ) ){
 				$session_login = array(
-					'id_usuario' => $login_settings['username'],
+					'id_usuario_login' => $login_settings['username'],
 					'nombres' => $resultado['usuario']['nombres'],
 					'perfil_usuario' => $resultado['usuario']['perfil_usuario'],
 					'correo_electronico' => $resultado['usuario']['correo_electronico'],
@@ -102,7 +102,7 @@ class Login extends Controller {
 	*/
 	public function mostrar_pagina_login( $request, $response, $args ){
 		$data = array(
-			'id_usuario' => $this->session->get('id_usuario'),
+			'id_usuario_login' => $this->session->get('id_usuario_login'),
 			// 'login_settings' => $this->session->get('login_settings'),
 			'nombres' => $this->session->get('nombres'),
 			'count' => $this->session->get('count'),

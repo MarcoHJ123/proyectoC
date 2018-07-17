@@ -9,20 +9,21 @@
 		<div class="col-sm-12">
       <div class="card card-creacion-ticket">
         <div class="card-header text-center m-t-10">
-          <h3>REGISTRA TU ANUNCIO</h3>
+          <h3>Registra Persona Desaparecida</h3>
         </div>
           <div class="f1 card-block form-crear-ticket">
           	{# <form role="form" action="" class="f1"> #}
           		{% include 'crear-ticket/inc/pasos.twig' %}
           		<fieldset>
-          		{% include 'crear-ticket/inc/datos-personales.twig' %}
-              </fieldset>
-              <fieldset>
           		{% include 'crear-ticket/inc/detalle-persona.twig' %}
               </fieldset>
               <fieldset>
-          		{% include 'crear-ticket/inc/detalles-generales.twig' %}
+              {% include 'crear-ticket/inc/detalles-generales.twig' %}
               </fieldset>
+              <fieldset>
+          		{% include 'crear-ticket/inc/datos-Personales.twig' %}
+              </fieldset>
+              
               <div class="m-b-26 box-mensaje-ticket-creado hide">
                 <div class="alert alert-info icons-alert fix-icon-alert">
                 </div>

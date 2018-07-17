@@ -17,9 +17,9 @@ class Usuario extends Model {
 			'usuario' => $usuario,
 		);
 
-		$sql = "SELECT DISTINCT nombres, perfil_usuario, correo_electronico
+		$sql = "SELECT DISTINCT u.nombres, u.perfil_usuario, u.correo_electronico, u.id_usuario
 														FROM usuario u INNER JOIN usuario_login ul WHERE
-														u.id_usuario = ul.id_usurio and u.estado = '1' and u.id_usuario = :usuario";
+														u.id_usuario = ul.id_usurio and u.estado = '1' and ul.id_usuario_login = :usuario";
 
 		$result = $this->execute_query( CONNECTION_LOGIN, false, 'sql', $sql, $data );
 		$return = array_merge( $return, $result );
@@ -29,6 +29,8 @@ class Usuario extends Model {
 
 		return $return;
 	}
+
+	
 
 
 }
