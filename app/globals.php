@@ -38,10 +38,10 @@ $menu = array(
     'title' => 'Iniciar Sesión',
     'url'   => $base_url.$router->pathFor('pagina_login'),
   ),
-  // 'inicio2' => array(
-  //   'title' => 'Consultar Cita',
-  //   'url'   => $base_url.$router->pathFor('inicio2'),
-  // ),
+  'RegistrarUsuario' => array(
+    'title' => 'Registrar Usuario',
+    'url'   => $base_url.$router->pathFor('RegistrarUsuario'),
+  ),
 	// 'cronograma' => array(
  //    'title' => 'Cronograma Citas',
  //    'url'	  => $base_url.$router->pathFor('cronograma_inicio'),
