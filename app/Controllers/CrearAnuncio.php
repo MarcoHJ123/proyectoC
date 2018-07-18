@@ -8,7 +8,16 @@ use App\Models\Ticket;
 
 		public function inicio( $request, $response, $args ){
 			$data = array();
- 			return $this->view->render( $response, 'crear-ticket/main.twig', $data );
+ 			return $this->view->render( $response, 'crear-ticket/master.twig', $data );
+		}
+
+		public function inicioDesaparecido( $request, $response, $args ){
+			$data = array();
+ 			return $this->view->render( $response, 'crear-ticket/desaparecido/main.twig', $data );
+		}
+		public function inicioPerdido( $request, $response, $args ){
+			$data = array();
+ 			return $this->view->render( $response, 'crear-ticket/perdido/main.twig', $data );
 		}
 
 		public function crear_anuncio( $request, $response, $args ){

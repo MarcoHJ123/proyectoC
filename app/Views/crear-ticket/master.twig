@@ -1,0 +1,21 @@
+{% extends 'templates/master/master.twig' %}
+
+{% block content %}
+
+<a class="btn btn-mat waves-light btn-success" href="{{ base_url() }}/crear-anuncio/perdido" style="background-color: white; color: green;">APORTAR</a>
+
+<a class="btn btn-mat waves-light btn-danger text-center" href="{{ base_url() }}/crear-anuncio/desaparecido" style="background-color: white; color: red;">APORTAR</a>
+
+{% endblock %}
+
+{% block scripts %}
+  {{ parent() }}
+  <!-- pickadate -->
+  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/libs/pickadate/js/picker.js"></script>
+  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/libs/pickadate/js/picker.time.js"></script>
+  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/libs/pickadate/js/picker.date.js"></script>
+
+  <!-- App JS -->
+  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/js/crear_ticket.js"></script>
+  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/js/validar_crear_ticket.js"></script>
+{% endblock %}
