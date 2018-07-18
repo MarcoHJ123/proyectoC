@@ -1,0 +1,35 @@
+
+<h4>Datos Personales</h4>
+<div class="row">
+	<div class="col-md-6 p-t-6" for="nombres_persona">
+  	<label class="col-form-label">Nombres</label>
+    <input type="text" name="nombres_persona" class="form-control" id="nombres_persona">
+  </div>
+  <div class="col-md-6 p-t-6" for="apellidos_persona">
+    <label class="col-form-label">Apellidos</label>
+    <input type="text" name="apellidos_persona"  class="form-control" id="apellidos_persona">
+  </div>
+  <div class="col-md-6 p-t-6" for="fecha_nacimiento">
+    <label class="col-form-label">Fecha Nacimiento</label>
+  	<input type="date" name="fecha_nacimiento"  class="form-control" id="fecha_nacimiento">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 p-t-6" for="tipo_documento">
+    <label class="col-form-label" >Tipo Documento Identidad</label>
+    {# <input type="text" name="tipo_documento"  class="form-control" id="tipo_documento"> #}
+    <select name="tipo_documento"  id="tipo_documento" class="form-control form-control-inverse" >
+		<option value="0">- SELECCIONAR -</option>
+		<option value="1">DNI</option>
+		<option value="2">PASAPORTE</option>
+		</select>
+	</div>
+	<div class="col-md-6 p-t-6" for="numero_documento">
+		<label class="col-form-label" >Numero Documento</label>
+  	<input type="text" name="numero_documento" placeholder="Numero de documento" class="form-control" id="numero_documento">
+	</div>
+</div>
+<div class="f1-buttons">
+    <button type="button" class="btn btn-previous">Previous</button>
+  <button type="button" id="btn-crear-anuncio" class="btn btn-mat waves-light btn-inverse text-center">Crear Anuncio</button>
+</div>

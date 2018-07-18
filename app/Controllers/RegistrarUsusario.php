@@ -1,0 +1,53 @@
+<?php
+namespace App\Controllers;
+/*te mamaste con el repositorio*/
+use App\Models\Ticket;
+
+
+	class registrarUsuario extends Controller {
+
+		public function inicio( $request, $response, $args ){
+			$data = array();
+ 			return $this->view->render( $response, 'crear-usuario/master.twig', $data );
+		}
+
+		// public function inicioDesaparecido( $request, $response, $args ){
+		// 	$data = array();
+ 	// 		return $this->view->render( $response, 'crear-ticket/desaparecido/main.twig', $data );
+		// }
+		// public function inicioPerdido( $request, $response, $args ){
+		// 	$data = array();
+ 	// 		return $this->view->render( $response, 'crear-ticket/perdido/main.twig', $data );
+		// }
+
+		public function crear_usuario( $request, $response, $args ){
+		$return = array(
+			'success' => false,
+			'html' => '',
+		);
+		if( ! is_ajax() ) {
+			$return['html'] = 'ajax-error';
+			return json_encode( $return );
+		}
+
+		$error = false;
+		$obj_cita = new Ticket();
+		$resultado = $obj_cita->crearUsuario( $request );
+		if( $resultado['status'] == true ){
+			$mensaje = "creada ";
+			$return['msgEnviado'] = $mensaje;
+		} else {
+			$error = true;
+		}
+
+		if( $error ){
+			$return['error'] = $resultado['error'];
+			$return['sql'] = $resultado['sql'];
+		} else {
+			$return['success'] = true;
+		}
+
+		return json_encode( $return );
+		}
+}
+?>

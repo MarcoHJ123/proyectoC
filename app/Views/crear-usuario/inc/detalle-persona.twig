@@ -1,0 +1,43 @@
+<h4>Detalles de la persona</h4>
+<div class="row">
+<div class="col-md-12 p-t-12" for="id_imagen">
+  <label for="imagen">Imagen:</label> 
+  <input id="id_imagen" name="id_imagen" size="30" value="1" type="file" />
+ 
+  </div>
+    <div class="col-md-6 p-t-6" for="nombres_persona">
+    <label class="col-form-label">Nombres</label>
+    <input type="text" name="nombres_persona" class="form-control" id="nombres_persona">
+  </div>
+  <div class="col-md-6 p-t-6" for="apellidos_persona">
+    <label class="col-form-label">Apellidos</label>
+    <input type="text" name="apellidos_persona"  class="form-control" id="apellidos_persona">
+  </div>
+<div class="col-md-6 p-t-6" for="sexo_persona">
+  <label class="col-form-label">Sexo</label>
+  {# <input type="text" name="sexo_persona" class="form-control" id="sexo_persona"> #}
+  <select name="sexo_persona" class="form-control form-control-inverse">
+	<option value="0">- SELECCIONAR -</option>
+	<option value="h">Hombre</option>
+	<option value="m">Mujer</option>
+	</select>
+</div>
+<div class="col-md-6 p-t-6" for="color_piel">
+  <label class="col-form-label">Institucion</label>
+  {# <input type="text" name="color_piel" class="form-control" id="color_piel"> #}
+  <select name="id_institucion" class="form-control form-control-inverse">
+	<option value="0">- SELECCIONAR -</option>
+	<option value="bl">Blanco</option>
+	<option value="m">Moreno</option>
+	<option value="tr">Trigueño</option>
+	</select>
+</div>
+<div class="col-md-6 p-t-6" for="correo_electronico">
+  <label class="col-form-label">Correo Electronico</label>
+  <input type="text" name="correo_electronico" placeholder="Correo" class="form-control" id="correo_electronico">
+</div>
+
+</div>
+<div class="buttons">
+   <button type="button" id="btn-crear-anuncio" class="btn btn-mat waves-light btn-inverse text-center">Crear Usuario</button>
+</div>
