@@ -4,11 +4,11 @@ namespace App\Controllers;
 use App\Models\Ticket;
 
 
-	class registrarUsuario extends Controller {
+	class RegistrarUsuario extends Controller {
 
 		public function inicio( $request, $response, $args ){
 			$data = array();
- 			return $this->view->render( $response, 'crear-usuario/master.twig', $data );
+ 			return $this->view->render( $response, 'crear-usuario/main.twig', $data );
 		}
 
 		// public function inicioDesaparecido( $request, $response, $args ){

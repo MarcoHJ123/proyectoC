@@ -31,9 +31,11 @@ $container['ProgramacionCita'] = function( $container ){
 $container['RegistrarAporte'] = function( $container ){
   return new App\Controllers\RegistrarAporte();
 };
-
 $container['LoginFb'] = function( $container ){
   return new App\Controllers\LoginFb();
+};
+$container['RegistrarUsuario'] = function( $container ){
+  return new App\Controllers\RegistrarUsuario();
 };
 
 /*
