@@ -32,6 +32,10 @@ $container['RegistrarAporte'] = function( $container ){
   return new App\Controllers\RegistrarAporte();
 };
 
+$container['LoginFb'] = function( $container ){
+  return new App\Controllers\LoginFb();
+};
+
 /*
 $container['CronogramaCita'] = function( $container ){
   return new App\Controllers\CronogramaCita();

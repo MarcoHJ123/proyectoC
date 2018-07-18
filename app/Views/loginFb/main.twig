@@ -1,0 +1,24 @@
+{% extends 'templates/master/master.twig' %}
+
+{% block content %}
+
+ACA HACES TU PUTA VISTA DEL LOGIN CON FB PVTO JAJA :V
+CONTROLLER : LOGINFB.PHP
+MODELS: USUARIOFB.PHP
+
+PARA INCLUIR LOS ARCHIVOS DE LA API DE FB:
+LAS CONFIGURACIONES GUIATE DEL SMSGATEWAY
+
+
+{% endblock %}
+{% block scripts %}
+  {{ parent() }}
+  <!-- pickadate -->
+  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/libs/pickadate/js/picker.js"></script>
+  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/libs/pickadate/js/picker.time.js"></script>
+  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/libs/pickadate/js/picker.date.js"></script>
+
+  <!-- App JS -->
+  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/js/crear_ticket.js"></script>
+  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/js/validar_crear_ticket.js"></script>
+{% endblock %}
