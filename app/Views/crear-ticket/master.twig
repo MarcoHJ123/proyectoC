@@ -1,11 +1,39 @@
 {% extends 'templates/master/master.twig' %}
 
 {% block content %}
+<style type="text/css">
+	#panele{
+		text-align:center;
+		background-color: white;
+		border:solid;
+		border-color: #F0F0EE;
+		/*padding:-2px;*/
+		padding-left: initial;
+    padding-right: initial;
+    border-radius: 20px;
+	}
+	#buttone{
+		border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+	}
+</style>
+<div class="col-sm-12 row" >
+	<div class="col-sm-12" style="text-align: center; padding: 20px;" >
+	<h3>CREAR ANUNCIO</h3>
+	</div>
+	<div class="col-sm-6" id="panele">
+		<h4>PERSONAS PERDIDAS</h4>
+		<img src="{{ base_url() }}/public/assets/images/user-card/img-round5.jpg" alt="bg-img" class="img-responsive" alt="User-Profile-Image" id="ticket_lista">
+		<a class="btn btn-success col-sm-12" href="{{ base_url() }}/crear-anuncio/perdido" id="buttone">APORTAR</a>
+	</div>
 
-<a class="btn btn-mat waves-light btn-success" href="{{ base_url() }}/crear-anuncio/perdido" style="background-color: white; color: green;">APORTAR</a>
+	<div class="col-sm-6" id="panele">
+		<h4>PERSONAS DESAPARECIDAS</h4>
+		<img src="{{ base_url() }}/public/assets/images/user-card/img-round5.jpg" alt="bg-img" class="img-responsive" alt="User-Profile-Image" id="ticket_lista">
+		<a class="btn btn-danger col-sm-12"  href="{{ base_url() }}/crear-anuncio/desaparecido" id="buttone" >APORTAR</a>
+	</div>
 
-<a class="btn btn-mat waves-light btn-danger text-center" href="{{ base_url() }}/crear-anuncio/desaparecido" style="background-color: white; color: red;">APORTAR</a>
-
+</div>
 {% endblock %}
 
 {% block scripts %}
