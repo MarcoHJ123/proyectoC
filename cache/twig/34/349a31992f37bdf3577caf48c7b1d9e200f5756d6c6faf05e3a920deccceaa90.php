@@ -16,7 +16,10 @@ class __TwigTemplate_cd0ea4690d7e7dd118f4fca19fe40354048aef2c573e268d18fc0008715
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 66
-        echo "<form class=\"\" method=\"post\" action=\"";
+        echo "
+
+<form class=\"\" method=\"post\" action=\"";
+        // line 68
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->pathFor("procesar_login"), "html", null, true);
         echo "\">
   <div class=\"auth-box card\">
@@ -24,9 +27,9 @@ class __TwigTemplate_cd0ea4690d7e7dd118f4fca19fe40354048aef2c573e268d18fc0008715
     <div class=\"card-block m-t-20\" style=\"padding: 30px;\">
 
       ";
-        // line 71
-        $this->loadTemplate("templates/inc/messages.twig", "login/inc/login-form.twig", 71)->display($context);
-        // line 72
+        // line 73
+        $this->loadTemplate("templates/inc/messages.twig", "login/inc/login-form.twig", 73)->display($context);
+        // line 74
         echo "
       <div class=\"row m-b-20\">
         <div class=\"col-md-12\">
@@ -54,6 +57,12 @@ class __TwigTemplate_cd0ea4690d7e7dd118f4fca19fe40354048aef2c573e268d18fc0008715
           <button type=\"submit\" class=\"btn waves-effect waves-light hor-grd btn-grd-inverse btn-block text-center m-b-20\">Iniciar Sesión</button>
         </div>
       </div>
+        <div class=\"row m-t-20\">
+        <div class=\"col-md-12\">
+          < <a href='proyectoC/facebook/login.php'>aqu&iacute;</a>
+        </div>
+      </div>
+
 
     </div>
   </div>
@@ -73,7 +82,7 @@ class __TwigTemplate_cd0ea4690d7e7dd118f4fca19fe40354048aef2c573e268d18fc0008715
 
     public function getDebugInfo()
     {
-        return array (  30 => 72,  28 => 71,  19 => 66,);
+        return array (  33 => 74,  31 => 73,  23 => 68,  19 => 66,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -151,6 +160,8 @@ class __TwigTemplate_cd0ea4690d7e7dd118f4fca19fe40354048aef2c573e268d18fc0008715
         <!-- end of container-fluid -->
 
     </section> #}
+
+
 <form class=\"\" method=\"post\" action=\"{{ path_for('procesar_login') }}\">
   <div class=\"auth-box card\">
 
@@ -184,6 +195,12 @@ class __TwigTemplate_cd0ea4690d7e7dd118f4fca19fe40354048aef2c573e268d18fc0008715
           <button type=\"submit\" class=\"btn waves-effect waves-light hor-grd btn-grd-inverse btn-block text-center m-b-20\">Iniciar Sesión</button>
         </div>
       </div>
+        <div class=\"row m-t-20\">
+        <div class=\"col-md-12\">
+          < <a href='proyectoC/facebook/login.php'>aqu&iacute;</a>
+        </div>
+      </div>
+
 
     </div>
   </div>

@@ -27,6 +27,7 @@ class __TwigTemplate_49933f7368f79478bccf1235b223793c1dc2ba81d12d088c97d310a2d9a
   <!-- Tell the browser to be responsive to screen width -->
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 
+  <!-- Favicon icon -->
   ";
         // line 12
         echo "  <title>PERSONAS</title>
