@@ -1,9 +1,9 @@
 
 <div class="row">
 <div class="col-md-12 p-t-12" for="id_imagen">
-  <label for="imagen">Imagen:</label> 
+  <label for="imagen">Imagen:</label>
   <input id="id_imagen" name="id_imagen" size="30" value="1" type="file" />
- 
+
   </div>
     <div class="col-md-6 p-t-6" for="nombres_persona">
     <label class="col-form-label">Nombres</label>
@@ -22,17 +22,18 @@
 	<option value="m">Mujer</option>
 	</select>
 </div>
-    
+
 <div class="col-md-6 p-t-6" for="institucion">
   <label class="col-form-label">Institucion</label>
   {# <input type="text" name="color_piel" class="form-control" id="color_piel"> #}
   <select name="institucion" id="institucion" class="form-control form-control-inverse">
+  <option value="0">- SELECCIONAR -</option>
   {% for institucion in instituciones %}
 	<option value="{{ institucion.id_institucion }}">{{institucion.nombre}}</option>
   {% endfor %}
 	</select>
 </div>
- 
+
 <div class="col-md-4 p-t-6" for="correo_electronico">
   <label class="col-form-label">Correo Electronico</label>
   <input type="text" name="correo_electronico" placeholder="Correo" class="form-control" id="correo_electronico">

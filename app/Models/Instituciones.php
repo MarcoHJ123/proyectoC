@@ -10,7 +10,7 @@ class Instituciones extends Model {
 
 		$data = array();
 
-		$sql = "SELECT * FROM instritucion";
+		$sql = "SELECT id_institucion, nombre FROM instritucion";
 
 		$result = $this->execute_query( CONNECTION_SIJ, false, 'sql', $sql, $data );
 		$return = array_merge( $return, $result );
