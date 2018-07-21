@@ -28,9 +28,11 @@ class __TwigTemplate_66fd1a77963329abb47cf71bb42313c6fb3fa9549a72ca42e170d004fc6
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 
   <!-- Favicon icon -->
-  ";
-        // line 12
-        echo "  <title>PERSONAS PERDIDAS Y DESAPARECIDAS</title>
+  <link rel=\"icon\" type=\"image/png\" sizes=\"8x4\" href=\"";
+        // line 11
+        echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
+        echo "/public/assets/app/images/logo.png\">
+  <title>PERSONAS PERDIDAS Y DESAPARECIDAS</title>
 
   ";
         // line 14
@@ -194,7 +196,7 @@ class __TwigTemplate_66fd1a77963329abb47cf71bb42313c6fb3fa9549a72ca42e170d004fc6
 
     public function getDebugInfo()
     {
-        return array (  146 => 74,  144 => 73,  137 => 69,  133 => 68,  128 => 66,  124 => 64,  121 => 63,  116 => 47,  113 => 46,  105 => 111,  103 => 63,  95 => 57,  86 => 49,  84 => 46,  77 => 41,  75 => 40,  68 => 35,  66 => 34,  59 => 29,  57 => 28,  49 => 22,  47 => 21,  39 => 15,  37 => 14,  33 => 12,  21 => 1,);
+        return array (  148 => 74,  146 => 73,  139 => 69,  135 => 68,  130 => 66,  126 => 64,  123 => 63,  118 => 47,  115 => 46,  107 => 111,  105 => 63,  97 => 57,  88 => 49,  86 => 46,  79 => 41,  77 => 40,  70 => 35,  68 => 34,  61 => 29,  59 => 28,  51 => 22,  49 => 21,  41 => 15,  39 => 14,  33 => 11,  21 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -217,7 +219,7 @@ class __TwigTemplate_66fd1a77963329abb47cf71bb42313c6fb3fa9549a72ca42e170d004fc6
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 
   <!-- Favicon icon -->
-  {# <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"{{ base_url() }}/public/assets/app/images/favicon.png\"> #}
+  <link rel=\"icon\" type=\"image/png\" sizes=\"8x4\" href=\"{{ base_url() }}/public/assets/app/images/logo.png\">
   <title>PERSONAS PERDIDAS Y DESAPARECIDAS</title>
 
   {% include 'templates/master/inc/css-files.twig' %}
