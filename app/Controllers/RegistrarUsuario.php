@@ -7,21 +7,29 @@ use App\Models\Institucion;
 
 	class RegistrarUsuario extends Controller {
 
-			
+
 
 
 
 		public function inicio( $request, $response, $args ){
+<<<<<<< HEAD
 				$obj = new Institucion();
+=======
+			$obj = new Instituciones();
+>>>>>>> 386f134db063fbc3dabc33d2334656b62ef4dec7
 		$resultado = $obj->listar_institucion();
 		$instituciones = array();
 		if( $resultado['status'] ){
 			$instituciones = $resultado['items'];
 		}
+		d($resultado);
 		$data = array(
+<<<<<<< HEAD
 			'Instituciones' => $instituciones,
+=======
+			'instituciones' => $instituciones,
+>>>>>>> 386f134db063fbc3dabc33d2334656b62ef4dec7
 		);
-			$data = array();
  			return $this->view->render( $response, 'crear-usuario/main.twig', $data );
 		}
 

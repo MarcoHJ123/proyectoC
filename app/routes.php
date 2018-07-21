@@ -14,7 +14,7 @@ $this->get( '/crear-anuncio/perdido', 'CrearAnuncio:inicioPerdido' )->setName( '
 $this->post( '/ajax/crear-anuncio', 'CrearAnuncio:crear_anuncio' )->setName( 'CrearAnuncio' );
 
 $this->get( '/crear-usuario/', 'RegistrarUsuario:inicio' )->setName( 'RegistrarUsuario' );
-$this->post( '/ajax/crear-usuario', 'RegistrarUsuario:crear_anuncio' )->setName( 'RegistrarUsuario' );
+$this->post( '/ajax/crear-usuario', 'RegistrarUsuario:crear_anuncio' )->setName( 'RegistrarUsuarios' );
 
 
 $this->get( '/login', 'Login:mostrar_pagina_login' )->setName( 'pagina_login' );

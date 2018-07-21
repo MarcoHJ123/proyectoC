@@ -47,17 +47,19 @@ class __TwigTemplate_612568ca111cfce51be9fbbdec6225014be8bf4c9d4b04e673f81692dd9
         // line 16
         echo "           ";
         // line 18
-        echo "              ";
-        $this->loadTemplate("crear-usuario/inc/detalle-persona.twig", "crear-usuario/main.twig", 18)->display($context);
+        echo "
+              ";
         // line 19
-        echo "            ";
+        $this->loadTemplate("crear-usuario/inc/detalle-persona.twig", "crear-usuario/main.twig", 19)->display($context);
         // line 20
+        echo "            ";
+        // line 21
         echo "              <div class=\"m-b-26 box-mensaje-usuario-creado hide\">
                 <div class=\"alert alert-info icons-alert fix-icon-alert\">
                 </div>
               </div>
             ";
-        // line 25
+        // line 26
         echo "          </div>
         </div>
       </div>
@@ -66,33 +68,33 @@ class __TwigTemplate_612568ca111cfce51be9fbbdec6225014be8bf4c9d4b04e673f81692dd9
 ";
     }
 
-    // line 31
+    // line 32
     public function block_scripts($context, array $blocks = array())
     {
-        // line 32
+        // line 33
         echo "  ";
         $this->displayParentBlock("scripts", $context, $blocks);
         echo "
   <!-- pickadate -->
   <script type=\"text/javascript\" src=\"";
-        // line 34
+        // line 35
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/app/libs/pickadate/js/picker.js\"></script>
   <script type=\"text/javascript\" src=\"";
-        // line 35
+        // line 36
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/app/libs/pickadate/js/picker.time.js\"></script>
   <script type=\"text/javascript\" src=\"";
-        // line 36
+        // line 37
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/app/libs/pickadate/js/picker.date.js\"></script>
 
   <!-- App JS -->
   <script type=\"text/javascript\" src=\"";
-        // line 39
+        // line 40
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/app/js/crear_usuario.js\"></script>
- 
+
 ";
     }
 
@@ -108,7 +110,7 @@ class __TwigTemplate_612568ca111cfce51be9fbbdec6225014be8bf4c9d4b04e673f81692dd9
 
     public function getDebugInfo()
     {
-        return array (  93 => 39,  87 => 36,  83 => 35,  79 => 34,  73 => 32,  70 => 31,  61 => 25,  55 => 20,  53 => 19,  50 => 18,  48 => 16,  39 => 8,  37 => 7,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  95 => 40,  89 => 37,  85 => 36,  81 => 35,  75 => 33,  72 => 32,  63 => 26,  57 => 21,  55 => 20,  53 => 19,  50 => 18,  48 => 16,  39 => 8,  37 => 7,  32 => 4,  29 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -138,6 +140,7 @@ class __TwigTemplate_612568ca111cfce51be9fbbdec6225014be8bf4c9d4b04e673f81692dd9
             {# <form role=\"form\" action=\"\" class=\"f1\"> #}
            {#    {% include 'crear-usuario/inc/pasos.twig' %}
                <fieldset> #}
+
               {% include 'crear-usuario/inc/detalle-persona.twig' %}
             {#   </fieldset> #}
               <div class=\"m-b-26 box-mensaje-usuario-creado hide\">
@@ -160,7 +163,7 @@ class __TwigTemplate_612568ca111cfce51be9fbbdec6225014be8bf4c9d4b04e673f81692dd9
 
   <!-- App JS -->
   <script type=\"text/javascript\" src=\"{{ base_url() }}/public/assets/app/js/crear_usuario.js\"></script>
- 
+
 {% endblock %}", "crear-usuario/main.twig", "C:\\xampp\\htdocs\\proyectoC\\app\\Views\\crear-usuario\\main.twig");
     }
 }

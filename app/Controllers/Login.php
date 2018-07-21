@@ -129,7 +129,7 @@ class Login extends Controller {
 
 			$this->flash->addMessage( 'success', 'Bienvenido(a): '.$user_login['nombres'] );
 
-			return $this->response->withRedirect( $this->router->pathFor( 'programacion_citas' ) );
+			return $this->response->withRedirect( $this->router->pathFor( 'Anuncios' ) );
 
 		}
 
