@@ -41,17 +41,32 @@ class __TwigTemplate_0b84b58f13d5755fad7f7191fe0016e51666eb73631daa3d70790ee6579
 \t<option value=\"m\">Mujer</option>
 \t</select>
 </div>
-<div class=\"col-md-6 p-t-6\" for=\"color_piel\">
+    
+<div class=\"col-md-6 p-t-6\" for=\"institucion\">
   <label class=\"col-form-label\">Institucion</label>
   ";
-        // line 28
-        echo "  <select name=\"id_institucion\" class=\"form-control form-control-inverse\">
-\t<option value=\"0\">- SELECCIONAR -</option>
-\t<option value=\"bl\">Blanco</option>
-\t<option value=\"m\">Moreno</option>
-\t<option value=\"tr\">Trigueño</option>
-\t</select>
+        // line 29
+        echo "  <select name=\"institucion\" id=\"institucion\" class=\"form-control form-control-inverse\">
+  ";
+        // line 30
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["instituciones"]) ? $context["instituciones"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["institucion"]) {
+            // line 31
+            echo "\t<option value=\"";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["institucion"], "id_institucion", array()), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["institucion"], "nombre", array()), "html", null, true);
+            echo "</option>
+  ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['institucion'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 33
+        echo "\t</select>
 </div>
+ 
 <div class=\"col-md-4 p-t-6\" for=\"correo_electronico\">
   <label class=\"col-form-label\">Correo Electronico</label>
   <input type=\"text\" name=\"correo_electronico\" placeholder=\"Correo\" class=\"form-control\" id=\"correo_electronico\">
@@ -70,9 +85,14 @@ class __TwigTemplate_0b84b58f13d5755fad7f7191fe0016e51666eb73631daa3d70790ee6579
         return "crear-usuario/inc/detalle-persona.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  48 => 28,  38 => 19,  19 => 1,);
+        return array (  67 => 33,  56 => 31,  52 => 30,  49 => 29,  38 => 19,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -109,16 +129,17 @@ class __TwigTemplate_0b84b58f13d5755fad7f7191fe0016e51666eb73631daa3d70790ee6579
 \t<option value=\"m\">Mujer</option>
 \t</select>
 </div>
-<div class=\"col-md-6 p-t-6\" for=\"color_piel\">
+    
+<div class=\"col-md-6 p-t-6\" for=\"institucion\">
   <label class=\"col-form-label\">Institucion</label>
   {# <input type=\"text\" name=\"color_piel\" class=\"form-control\" id=\"color_piel\"> #}
-  <select name=\"id_institucion\" class=\"form-control form-control-inverse\">
-\t<option value=\"0\">- SELECCIONAR -</option>
-\t<option value=\"bl\">Blanco</option>
-\t<option value=\"m\">Moreno</option>
-\t<option value=\"tr\">Trigueño</option>
+  <select name=\"institucion\" id=\"institucion\" class=\"form-control form-control-inverse\">
+  {% for institucion in instituciones %}
+\t<option value=\"{{ institucion.id_institucion }}\">{{institucion.nombre}}</option>
+  {% endfor %}
 \t</select>
 </div>
+ 
 <div class=\"col-md-4 p-t-6\" for=\"correo_electronico\">
   <label class=\"col-form-label\">Correo Electronico</label>
   <input type=\"text\" name=\"correo_electronico\" placeholder=\"Correo\" class=\"form-control\" id=\"correo_electronico\">

@@ -2,11 +2,25 @@
 namespace App\Controllers;
 /*te mamaste con el repositorio*/
 use App\Models\Ticket;
+use App\Models\Instituciones;
 
 
 	class RegistrarUsuario extends Controller {
 
+			
+
+
+
 		public function inicio( $request, $response, $args ){
+				$obj = new Instituciones();
+		$resultado = $obj->listar_institucion();
+		$institucion = array();
+		if( $resultado['status'] ){
+			$institucion = $resultado['items'];
+		}
+		$data = array(
+			'institucion' => $institucion,
+		);
 			$data = array();
  			return $this->view->render( $response, 'crear-usuario/main.twig', $data );
 		}

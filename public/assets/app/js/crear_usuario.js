@@ -12,13 +12,14 @@
     app.$nombres_persona = app.$form.find('input[name="nombres_persona"]');
     app.$sexo_persona = app.$form.find('select[name="sexo_persona"]');
     app.$correo_electronico = app.$form.find('input[name="correo_electronico"]');
-    app.$id_institucion = app.$form.find('select[name="id_institucion"]');
+    app.$institucion = app.$form.find('select[name="institucion"]');
     app.$apellidos = app.$form.find('input[name="apellidos_persona"]');
 
     app.$box_msg_final = app.$form.find('.box-mensaje-usuario-creado');
     app.$btn_crear_anuncio = app.$form.find('#btn-crear-anuncio');
 
     $(document).on('click', '#btn-crear-anuncio', app.on_click_crear_anuncio );
+    $(document).on('change', 'select[name="institucion"]', app.on_change_distrito );
 
     app.inicializar_elementos_de_formulario();
   };
@@ -26,6 +27,7 @@
   app.on_click_crear_anuncio = function(){
     var $btn = $(this);
     var data = app.get_datos_form();
+    var institucion = $.trim( $('[name="institucion"]').val().toUpperCase());
     cc('=== Datos del Usuario ==', data);
       app.crear_anuncio( $btn );
   };
@@ -64,7 +66,9 @@
     }, 2000);
 
   }
-
+    app.on_change_distrito = function( event ){
+    app.$form.find('.msg-error-datos').hide();
+  };  
   // app.validar_campos = function(){
     //   var error = false;
     //   var error_msg = '<p>Corrige los siguientes campos: </p>';
@@ -103,7 +107,7 @@
     app.$nombres_persona.val('') ;
     app.$sexo_persona.val('') ;
     app.$correo_electronico.val('') ;
-    app.$id_institucion.val('') ;
+    app.$institucion.val('') ;
     app.$apellidos.val('') ;
   };
 
@@ -157,8 +161,8 @@
     if( sexo_persona != '0' ){$selected = app.$sexo_persona.find('option:selected');}
     
     var correo_electronico = $.trim( app.$correo_electronico.val() );
-    var id_institucion = $.trim( app.$id_institucion.val() );
-    if( id_institucion != '0' ){$selected = app.$id_institucion.find('option:selected');}
+    var institucion = $.trim( app.$institucion.val() );
+    if( institucion != '0' ){$selected = app.$institucion.find('option:selected');}
     var apellidos = $.trim( app.$apellidos.val() );
 
     
@@ -168,7 +172,7 @@
       nombres_persona: nombres_persona,
       sexo_persona: sexo_persona,
       correo_electronico: correo_electronico,
-      id_institucion: id_institucion,
+      institucion: institucion,
       apellidos: apellidos,
     };
   };
