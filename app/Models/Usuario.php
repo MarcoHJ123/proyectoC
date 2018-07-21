@@ -30,7 +30,7 @@ class Usuario extends Model {
 		return $return;
 	}
 
-	
+
 public function get_data( $request, $tabla ){
 		if( $tabla == 'usuario' ){
 			return array(
@@ -55,7 +55,7 @@ public function get_data( $request, $tabla ){
 		return array();
 	}
 
-public function crearUsuario($request){
+	public function crearUsuario($request){
 		$return = array(
 				'status' => false,
 				'error' => '',
@@ -125,6 +125,6 @@ public function crearUsuario($request){
 			}
 			return $return;
 		}
-}
+	}
 
 }
