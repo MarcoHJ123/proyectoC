@@ -13,12 +13,12 @@
     app.$sexo_persona = app.$form.find('select[name="sexo_persona"]');
     app.$correo_electronico = app.$form.find('input[name="correo_electronico"]');
     app.$institucion = app.$form.find('select[name="institucion"]');
-    app.$apellidos = app.$form.find('input[name="apellidos_persona"]');
+    app.$apellidos = app.$form.find('input[name="apellidos"]');
 
     app.$box_msg_final = app.$form.find('.box-mensaje-usuario-creado');
-    app.$btn_crear_anuncio = app.$form.find('#btn-crear-anuncio');
+    app.$btn_crear_anuncio = app.$form.find('#btn-crear-usuario');
 
-    $(document).on('click', '#btn-crear-anuncio', app.on_click_crear_anuncio );
+    $(document).on('click', '#btn-crear-usuario', app.on_click_crear_anuncio );
     $(document).on('change', 'select[name="institucion"]', app.on_change_distrito );
 
     app.inicializar_elementos_de_formulario();

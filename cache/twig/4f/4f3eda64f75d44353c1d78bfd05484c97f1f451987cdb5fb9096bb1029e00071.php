@@ -27,9 +27,9 @@ class __TwigTemplate_0b84b58f13d5755fad7f7191fe0016e51666eb73631daa3d70790ee6579
     <label class=\"col-form-label\">Nombres</label>
     <input type=\"text\" name=\"nombres_persona\" class=\"form-control\" id=\"nombres_persona\">
   </div>
-  <div class=\"col-md-6 p-t-6\" for=\"apellidos_persona\">
+  <div class=\"col-md-6 p-t-6\" for=\"apellidos\">
     <label class=\"col-form-label\">Apellidos</label>
-    <input type=\"text\" name=\"apellidos_persona\"  class=\"form-control\" id=\"apellidos_persona\">
+    <input type=\"text\" name=\"apellidos\"  class=\"form-control\" id=\"apellidos\">
   </div>
 <div class=\"col-md-6 p-t-6\" for=\"sexo_persona\">
   <label class=\"col-form-label\">Sexo</label>
@@ -75,7 +75,7 @@ class __TwigTemplate_0b84b58f13d5755fad7f7191fe0016e51666eb73631daa3d70790ee6579
 
 </div>
 <div class=\"buttons\">
-   <button type=\"button\" id=\"btn-crear-anuncio\" class=\"btn btn-mat waves-light btn-inverse text-center\">
+   <button type=\"button\" id=\"btn-crear-usuario\" class=\"btn btn-mat waves-light btn-inverse text-center\">
 
     Crear Usuario</button>
 </div>";
@@ -117,9 +117,9 @@ class __TwigTemplate_0b84b58f13d5755fad7f7191fe0016e51666eb73631daa3d70790ee6579
     <label class=\"col-form-label\">Nombres</label>
     <input type=\"text\" name=\"nombres_persona\" class=\"form-control\" id=\"nombres_persona\">
   </div>
-  <div class=\"col-md-6 p-t-6\" for=\"apellidos_persona\">
+  <div class=\"col-md-6 p-t-6\" for=\"apellidos\">
     <label class=\"col-form-label\">Apellidos</label>
-    <input type=\"text\" name=\"apellidos_persona\"  class=\"form-control\" id=\"apellidos_persona\">
+    <input type=\"text\" name=\"apellidos\"  class=\"form-control\" id=\"apellidos\">
   </div>
 <div class=\"col-md-6 p-t-6\" for=\"sexo_persona\">
   <label class=\"col-form-label\">Sexo</label>
@@ -149,7 +149,7 @@ class __TwigTemplate_0b84b58f13d5755fad7f7191fe0016e51666eb73631daa3d70790ee6579
 
 </div>
 <div class=\"buttons\">
-   <button type=\"button\" id=\"btn-crear-anuncio\" class=\"btn btn-mat waves-light btn-inverse text-center\">
+   <button type=\"button\" id=\"btn-crear-usuario\" class=\"btn btn-mat waves-light btn-inverse text-center\">
 
     Crear Usuario</button>
 </div>", "crear-usuario/inc/detalle-persona.twig", "C:\\xampp\\htdocs\\proyectoC\\app\\Views\\crear-usuario\\inc\\detalle-persona.twig");

@@ -43,9 +43,9 @@ public function get_data( $request, $tabla ){
 				'fecha_creacion' => '2021-07-05',//ok
 				'fecha_ultima_sesion' => '2021-07-05',//ok
 				'perfil_usuario' => $request->getParam( 'perfil_usuario' ),//ok
-				'id_institucion' => $request->getParam( 'id_institucion' ),//ok
+				'id_institucion' => $request->getParam( 'institucion' ),//ok
 				// 'id_usuario' => '1',//ok
-				'fecha_registro' => '2021-07-05',//ok
+				// 'fecha_registro' => '2021-07-05',//ok
 				// 'fecha_final' => '',//ok--
 				'id_ubigeo' => $request->getParam( 'id_ubigeo' ),//ok
 				'apellidos' => $request->getParam( 'apellidos' ),//ok
