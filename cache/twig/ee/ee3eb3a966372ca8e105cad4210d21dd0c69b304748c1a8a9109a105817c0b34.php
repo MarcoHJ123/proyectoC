@@ -84,9 +84,15 @@ class __TwigTemplate_97474d4acea53bcfaede24517d8a83b1e630c83e6b33931129486025a67
                 // line 53
                 echo "        <div ";
                 if (($this->getAttribute($context["datos"], "estado_persona", array()) == "1")) {
+<<<<<<< HEAD
                     echo " class=\"col-sm-3 bg-c-green user-profile\" ";
                 } else {
                     echo "class=\"col-sm-3 bg-c-red user-profile\" ";
+=======
+                    echo " class=\"col-sm-6 col-md-6 col-lg-3 bg-c-green user-profile\" ";
+                } else {
+                    echo "class=\"col-sm-6 col-md-6 col-lg-3 bg-c-red user-profile\" ";
+>>>>>>> ffe487f48469f4da89cdde7ad231338e3f2da5cc
                 }
                 echo " style=\"border-style:solid; border-color: #C2C2C2;\">
             <div class=\"card-block text-center text-white\">
@@ -234,7 +240,11 @@ class __TwigTemplate_97474d4acea53bcfaede24517d8a83b1e630c83e6b33931129486025a67
 <div class=\"row\" id=\"seccion2\">
 {% if personas %}
     {% for datos in personas %}
+<<<<<<< HEAD
         <div {% if datos.estado_persona == '1' %} class=\"col-sm-3 bg-c-green user-profile\" {% else %}class=\"col-sm-3 bg-c-red user-profile\" {% endif %} style=\"border-style:solid; border-color: #C2C2C2;\">
+=======
+        <div {% if datos.estado_persona == '1' %} class=\"col-sm-6 col-md-6 col-lg-3 bg-c-green user-profile\" {% else %}class=\"col-sm-6 col-md-6 col-lg-3 bg-c-red user-profile\" {% endif %} style=\"border-style:solid; border-color: #C2C2C2;\">
+>>>>>>> ffe487f48469f4da89cdde7ad231338e3f2da5cc
             <div class=\"card-block text-center text-white\">
                 <div class=\"m-b-25\">
                     <img src=\"{{ base_url() }}/public/assets/images/user-card/img-round5.jpg\" alt=\"bg-img\" class=\"img-radius\" alt=\"User-Profile-Image\" id=\"ticket_lista\">
