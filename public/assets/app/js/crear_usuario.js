@@ -162,7 +162,6 @@
     
     var correo_electronico = $.trim( app.$correo_electronico.val() );
     var institucion = $.trim( app.$institucion.val() );
-    if( institucion != '0' ){$selected = app.$institucion.find('option:selected');}
     var apellidos = $.trim( app.$apellidos.val() );
 
     

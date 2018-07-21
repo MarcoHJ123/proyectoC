@@ -1,7 +1,7 @@
 <?php
 namespace App\Models;
 
-class Instituciones extends Model {
+class Institucion extends Model {
 
 	public function listar_institucion(){
 		$return = array(

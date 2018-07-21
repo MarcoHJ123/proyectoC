@@ -2,7 +2,7 @@
 namespace App\Controllers;
 /*te mamaste con el repositorio*/
 use App\Models\Ticket;
-use App\Models\Instituciones;
+use App\Models\Institucion;
 
 
 	class RegistrarUsuario extends Controller {
@@ -12,14 +12,14 @@ use App\Models\Instituciones;
 
 
 		public function inicio( $request, $response, $args ){
-				$obj = new Instituciones();
+				$obj = new Institucion();
 		$resultado = $obj->listar_institucion();
-		$institucion = array();
+		$instituciones = array();
 		if( $resultado['status'] ){
-			$institucion = $resultado['items'];
+			$instituciones = $resultado['items'];
 		}
 		$data = array(
-			'institucion' => $institucion,
+			'Instituciones' => $instituciones,
 		);
 			$data = array();
  			return $this->view->render( $response, 'crear-usuario/main.twig', $data );
