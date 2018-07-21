@@ -68,13 +68,18 @@ class __TwigTemplate_0b84b58f13d5755fad7f7191fe0016e51666eb73631daa3d70790ee6579
         echo "\t</select>
 </div>
 
-<div class=\"col-md-4 p-t-6\" for=\"correo_electronico\">
+<div class=\"col-md-6 p-t-6\" for=\"correo_electronico\">
   <label class=\"col-form-label\">Correo Electronico</label>
   <input type=\"text\" name=\"correo_electronico\" placeholder=\"Correo\" class=\"form-control\" id=\"correo_electronico\">
 </div>
+<div class=\"col-md-6 p-t-6\" for=\"fecha_nacimiento\">
+  <label class=\"col-form-label\">Fecha de Nacimiento</label>
+  <input type=\"date\" name=\"fecha_nacimiento\"  class=\"form-control\" id=\"fecha_nacimiento\">
+</div>
 
 </div>
-<div class=\"buttons\">
+<div  class=\"buttons\">
+  <br>
    <button type=\"button\" id=\"btn-crear-usuario\" class=\"btn btn-mat waves-light btn-inverse text-center\">
 
     Crear Usuario</button>
@@ -142,13 +147,18 @@ class __TwigTemplate_0b84b58f13d5755fad7f7191fe0016e51666eb73631daa3d70790ee6579
 \t</select>
 </div>
 
-<div class=\"col-md-4 p-t-6\" for=\"correo_electronico\">
+<div class=\"col-md-6 p-t-6\" for=\"correo_electronico\">
   <label class=\"col-form-label\">Correo Electronico</label>
   <input type=\"text\" name=\"correo_electronico\" placeholder=\"Correo\" class=\"form-control\" id=\"correo_electronico\">
 </div>
+<div class=\"col-md-6 p-t-6\" for=\"fecha_nacimiento\">
+  <label class=\"col-form-label\">Fecha de Nacimiento</label>
+  <input type=\"date\" name=\"fecha_nacimiento\"  class=\"form-control\" id=\"fecha_nacimiento\">
+</div>
 
 </div>
-<div class=\"buttons\">
+<div  class=\"buttons\">
+  <br>
    <button type=\"button\" id=\"btn-crear-usuario\" class=\"btn btn-mat waves-light btn-inverse text-center\">
 
     Crear Usuario</button>

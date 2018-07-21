@@ -36,7 +36,7 @@ public function get_data( $request, $tabla ){
 			return array(
 				'id_usuario'=> 1,
 				'nombres' => $request->getParam( 'nombres_persona' ),
-				'fecha_nacimiento' => '2021-07-05',//ok
+				'fecha_nacimiento' => $request->getParam( 'fecha_nacimiento' ),//ok
 				'estado' => '1',//ok
 				'sexo' => $request->getParam( 'sexo_persona' ),//ok
 				'correo_electronico' => $request->getParam( 'correo_electronico' ),//ok

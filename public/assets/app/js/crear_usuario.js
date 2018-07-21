@@ -14,6 +14,7 @@
     app.$correo_electronico = app.$form.find('input[name="correo_electronico"]');
     app.$institucion = app.$form.find('select[name="institucion"]');
     app.$apellidos = app.$form.find('input[name="apellidos"]');
+    app.$fecha_nacimiento = app.$form.find('input[name="fecha_nacimiento"]');
 
     app.$box_msg_final = app.$form.find('.box-mensaje-usuario-creado');
     app.$btn_crear_anuncio = app.$form.find('#btn-crear-usuario');
@@ -109,6 +110,7 @@
     app.$correo_electronico.val('') ;
     app.$institucion.val('') ;
     app.$apellidos.val('') ;
+    app.$fecha_nacimiento.val('') ;
   };
 
 
@@ -163,7 +165,7 @@
     var correo_electronico = $.trim( app.$correo_electronico.val() );
     var institucion = $.trim( app.$institucion.val() );
     var apellidos = $.trim( app.$apellidos.val() );
-
+    var fecha_nacimiento = $.trim( app.$fecha_nacimiento.val() );
     
   
 
@@ -173,6 +175,7 @@
       correo_electronico: correo_electronico,
       institucion: institucion,
       apellidos: apellidos,
+      fecha_nacimiento: fecha_nacimiento,
     };
   };
 
