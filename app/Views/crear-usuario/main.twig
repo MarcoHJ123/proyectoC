@@ -9,11 +9,14 @@
     <div class="col-sm-12">
       <div class="card card-creacion-usuario">
         <div class="card-header text-center m-t-10">
-          <h3>Registra Persona Desaparecida</h3>
+          <h3>Registrar Usuario</h3>
         </div>
           <div class="f1 card-block form-crear-usuario">
             {# <form role="form" action="" class="f1"> #}
-              {% include 'crear-usuario/inc/pasos.twig' %}
+           {#    {% include 'crear-usuario/inc/pasos.twig' %}
+               <fieldset> #}
+              {% include 'crear-usuario/inc/detalle-persona.twig' %}
+            {#   </fieldset> #}
               <div class="m-b-26 box-mensaje-usuario-creado hide">
                 <div class="alert alert-info icons-alert fix-icon-alert">
                 </div>
@@ -34,5 +37,5 @@
 
   <!-- App JS -->
   <script type="text/javascript" src="{{ base_url() }}/public/assets/app/js/crear_usuario.js"></script>
-  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/js/validar_crear_usuario.js"></script>
+ 
 {% endblock %}

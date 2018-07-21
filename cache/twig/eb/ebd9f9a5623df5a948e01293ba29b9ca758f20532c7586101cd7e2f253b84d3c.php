@@ -1,14 +1,14 @@
 <?php
 
-/* crear-usuario/main.twig */
-class __TwigTemplate_612568ca111cfce51be9fbbdec6225014be8bf4c9d4b04e673f81692dd978319 extends Twig_Template
+/* crear-ticket/desaparecido/main.twig */
+class __TwigTemplate_51b5842ec732cc5273cb04e6556e718f814c548119d75c3eb5ee9b8cae156e73 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("templates/master/master.twig", "crear-usuario/main.twig", 1);
+        $this->parent = $this->loadTemplate("templates/master/master.twig", "crear-ticket/desaparecido/main.twig", 1);
         $this->blocks = array(
             'content' => array($this, 'block_content'),
             'scripts' => array($this, 'block_scripts'),
@@ -34,30 +34,45 @@ class __TwigTemplate_612568ca111cfce51be9fbbdec6225014be8bf4c9d4b04e673f81692dd9
       <div class=\"col-sm-12\">
         ";
         // line 7
-        $this->loadTemplate("templates/inc/messages.twig", "crear-usuario/main.twig", 7)->display($context);
+        $this->loadTemplate("templates/inc/messages.twig", "crear-ticket/desaparecido/main.twig", 7)->display($context);
         // line 8
         echo "      </div>
     <div class=\"col-sm-12\">
-      <div class=\"card card-creacion-usuario\">
+      <div class=\"card card-creacion-ticket\">
         <div class=\"card-header text-center m-t-10\">
-          <h3>Registrar Usuario</h3>
+          <h3>Registra Persona Desaparecida</h3>
         </div>
-          <div class=\"f1 card-block form-crear-usuario\">
+          <div class=\"f1 card-block form-crear-ticket\">
             ";
         // line 16
-        echo "           ";
-        // line 18
         echo "              ";
-        $this->loadTemplate("crear-usuario/inc/detalle-persona.twig", "crear-usuario/main.twig", 18)->display($context);
+        $this->loadTemplate("crear-ticket/desaparecido/inc/pasos.twig", "crear-ticket/desaparecido/main.twig", 16)->display($context);
+        // line 17
+        echo "              <fieldset>
+              ";
+        // line 18
+        $this->loadTemplate("crear-ticket/desaparecido/inc/detalle-persona.twig", "crear-ticket/desaparecido/main.twig", 18)->display($context);
         // line 19
-        echo "            ";
-        // line 20
-        echo "              <div class=\"m-b-26 box-mensaje-usuario-creado hide\">
+        echo "              </fieldset>
+              <fieldset>
+              ";
+        // line 21
+        $this->loadTemplate("crear-ticket/desaparecido/inc/detalles-generales.twig", "crear-ticket/desaparecido/main.twig", 21)->display($context);
+        // line 22
+        echo "              </fieldset>
+              <fieldset>
+              ";
+        // line 24
+        $this->loadTemplate("crear-ticket/desaparecido/inc/datos-Personales.twig", "crear-ticket/desaparecido/main.twig", 24)->display($context);
+        // line 25
+        echo "              </fieldset>
+
+              <div class=\"m-b-26 box-mensaje-ticket-creado hide\">
                 <div class=\"alert alert-info icons-alert fix-icon-alert\">
                 </div>
               </div>
             ";
-        // line 25
+        // line 32
         echo "          </div>
         </div>
       </div>
@@ -66,39 +81,42 @@ class __TwigTemplate_612568ca111cfce51be9fbbdec6225014be8bf4c9d4b04e673f81692dd9
 ";
     }
 
-    // line 31
+    // line 38
     public function block_scripts($context, array $blocks = array())
     {
-        // line 32
+        // line 39
         echo "  ";
         $this->displayParentBlock("scripts", $context, $blocks);
         echo "
   <!-- pickadate -->
   <script type=\"text/javascript\" src=\"";
-        // line 34
+        // line 41
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/app/libs/pickadate/js/picker.js\"></script>
   <script type=\"text/javascript\" src=\"";
-        // line 35
+        // line 42
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/app/libs/pickadate/js/picker.time.js\"></script>
   <script type=\"text/javascript\" src=\"";
-        // line 36
+        // line 43
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/app/libs/pickadate/js/picker.date.js\"></script>
 
   <!-- App JS -->
   <script type=\"text/javascript\" src=\"";
-        // line 39
+        // line 46
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
-        echo "/public/assets/app/js/crear_usuario.js\"></script>
- 
+        echo "/public/assets/app/js/crear_ticket.js\"></script>
+  <script type=\"text/javascript\" src=\"";
+        // line 47
+        echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
+        echo "/public/assets/app/js/validar_crear_ticket.js\"></script>
 ";
     }
 
     public function getTemplateName()
     {
-        return "crear-usuario/main.twig";
+        return "crear-ticket/desaparecido/main.twig";
     }
 
     public function isTraitable()
@@ -108,7 +126,7 @@ class __TwigTemplate_612568ca111cfce51be9fbbdec6225014be8bf4c9d4b04e673f81692dd9
 
     public function getDebugInfo()
     {
-        return array (  93 => 39,  87 => 36,  83 => 35,  79 => 34,  73 => 32,  70 => 31,  61 => 25,  55 => 20,  53 => 19,  50 => 18,  48 => 16,  39 => 8,  37 => 7,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  112 => 47,  108 => 46,  102 => 43,  98 => 42,  94 => 41,  88 => 39,  85 => 38,  76 => 32,  68 => 25,  66 => 24,  62 => 22,  60 => 21,  56 => 19,  54 => 18,  51 => 17,  48 => 16,  39 => 8,  37 => 7,  32 => 4,  29 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -130,17 +148,24 @@ class __TwigTemplate_612568ca111cfce51be9fbbdec6225014be8bf4c9d4b04e673f81692dd9
         {% include 'templates/inc/messages.twig' %}
       </div>
     <div class=\"col-sm-12\">
-      <div class=\"card card-creacion-usuario\">
+      <div class=\"card card-creacion-ticket\">
         <div class=\"card-header text-center m-t-10\">
-          <h3>Registrar Usuario</h3>
+          <h3>Registra Persona Desaparecida</h3>
         </div>
-          <div class=\"f1 card-block form-crear-usuario\">
+          <div class=\"f1 card-block form-crear-ticket\">
             {# <form role=\"form\" action=\"\" class=\"f1\"> #}
-           {#    {% include 'crear-usuario/inc/pasos.twig' %}
-               <fieldset> #}
-              {% include 'crear-usuario/inc/detalle-persona.twig' %}
-            {#   </fieldset> #}
-              <div class=\"m-b-26 box-mensaje-usuario-creado hide\">
+              {% include 'crear-ticket/desaparecido/inc/pasos.twig' %}
+              <fieldset>
+              {% include 'crear-ticket/desaparecido/inc/detalle-persona.twig' %}
+              </fieldset>
+              <fieldset>
+              {% include 'crear-ticket/desaparecido/inc/detalles-generales.twig' %}
+              </fieldset>
+              <fieldset>
+              {% include 'crear-ticket/desaparecido/inc/datos-Personales.twig' %}
+              </fieldset>
+
+              <div class=\"m-b-26 box-mensaje-ticket-creado hide\">
                 <div class=\"alert alert-info icons-alert fix-icon-alert\">
                 </div>
               </div>
@@ -159,8 +184,8 @@ class __TwigTemplate_612568ca111cfce51be9fbbdec6225014be8bf4c9d4b04e673f81692dd9
   <script type=\"text/javascript\" src=\"{{ base_url() }}/public/assets/app/libs/pickadate/js/picker.date.js\"></script>
 
   <!-- App JS -->
-  <script type=\"text/javascript\" src=\"{{ base_url() }}/public/assets/app/js/crear_usuario.js\"></script>
- 
-{% endblock %}", "crear-usuario/main.twig", "C:\\xampp\\htdocs\\proyectoC\\app\\Views\\crear-usuario\\main.twig");
+  <script type=\"text/javascript\" src=\"{{ base_url() }}/public/assets/app/js/crear_ticket.js\"></script>
+  <script type=\"text/javascript\" src=\"{{ base_url() }}/public/assets/app/js/validar_crear_ticket.js\"></script>
+{% endblock %}", "crear-ticket/desaparecido/main.twig", "C:\\xampp\\htdocs\\proyectoC\\app\\Views\\crear-ticket\\desaparecido\\main.twig");
     }
 }
