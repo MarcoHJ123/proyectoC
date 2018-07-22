@@ -28,7 +28,7 @@
   app.on_click_crear_anuncio = function(){
     var $btn = $(this);
     var data = app.get_datos_form();
-    var institucion = $.trim( $('[name="institucion"]').val().toUpperCase());
+    // var institucion = $.trim( $('[name="institucion"]').val().toUpperCase());
     cc('=== Datos del Usuario ==', data);
       app.crear_anuncio( $btn );
   };
@@ -69,7 +69,7 @@
   }
     app.on_change_distrito = function( event ){
     app.$form.find('.msg-error-datos').hide();
-  };  
+  };
   // app.validar_campos = function(){
     //   var error = false;
     //   var error_msg = '<p>Corrige los siguientes campos: </p>';
@@ -161,13 +161,13 @@
     var nombres_persona = $.trim( app.$nombres_persona.val() );
     var sexo_persona = $.trim( app.$sexo_persona.val() );
     if( sexo_persona != '0' ){$selected = app.$sexo_persona.find('option:selected');}
-    
+
     var correo_electronico = $.trim( app.$correo_electronico.val() );
     var institucion = $.trim( app.$institucion.val() );
     var apellidos = $.trim( app.$apellidos.val() );
     var fecha_nacimiento = $.trim( app.$fecha_nacimiento.val() );
-    
-  
+
+
 
     return {
       nombres_persona: nombres_persona,

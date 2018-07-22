@@ -42,14 +42,14 @@ public function get_data( $request, $tabla ){
 				'correo_electronico' => $request->getParam( 'correo_electronico' ),//ok
 				'fecha_creacion' => '2021-07-05',//ok
 				'fecha_ultima_sesion' => '2021-07-05',//ok
-				'perfil_usuario' => $request->getParam( 'perfil_usuario' ),//ok
+				// 'perfil_usuario' => $request->getParam( 'perfil_usuario' ),//ok
 				'id_institucion' => $request->getParam( 'institucion' ),//ok
 				// 'id_usuario' => '1',//ok
 				// 'fecha_registro' => '2021-07-05',//ok
 				// 'fecha_final' => '',//ok--
-				'id_ubigeo' => $request->getParam( 'id_ubigeo' ),//ok
+				// 'id_ubigeo' => $request->getParam( 'id_ubigeo' ),//ok
 				'apellidos' => $request->getParam( 'apellidos' ),//ok
-				'id_fb' => $request->getParam( 'id_fb' ),//ok
+				// 'id_fb' => $request->getParam( 'id_fb' ),//ok
 			);
 		}
 		return array();
@@ -70,14 +70,14 @@ public function get_data( $request, $tabla ){
 			}
 
 			//Consultamos la última cita para obtener el siguiente id de cita
-			$id_ticket = 1;
-	    $resultado = $this->get_anuncio('last');
+			$id_usuario = 1;
+	    $resultado = $this->get_usuario('last');
 	    if( $resultado['status'] && isset( $resultado['item']['id_usuario'] ) ){
-	    	$id_ticket = (int) $resultado['item']['id_usuario'] + 1;
+	    	$id_usuario = (int) $resultado['item']['id_usuario'] + 1;
 	    }
-	    $ticket = $this->get_data( $request, 'usuario' );
-	    $ticket['id_usuario'] = $id_ticket;
-			// $ticket['nombres'] = encriptar_password( $request->getParam( 'nombres_persona' ));
+	    $usuario = $this->get_data( $request, 'usuario' );
+	    $usuario['id_usuario'] = $id_usuario;
+			// $usuario['nombres'] = encriptar_password( $request->getParam( 'nombres_persona' ));
 
 
 			try {
@@ -86,7 +86,7 @@ public function get_data( $request, $tabla ){
 		    /*---------------------------------------------------
 		    | Insertando "citas_web"
 		    ----------------------------------------------------*/
-		    $stmt = $this->connections->prepare_insert( $conn_proy, 'usuario', $ticket );
+		    $stmt = $this->connections->prepare_insert( $conn_proy, 'usuario', $usuario );
 		    $return['sql'] = $this->connections->sql;
 		    $return['error'] = '"usuario"';
 
@@ -112,7 +112,7 @@ public function get_data( $request, $tabla ){
 			return $return;
 		}
 
-		public function get_anuncio( $request ){
+		public function get_usuario( $request ){
 			$return = array(
 				'status' => false,
 			);
@@ -125,6 +125,4 @@ public function get_data( $request, $tabla ){
 			}
 			return $return;
 		}
-	}
-
 }

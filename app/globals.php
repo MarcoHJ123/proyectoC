@@ -30,9 +30,9 @@ $menu = array(
     'title' => 'Anuncios',
     'url'	  => $base_url.$router->pathFor('Anuncios'),
   ),
-  'CrearAnuncio' => array(
+  'Crear_Anuncio' => array(
     'title' => 'Anunciar',
-    'url'   => $base_url.$router->pathFor('CrearAnuncio'),
+    'url'   => $base_url.$router->pathFor('Crear_Anuncio'),
   ),
   'login' => array(
     'title' => 'Iniciar Sesión',
@@ -42,22 +42,6 @@ $menu = array(
     'title' => 'Registrar Usuario',
     'url'   => $base_url.$router->pathFor('RegistrarUsuario'),
   ),
-	// 'cronograma' => array(
- //    'title' => 'Cronograma Citas',
- //    'url'	  => $base_url.$router->pathFor('cronograma_inicio'),
- //  ),
- //  'login' => array(
- //    'title' => 'Iniciar Sesión',
- //    'url'	  => $base_url.$router->pathFor('pagina_login'),
- //  ),
- //  'cerrar_sesion' => array(
- //    'title' => 'Cerrar Sesión',
- //    'url'	  => $base_url.$router->pathFor('cerrar_sesion'),
- //  ),
- //  'ajustes' => array(
- //    'title' => 'Ajustes',
- //    'url'	  => $base_url.$router->pathFor('ajustes'),
-  // ),
 );
 
 $view_env->addGlobal( 'current_url', $container->get('request')->getUri() );
