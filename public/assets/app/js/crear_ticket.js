@@ -43,7 +43,7 @@
     $btn.find('i').removeClass('fa-check').addClass('fa-spinner fa-spin');
     setTimeout(function(){
       ajax({
-        url: APP.url.inicio + '/ajax/crear-anuncio',
+        url: APP.url.inicio + '/ajax/crear-anuncioD',
         type: 'POST',
         dataType: 'json',
         data: data,

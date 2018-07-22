@@ -6,7 +6,7 @@ use App\Models\Personas;
 
 class ListarAnuncios extends Controller {
 
- public function Anuncios( $request, $response, $args ){
+ 	public function Anuncios( $request, $response, $args ){
 		$obj = new Personas();
 		$resultado = $obj->listar_personas();
 		// d($resultado);
@@ -18,8 +18,6 @@ class ListarAnuncios extends Controller {
 			'personas' => $personas,
  		);
  		return $this->view->render( $response, 'listar-anuncios/main.twig', $data );
- }
-
-
+ 	}
 }
 ?>

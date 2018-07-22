@@ -1,7 +1,7 @@
 <?php
 namespace App\Models;
 
-class Ticket extends Model {
+class Anuncio extends Model {
 	public function get_data( $request, $tabla ){
 		if( $tabla == 'ticket' ){
 			return array(

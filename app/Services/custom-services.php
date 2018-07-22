@@ -4,54 +4,37 @@
 | Controladores
 |---------------------------------------------------------------------------------------------------
 */
-$container['Page'] = function( $container ){
-  return new App\Controllers\Page();
-};
-
-$container['ConsultaExpediente'] = function( $container ){
-  return new App\Controllers\ConsultaExpediente();
-};
-
-$container['ListarAnuncios'] = function( $container ){
-  return new App\Controllers\ListarAnuncios();
-};
-
-$container['CrearAnuncio'] = function( $container ){
-  return new App\Controllers\CrearAnuncio();
-};
-$container['Crea'] = function( $container ){
-  return new App\Controllers\ProgramacionCita();
-};
-$container['Login'] = function( $container ){
-  return new App\Controllers\Login();
-};
-$container['ProgramacionCita'] = function( $container ){
-  return new App\Controllers\ProgramacionCita();
-};
-$container['RegistrarAporte'] = function( $container ){
-  return new App\Controllers\RegistrarAporte();
-};
-$container['LoginFb'] = function( $container ){
-  return new App\Controllers\LoginFb();
-};
-$container['RegistrarUsuario'] = function( $container ){
-  return new App\Controllers\RegistrarUsuario();
-};
-
-/*
-$container['CronogramaCita'] = function( $container ){
-  return new App\Controllers\CronogramaCita();
-};
 
 $container['Ajustes'] = function( $container ){
   return new App\Controllers\Ajustes();
 };
-
-
-
 $container['ApiController'] = function( $container ){
   return new App\Controllers\ApiController();
-};*/
+};
+$container['CrearAnuncio'] = function( $container ){
+  return new App\Controllers\CrearAnuncio();
+};
+$container['CrearAnuncioD'] = function( $container ){
+  return new App\Controllers\CrearAnuncioD();
+};
+$container['CrearAnuncioP'] = function( $container ){
+  return new App\Controllers\CrearAnuncioP();
+};
+$container['ListarAnuncios'] = function( $container ){
+  return new App\Controllers\ListarAnuncios();
+};
+$container['Login'] = function( $container ){
+  return new App\Controllers\Login();
+};
+$container['LoginFb'] = function( $container ){
+  return new App\Controllers\LoginFb();
+};
+$container['RegistrarAporte'] = function( $container ){
+  return new App\Controllers\RegistrarAporte();
+};
+$container['RegistrarUsuario'] = function( $container ){
+  return new App\Controllers\RegistrarUsuario();
+};
 
 /*
 |---------------------------------------------------------------------------------------------------

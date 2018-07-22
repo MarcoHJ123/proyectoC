@@ -47,17 +47,17 @@ class __TwigTemplate_92f5059e4112c9e861e9db2300b9b013e2ad7dbd686f92b0b368ce75e16
         if ( !$this->getAttribute((isset($context["user_login"]) ? $context["user_login"] : null), "c_usuario", array())) {
             // line 21
             echo "          <li class=\"";
-            if (((isset($context["current_url"]) ? $context["current_url"] : null) == $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "CrearAnuncio", array()), "url", array()))) {
+            if (((isset($context["current_url"]) ? $context["current_url"] : null) == $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "Crear_Anuncio", array()), "url", array()))) {
                 echo " active ";
             }
             echo "\">
             <a href=\"";
             // line 22
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "CrearAnuncio", array()), "url", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "Crear_Anuncio", array()), "url", array()), "html", null, true);
             echo "\" class=\" \">
               <span class=\"pcoded-mtext\">";
             // line 23
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "CrearAnuncio", array()), "title", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "Crear_Anuncio", array()), "title", array()), "html", null, true);
             echo "</span>
             </a>
           </li>
@@ -177,9 +177,9 @@ class __TwigTemplate_92f5059e4112c9e861e9db2300b9b013e2ad7dbd686f92b0b368ce75e16
           </li>
           {% endif %}
           {% if not user_login.c_usuario %}
-          <li class=\"{% if current_url == main_menu.CrearAnuncio.url %} active {% endif %}\">
-            <a href=\"{{ main_menu.CrearAnuncio.url }}\" class=\" \">
-              <span class=\"pcoded-mtext\">{{ main_menu.CrearAnuncio.title }}</span>
+          <li class=\"{% if current_url == main_menu.Crear_Anuncio.url %} active {% endif %}\">
+            <a href=\"{{ main_menu.Crear_Anuncio.url }}\" class=\" \">
+              <span class=\"pcoded-mtext\">{{ main_menu.Crear_Anuncio.title }}</span>
             </a>
           </li>
           {% endif %}

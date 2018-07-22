@@ -1,42 +1,27 @@
 <?php
 namespace App\Controllers;
-/*te mamaste con el repositorio*/
-use App\Models\Ticket;
+
+use App\Models\Usuario;
 use App\Models\Institucion;
 
+class RegistrarUsuario extends Controller {
 
-	class RegistrarUsuario extends Controller {
-
-
-
-
-
-		public function inicio( $request, $response, $args ){
-
-				$obj = new Institucion();
+	public function inicio( $request, $response, $args ){
+		$obj = new Institucion();
 		$resultado = $obj->listar_institucion();
 		$instituciones = array();
 		if( $resultado['status'] ){
 			$instituciones = $resultado['items'];
 		}
-		d($resultado);
+		// d($resultado);
 		$data = array(
 
 			'instituciones' => $instituciones,
 		);
  			return $this->view->render( $response, 'crear-usuario/main.twig', $data );
-		}
+	}
 
-		// public function inicioDesaparecido( $request, $response, $args ){
-		// 	$data = array();
- 	// 		return $this->view->render( $response, 'crear-ticket/desaparecido/main.twig', $data );
-		// }
-		// public function inicioPerdido( $request, $response, $args ){
-		// 	$data = array();
- 	// 		return $this->view->render( $response, 'crear-ticket/perdido/main.twig', $data );
-		// }
-
-		public function crear_usuario( $request, $response, $args ){
+	public function crear_usuario( $request, $response, $args ){
 		$return = array(
 			'success' => false,
 			'html' => '',
@@ -47,11 +32,11 @@ use App\Models\Institucion;
 		}
 
 		$error = false;
-		$obj_cita = new Ticket();
+		$obj_cita = new Usuario();
 		$resultado = $obj_cita->crearUsuario( $request );
 		if( $resultado['status'] == true ){
 			$mensaje = "creada ";
-			$return['msgEnviado'] = $mensaje;
+			$return['msgCreacion'] = $mensaje;
 		} else {
 			$error = true;
 		}
@@ -64,6 +49,6 @@ use App\Models\Institucion;
 		}
 
 		return json_encode( $return );
-		}
+	}
 }
 ?>
