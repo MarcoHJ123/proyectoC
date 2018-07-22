@@ -59,7 +59,7 @@ class Login extends Controller {
 		if( $this->esta_conectado() ){
 			$this->cerrar_sesion();
 		}
-		$settings = get_settings_file( 'conexiones.js' );
+		$settings = get_settings_file( 'conexiones.json' );
 		$login_settings = $settings[CONNECTION_LOGIN];
 		$login_settings['username'] = trim( strtoupper( $usuario ) );
 		$login_settings['password'] =  trim(strtoupper( $password ));
