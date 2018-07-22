@@ -64,7 +64,7 @@ $view_env->addGlobal( 'en_produccion', $en_produccion ? 'true' : 'false' );
 |---------------------------------------------------------------------------------------------------
 | Datos del usuario conectado
 |---------------------------------------------------------------------------------------------------
-
+*/
 $user_login = array();
 $esta_conectado = $container->Login->esta_conectado();
 $logo_inicio_url = $base_url;
@@ -75,5 +75,5 @@ if( $esta_conectado ){
 
 
 $view_env->addGlobal( 'user_login', $user_login );
-$view_env->addGlobal( 'logo_inicio_url', $logo_inicio_url );*/
+$view_env->addGlobal( 'logo_inicio_url', $logo_inicio_url );
 
