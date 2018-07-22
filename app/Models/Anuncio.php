@@ -2,17 +2,18 @@
 namespace App\Models;
 
 class Anuncio extends Model {
+
 	public function get_data( $request, $tabla ){
-		if( $tabla == 'ticket' ){
+		if( $tabla == 'anuncio' ){
 			return array(
-				'id_ticket'=> 1,
+				'id_anuncio'=> 1,
 				'nombres' => $request->getParam( 'nombres_persona' ),
 				'sexo' => $request->getParam( 'sexo_persona' ),//ok
 				'colo_piel' => $request->getParam( 'color_piel' ),//ok
 				'estatura' => $request->getParam( 'estatura_persona' ),//ok
 				'fecha_nacimiento' => '2021-07-05',//ok
 				'tipo_documento' => $request->getParam( 'tipo_documento' ),//ok
-				'estado_ticket' => 'n',//ok
+				'estado_anuncio' => 'n',//ok
 				// 'id_usuario' => '1',//ok
 				'fecha_registro' => '2021-07-05',//ok
 				// 'fecha_final' => '',//ok--
@@ -26,6 +27,24 @@ class Anuncio extends Model {
 		}
 		return array();
 	}
+
+	public function listar_anuncios(){
+		$return = array(
+			'status' => false,
+		);
+
+		$data = array();
+
+		$sql = "SELECT * FROM anuncio";
+
+		$result = $this->execute_query( CONNECTION_SIJ, false, 'sql', $sql, $data );
+		$return = array_merge( $return, $result );
+		if( $return['status'] ){
+			$return['items'] = $this->get_all( $result['stmt'] );
+		}
+		return $return;
+	}
+
 public function crear($request){
 		$return = array(
 				'status' => false,
@@ -41,30 +60,29 @@ public function crear($request){
 			}
 
 			//Consultamos la última cita para obtener el siguiente id de cita
-			$id_ticket = 1;
+			$id_anuncio = 1;
 	    $resultado = $this->get_anuncio('last');
-	    if( $resultado['status'] && isset( $resultado['item']['id_ticket'] ) ){
-	    	$id_ticket = (int) $resultado['item']['id_ticket'] + 1;
+	    if( $resultado['status'] && isset( $resultado['item']['id_anuncio'] ) ){
+	    	$id_anuncio = (int) $resultado['item']['id_anuncio'] + 1;
 	    }
-	    $ticket = $this->get_data( $request, 'ticket' );
-	    $ticket['id_ticket'] = $id_ticket;
-			// $ticket['nombres'] = encriptar_password( $request->getParam( 'nombres_persona' ));
-
+	    $anuncio = $this->get_data( $request, 'anuncio' );
+	    $anuncio['id_anuncio'] = $id_anuncio;
+			// $anuncio['nombres'] = encriptar_password( $request->getParam( 'nombres_persona' ));
 
 			try {
 		    $conn_proy->beginTransaction();
 
 		    /*---------------------------------------------------
-		    | Insertando "citas_web"
+		    | Insertando "anuncio"
 		    ----------------------------------------------------*/
-		    $stmt = $this->connections->prepare_insert( $conn_proy, 'ticket', $ticket );
+		    $stmt = $this->connections->prepare_insert( $conn_proy, 'anuncio', $anuncio );
 		    $return['sql'] = $this->connections->sql;
-		    $return['error'] = '"ticket"';
+		    $return['error'] = '"anuncio"';
 
 		    if( $stmt ){
 					$return['status'] = $stmt->execute();
 					if( ! $return['status'] ){
-						$return['error'] = 'Error insertando en "ticket"';
+						$return['error'] = 'Error insertando en "anuncio"';
 						$conn_proy->rollback();
 						return $return;
 					}
@@ -88,7 +106,7 @@ public function crear($request){
 				'status' => false,
 			);
 			$data = array();
-				$sql = "SELECT id_ticket FROM ticket ORDER BY id_ticket DESC LIMIT 1";
+				$sql = "SELECT id_anuncio FROM anuncio ORDER BY id_anuncio DESC LIMIT 1";
 			$result = $this->execute_query( CONNECTION_SIJ, false, 'sql', $sql, $data );
 			$return = array_merge( $return, $result );
 			if( $return['status'] ){

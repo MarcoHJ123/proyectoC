@@ -13,12 +13,10 @@ class RegistrarUsuario extends Controller {
 		if( $resultado['status'] ){
 			$instituciones = $resultado['items'];
 		}
-		// d($resultado);
 		$data = array(
-
 			'instituciones' => $instituciones,
 		);
- 			return $this->view->render( $response, 'crear-usuario/main.twig', $data );
+ 		return $this->view->render( $response, 'crear-usuario/main.twig', $data );
 	}
 
 	public function crear_usuario( $request, $response, $args ){
@@ -26,6 +24,7 @@ class RegistrarUsuario extends Controller {
 			'success' => false,
 			'html' => '',
 		);
+
 		if( ! is_ajax() ) {
 			$return['html'] = 'ajax-error';
 			return json_encode( $return );
@@ -34,9 +33,10 @@ class RegistrarUsuario extends Controller {
 		$error = false;
 		$obj_cita = new Usuario();
 		$resultado = $obj_cita->crearUsuario( $request );
+
 		if( $resultado['status'] == true ){
-			$mensaje = "creada ";
-			$return['msgCreacion'] = $mensaje;
+			$mensaje = "creado";
+			$return['USUARIO'] = $mensaje;
 		} else {
 			$error = true;
 		}
@@ -50,5 +50,6 @@ class RegistrarUsuario extends Controller {
 
 		return json_encode( $return );
 	}
+
 }
 ?>

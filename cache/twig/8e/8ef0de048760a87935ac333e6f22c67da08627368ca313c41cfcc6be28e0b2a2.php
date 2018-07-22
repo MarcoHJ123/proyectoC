@@ -38,11 +38,11 @@ class __TwigTemplate_6a8c115e16aabe84d8d99da81c1f90d309187b23e89288cc77fc1fbb308
         // line 8
         echo "      </div>
     <div class=\"col-sm-12\">
-      <div class=\"card card-creacion-ticket\">
+      <div class=\"card card-creacion-anuncio\">
         <div class=\"card-header text-center m-t-10\">
           <h3>Registra Persona Desaparecida</h3>
         </div>
-          <div class=\"f1 card-block form-crear-ticket\">
+          <div class=\"f1 card-block form-crear-anuncio\">
             ";
         // line 16
         echo "              ";
@@ -67,7 +67,7 @@ class __TwigTemplate_6a8c115e16aabe84d8d99da81c1f90d309187b23e89288cc77fc1fbb308
         // line 25
         echo "              </fieldset>
 
-              <div class=\"m-b-26 box-mensaje-ticket-creado hide\">
+              <div class=\"m-b-26 box-mensaje-anuncio-creado hide\">
                 <div class=\"alert alert-info icons-alert fix-icon-alert\">
                 </div>
               </div>
@@ -106,7 +106,7 @@ class __TwigTemplate_6a8c115e16aabe84d8d99da81c1f90d309187b23e89288cc77fc1fbb308
   <script type=\"text/javascript\" src=\"";
         // line 46
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
-        echo "/public/assets/app/js/crear_ticket.js\"></script>
+        echo "/public/assets/app/js/crear_anunciosD.js\"></script>
   <script type=\"text/javascript\" src=\"";
         // line 47
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
@@ -148,11 +148,11 @@ class __TwigTemplate_6a8c115e16aabe84d8d99da81c1f90d309187b23e89288cc77fc1fbb308
         {% include 'templates/inc/messages.twig' %}
       </div>
     <div class=\"col-sm-12\">
-      <div class=\"card card-creacion-ticket\">
+      <div class=\"card card-creacion-anuncio\">
         <div class=\"card-header text-center m-t-10\">
           <h3>Registra Persona Desaparecida</h3>
         </div>
-          <div class=\"f1 card-block form-crear-ticket\">
+          <div class=\"f1 card-block form-crear-anuncio\">
             {# <form role=\"form\" action=\"\" class=\"f1\"> #}
               {% include 'crear-anuncios/desaparecido/inc/pasos.twig' %}
               <fieldset>
@@ -165,7 +165,7 @@ class __TwigTemplate_6a8c115e16aabe84d8d99da81c1f90d309187b23e89288cc77fc1fbb308
               {% include 'crear-anuncios/desaparecido/inc/datos-Personales.twig' %}
               </fieldset>
 
-              <div class=\"m-b-26 box-mensaje-ticket-creado hide\">
+              <div class=\"m-b-26 box-mensaje-anuncio-creado hide\">
                 <div class=\"alert alert-info icons-alert fix-icon-alert\">
                 </div>
               </div>
@@ -184,7 +184,7 @@ class __TwigTemplate_6a8c115e16aabe84d8d99da81c1f90d309187b23e89288cc77fc1fbb308
   <script type=\"text/javascript\" src=\"{{ base_url() }}/public/assets/app/libs/pickadate/js/picker.date.js\"></script>
 
   <!-- App JS -->
-  <script type=\"text/javascript\" src=\"{{ base_url() }}/public/assets/app/js/crear_ticket.js\"></script>
+  <script type=\"text/javascript\" src=\"{{ base_url() }}/public/assets/app/js/crear_anunciosD.js\"></script>
   <script type=\"text/javascript\" src=\"{{ base_url() }}/public/assets/app/js/validar_crear_ticket.js\"></script>
 {% endblock %}", "crear-anuncios/desaparecido/main.twig", "C:\\xampp\\htdocs\\proyectoC\\app\\Views\\crear-anuncios\\desaparecido\\main.twig");
     }

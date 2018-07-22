@@ -16,38 +16,42 @@ class __TwigTemplate_8414718ac35c08e4984eaf784ab37c77deda0e7672bfeed07d5d4ced8cf
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "
-<h4>Datos Personales</h4>
+        echo "<h4>Datos Personales</h4>
 <div class=\"row\">
+
 \t<div class=\"col-md-6 p-t-6\" for=\"nombres_persona\">
   \t<label class=\"col-form-label\">Nombres</label>
     <input type=\"text\" name=\"nombres_persona\" class=\"form-control\" id=\"nombres_persona\">
   </div>
+
   <div class=\"col-md-6 p-t-6\" for=\"apellidos_persona\">
     <label class=\"col-form-label\">Apellidos</label>
     <input type=\"text\" name=\"apellidos_persona\"  class=\"form-control\" id=\"apellidos_persona\">
   </div>
+
   <div class=\"col-md-6 p-t-6\" for=\"fecha_nacimiento\">
     <label class=\"col-form-label\">Fecha Nacimiento</label>
   \t<input type=\"date\" name=\"fecha_nacimiento\"  class=\"form-control\" id=\"fecha_nacimiento\">
   </div>
-</div>
-<div class=\"row\">
+
   <div class=\"col-md-6 p-t-6\" for=\"tipo_documento\">
     <label class=\"col-form-label\" >Tipo Documento Identidad</label>
     ";
-        // line 21
+        // line 22
         echo "    <select name=\"tipo_documento\"  id=\"tipo_documento\" class=\"form-control form-control-inverse\" >
 \t\t<option value=\"0\">- SELECCIONAR -</option>
 \t\t<option value=\"1\">DNI</option>
 \t\t<option value=\"2\">PASAPORTE</option>
 \t\t</select>
 \t</div>
+
 \t<div class=\"col-md-6 p-t-6\" for=\"numero_documento\">
 \t\t<label class=\"col-form-label\" >Numero Documento</label>
   \t<input type=\"text\" name=\"numero_documento\" placeholder=\"Numero de documento\" class=\"form-control\" id=\"numero_documento\">
 \t</div>
+
 </div>
+
 <div class=\"f1-buttons\">
   <button type=\"button\" class=\"btn btn-previous\">Anterior</button>
   <button type=\"button\" id=\"btn-crear-anuncio\" class=\"btn btn-mat waves-light btn-inverse text-center\">Crear Anuncio</button>
@@ -61,7 +65,7 @@ class __TwigTemplate_8414718ac35c08e4984eaf784ab37c77deda0e7672bfeed07d5d4ced8cf
 
     public function getDebugInfo()
     {
-        return array (  40 => 21,  19 => 1,);
+        return array (  41 => 22,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -74,23 +78,24 @@ class __TwigTemplate_8414718ac35c08e4984eaf784ab37c77deda0e7672bfeed07d5d4ced8cf
 
     public function getSourceContext()
     {
-        return new Twig_Source("
-<h4>Datos Personales</h4>
+        return new Twig_Source("<h4>Datos Personales</h4>
 <div class=\"row\">
+
 \t<div class=\"col-md-6 p-t-6\" for=\"nombres_persona\">
   \t<label class=\"col-form-label\">Nombres</label>
     <input type=\"text\" name=\"nombres_persona\" class=\"form-control\" id=\"nombres_persona\">
   </div>
+
   <div class=\"col-md-6 p-t-6\" for=\"apellidos_persona\">
     <label class=\"col-form-label\">Apellidos</label>
     <input type=\"text\" name=\"apellidos_persona\"  class=\"form-control\" id=\"apellidos_persona\">
   </div>
+
   <div class=\"col-md-6 p-t-6\" for=\"fecha_nacimiento\">
     <label class=\"col-form-label\">Fecha Nacimiento</label>
   \t<input type=\"date\" name=\"fecha_nacimiento\"  class=\"form-control\" id=\"fecha_nacimiento\">
   </div>
-</div>
-<div class=\"row\">
+
   <div class=\"col-md-6 p-t-6\" for=\"tipo_documento\">
     <label class=\"col-form-label\" >Tipo Documento Identidad</label>
     {# <input type=\"text\" name=\"tipo_documento\"  class=\"form-control\" id=\"tipo_documento\"> #}
@@ -100,11 +105,14 @@ class __TwigTemplate_8414718ac35c08e4984eaf784ab37c77deda0e7672bfeed07d5d4ced8cf
 \t\t<option value=\"2\">PASAPORTE</option>
 \t\t</select>
 \t</div>
+
 \t<div class=\"col-md-6 p-t-6\" for=\"numero_documento\">
 \t\t<label class=\"col-form-label\" >Numero Documento</label>
   \t<input type=\"text\" name=\"numero_documento\" placeholder=\"Numero de documento\" class=\"form-control\" id=\"numero_documento\">
 \t</div>
+
 </div>
+
 <div class=\"f1-buttons\">
   <button type=\"button\" class=\"btn btn-previous\">Anterior</button>
   <button type=\"button\" id=\"btn-crear-anuncio\" class=\"btn btn-mat waves-light btn-inverse text-center\">Crear Anuncio</button>

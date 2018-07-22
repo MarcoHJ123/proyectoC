@@ -1,16 +1,16 @@
 <?php
 namespace App\Controllers;
+
 use App\Models\Anuncio;
 
+class CrearAnuncioD extends Controller {
 
-	class CrearAnuncioD extends Controller {
+	public function inicioD( $request, $response, $args ){
+		$data = array();
+		return $this->view->render( $response, 'crear-anuncios/desaparecido/main.twig', $data );
+	}
 
-		public function inicioD( $request, $response, $args ){
-			$data = array();
- 			return $this->view->render( $response, 'crear-anuncios/desaparecido/main.twig', $data );
-		}
-
-		public function crear_anuncioD( $request, $response, $args ){
+	public function crear_anuncioD( $request, $response, $args ){
 		$return = array(
 			'success' => false,
 			'html' => '',
@@ -23,9 +23,10 @@ use App\Models\Anuncio;
 		$error = false;
 		$obj_cita = new Anuncio();
 		$resultado = $obj_cita->crear( $request );
+
 		if( $resultado['status'] == true ){
 			$mensaje = "creada ";
-			$return['msgEnviado'] = $mensaje;
+			$return['ANUNCIO'] = $mensaje;
 		} else {
 			$error = true;
 		}
@@ -36,8 +37,8 @@ use App\Models\Anuncio;
 		} else {
 			$return['success'] = true;
 		}
-
 		return json_encode( $return );
-		}
+	}
+
 }
 ?>
