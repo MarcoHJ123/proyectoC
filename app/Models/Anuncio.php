@@ -3,6 +3,11 @@ namespace App\Models;
 
 class Anuncio extends Model {
 
+	/*
+	|---------------------------------------------------------------------------------------------------
+	| DATOS DEL ANUNCIO
+	|---------------------------------------------------------------------------------------------------
+	*/
 	public function get_data( $request, $tabla ){
 		if( $tabla == 'anuncio' ){
 			return array(
@@ -16,7 +21,6 @@ class Anuncio extends Model {
 				'estado_anuncio' => 'n',//ok
 				'fecha_registro' => 'now()',//ok
 				'descripcion' => $request->getParam( 'descripcion' ),//ok
-				'estado_persona' => '2',//ok
 				'parentesco' => $request->getParam( 'parentesco' ),//ok
 				'apellidos' => $request->getParam( 'apellidos_persona' ),//ok
 				'numero_documento' => $request->getParam( 'numero_documento' ),//ok
@@ -27,6 +31,11 @@ class Anuncio extends Model {
 		return array();
 	}
 
+	/*
+	|---------------------------------------------------------------------------------------------------
+	| LISTA DE LOS ANUNCIOS -- MODIFICAR QUE SOLO SE VEA LOS CON ESTADO n
+	|---------------------------------------------------------------------------------------------------
+	*/
 	public function listar_anuncios(){
 		$return = array(
 			'status' => false,
@@ -44,7 +53,12 @@ class Anuncio extends Model {
 		return $return;
 	}
 
-public function crear($request){
+	/*
+	|---------------------------------------------------------------------------------------------------
+	| CREAR ANUNCIO DE PERSONA DESAPARECIDA
+	|---------------------------------------------------------------------------------------------------
+	*/
+public function crearDesaparecido($request){
 		$return = array(
 				'status' => false,
 				'error' => '',
@@ -66,6 +80,7 @@ public function crear($request){
 	    }
 	    $anuncio = $this->get_data( $request, 'anuncio' );
 	    $anuncio['id_anuncio'] = $id_anuncio;
+	    $anuncio['estado_persona'] = '2';
 			// $anuncio['nombres'] = encriptar_password( $request->getParam( 'nombres_persona' ));
 
 			try {
@@ -100,6 +115,11 @@ public function crear($request){
 			return $return;
 		}
 
+	/*
+	|---------------------------------------------------------------------------------------------------
+	| TRAE EL ULTIMO CODIGO DE ANUNCIO
+	|---------------------------------------------------------------------------------------------------
+	*/
 		public function get_anuncio( $request ){
 			$return = array(
 				'status' => false,

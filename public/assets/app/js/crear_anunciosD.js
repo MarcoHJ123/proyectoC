@@ -18,11 +18,11 @@
     app.$estatura_persona = app.$form.find('input[name="estatura_persona"]');
     app.$parentesco = app.$form.find('select[name="parentesco"]');
 
-    app.$ultima_ubicacion = app.$form.find('input[name="ultima_ubicacion"]');
-    app.$descripcion = app.$form.find('textarea[name="descripcion"]');
-
     app.$ubicacio_lt = app.$form.find('input[name="ubicacio_lt"]');
     app.$ubicacio_ln = app.$form.find('input[name="ubicacio_ln"]');
+    app.$descripcion = app.$form.find('textarea[name="descripcion"]');
+
+
 
     app.$box_msg_final = app.$form.find('.box-mensaje-anuncio-creado');
     app.$btn_crear_anuncio = app.$form.find('#btn-crear-anuncio');

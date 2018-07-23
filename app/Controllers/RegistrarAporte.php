@@ -11,9 +11,6 @@ class RegistrarAporte extends Controller {
 			d($id_anuncio);
 			$data = array();
 
-			$id_ticket = $args['id_ticket'];
-			d($id_ticket);
-
  		return $this->view->render( $response, 'aportar-anuncios/main.twig', $data );
   }
 }
