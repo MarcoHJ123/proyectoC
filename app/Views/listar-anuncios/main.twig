@@ -33,7 +33,7 @@
     }.col-sm-4 {
         padding-bottom: 0;
     }*/
-    #ticket_lista {
+    #anuncio_lista {
     max-width: 230px;
     max-height: 230px;
     min-width: 230px;
@@ -53,15 +53,15 @@
         <div {% if datos.estado_persona == '1' %} class="col-sm-6 col-md-6 col-lg-3 bg-c-green user-profile" {% else %}class="col-sm-6 col-md-6 col-lg-3 bg-c-red user-profile" {% endif %} style="border-style:solid; border-color: #C2C2C2;">
             <div class="card-block text-center text-white">
                 <div class="m-b-25">
-                    <img src="{{ base_url() }}/public/assets/images/user-card/img-round5.jpg" alt="bg-img" class="img-radius" alt="User-Profile-Image" id="ticket_lista">
+                    <img src="{{ base_url() }}/public/assets/images/user-card/img-round5.jpg" alt="bg-img" class="img-radius" alt="User-Profile-Image" id="anuncio_lista">
                 </div>
                 <h6 class="f-w-600">{{datos.nombres}} {{datos.apellidos}}</a> </h6>
                 <h6 class="f-w-400">{{datos.descripcion}}</h6>
                 <h6 class="f-w-600">PERU</h6>
                 {% if datos.estado_persona == '1' %}
-                <a class="btn btn-mat waves-light btn-success" href="{{ base_url() }}/anuncios/{{datos.id_ticket}}" style="background-color: white; color: green;">APORTAR</a>
+                <a class="btn btn-mat waves-light btn-success" href="{{ base_url() }}/anuncios/{{datos.id_anuncio}}" style="background-color: white; color: green;">APORTAR</a>
                 {% else %}
-                <a class="btn btn-mat waves-light btn-danger text-center" href="{{ base_url() }}/anuncios/{{datos.id_ticket}}" style="background-color: white; color: red;">APORTAR</a>
+                <a class="btn btn-mat waves-light btn-danger text-center" href="{{ base_url() }}/anuncios/{{datos.id_anuncio}}" style="background-color: white; color: red;">APORTAR</a>
                 {% endif %}
             </div>
         </div>

@@ -1,15 +1,13 @@
 <?php
 namespace App\Controllers;
 
-use App\Models\Personas;
-
+use App\Models\Anuncio;
 
 class ListarAnuncios extends Controller {
 
  	public function Anuncios( $request, $response, $args ){
-		$obj = new Personas();
-		$resultado = $obj->listar_personas();
-		// d($resultado);
+		$obj = new Anuncio();
+		$resultado = $obj->listar_anuncios();
 		$personas = array();
 		if( $resultado['status'] ){
 			$personas = $resultado['items'];

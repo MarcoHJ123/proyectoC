@@ -2,6 +2,7 @@
 namespace App\Models;
 
 class Anuncio extends Model {
+
 	public function get_data( $request, $tabla ){
 		if( $tabla == 'anuncio' ){
 			return array(
@@ -27,6 +28,24 @@ class Anuncio extends Model {
 		}
 		return array();
 	}
+
+	public function listar_anuncios(){
+		$return = array(
+			'status' => false,
+		);
+
+		$data = array();
+
+		$sql = "SELECT * FROM anuncio";
+
+		$result = $this->execute_query( CONNECTION_SIJ, false, 'sql', $sql, $data );
+		$return = array_merge( $return, $result );
+		if( $return['status'] ){
+			$return['items'] = $this->get_all( $result['stmt'] );
+		}
+		return $return;
+	}
+
 public function crear($request){
 		$return = array(
 				'status' => false,
@@ -50,13 +69,16 @@ public function crear($request){
 	    $anuncio = $this->get_data( $request, 'anuncio' );
 	    $anuncio['id_anuncio'] = $id_anuncio;
 			// $anuncio['nombres'] = encriptar_password( $request->getParam( 'nombres_persona' ));
+<<<<<<< HEAD
 
+=======
+>>>>>>> eb855b2a8a1664f8d7759169b11da3c6a0e1334e
 
 			try {
 		    $conn_proy->beginTransaction();
 
 		    /*---------------------------------------------------
-		    | Insertando "citas_web"
+		    | Insertando "anuncio"
 		    ----------------------------------------------------*/
 		    $stmt = $this->connections->prepare_insert( $conn_proy, 'anuncio', $anuncio );
 		    $return['sql'] = $this->connections->sql;

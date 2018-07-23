@@ -7,7 +7,7 @@
   });
 
   app.init = function(){
-    app.$form = $('.form-crear-ticket');
+    app.$form = $('.form-crear-anuncio');
     app.$nombres_persona = app.$form.find('input[name="nombres_persona"]');
     app.$apellidos_persona = app.$form.find('input[name="apellidos_persona"]');
     app.$tipo_documento = app.$form.find('select[name="tipo_documento"]');
@@ -22,7 +22,7 @@
     app.$ultima_ubicacion = app.$form.find('input[name="ultima_ubicacion"]');
     app.$descripcion = app.$form.find('textarea[name="descripcion"]');
 
-    app.$box_msg_final = app.$form.find('.box-mensaje-ticket-creado');
+    app.$box_msg_final = app.$form.find('.box-mensaje-anuncio-creado');
     app.$btn_crear_anuncio = app.$form.find('#btn-crear-anuncio');
 
     $(document).on('click', '#btn-crear-anuncio', app.on_click_crear_anuncio );

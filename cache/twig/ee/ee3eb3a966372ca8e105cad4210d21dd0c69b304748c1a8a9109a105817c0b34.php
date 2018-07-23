@@ -62,7 +62,11 @@ class __TwigTemplate_97474d4acea53bcfaede24517d8a83b1e630c83e6b33931129486025a67
     }.col-sm-4 {
         padding-bottom: 0;
     }*/
+<<<<<<< HEAD
     #ticket_lista {
+=======
+    #anuncio_lista {
+>>>>>>> eb855b2a8a1664f8d7759169b11da3c6a0e1334e
     max-width: 230px;
     max-height: 230px;
     min-width: 230px;
@@ -94,7 +98,11 @@ class __TwigTemplate_97474d4acea53bcfaede24517d8a83b1e630c83e6b33931129486025a67
                     <img src=\"";
                 // line 56
                 echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
+<<<<<<< HEAD
                 echo "/public/assets/images/user-card/img-round5.jpg\" alt=\"bg-img\" class=\"img-radius\" alt=\"User-Profile-Image\" id=\"ticket_lista\">
+=======
+                echo "/public/assets/images/user-card/img-round5.jpg\" alt=\"bg-img\" class=\"img-radius\" alt=\"User-Profile-Image\" id=\"anuncio_lista\">
+>>>>>>> eb855b2a8a1664f8d7759169b11da3c6a0e1334e
                 </div>
                 <h6 class=\"f-w-600\">";
                 // line 58
@@ -114,7 +122,11 @@ class __TwigTemplate_97474d4acea53bcfaede24517d8a83b1e630c83e6b33931129486025a67
                     echo "                <a class=\"btn btn-mat waves-light btn-success\" href=\"";
                     echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
                     echo "/anuncios/";
+<<<<<<< HEAD
                     echo twig_escape_filter($this->env, $this->getAttribute($context["datos"], "id_ticket", array()), "html", null, true);
+=======
+                    echo twig_escape_filter($this->env, $this->getAttribute($context["datos"], "id_anuncio", array()), "html", null, true);
+>>>>>>> eb855b2a8a1664f8d7759169b11da3c6a0e1334e
                     echo "\" style=\"background-color: white; color: green;\">APORTAR</a>
                 ";
                 } else {
@@ -122,7 +134,11 @@ class __TwigTemplate_97474d4acea53bcfaede24517d8a83b1e630c83e6b33931129486025a67
                     echo "                <a class=\"btn btn-mat waves-light btn-danger text-center\" href=\"";
                     echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
                     echo "/anuncios/";
+<<<<<<< HEAD
                     echo twig_escape_filter($this->env, $this->getAttribute($context["datos"], "id_ticket", array()), "html", null, true);
+=======
+                    echo twig_escape_filter($this->env, $this->getAttribute($context["datos"], "id_anuncio", array()), "html", null, true);
+>>>>>>> eb855b2a8a1664f8d7759169b11da3c6a0e1334e
                     echo "\" style=\"background-color: white; color: red;\">APORTAR</a>
                 ";
                 }
@@ -217,7 +233,11 @@ class __TwigTemplate_97474d4acea53bcfaede24517d8a83b1e630c83e6b33931129486025a67
     }.col-sm-4 {
         padding-bottom: 0;
     }*/
+<<<<<<< HEAD
     #ticket_lista {
+=======
+    #anuncio_lista {
+>>>>>>> eb855b2a8a1664f8d7759169b11da3c6a0e1334e
     max-width: 230px;
     max-height: 230px;
     min-width: 230px;
@@ -237,15 +257,25 @@ class __TwigTemplate_97474d4acea53bcfaede24517d8a83b1e630c83e6b33931129486025a67
         <div {% if datos.estado_persona == '1' %} class=\"col-sm-6 col-md-6 col-lg-3 bg-c-green user-profile\" {% else %}class=\"col-sm-6 col-md-6 col-lg-3 bg-c-red user-profile\" {% endif %} style=\"border-style:solid; border-color: #C2C2C2;\">
             <div class=\"card-block text-center text-white\">
                 <div class=\"m-b-25\">
+<<<<<<< HEAD
                     <img src=\"{{ base_url() }}/public/assets/images/user-card/img-round5.jpg\" alt=\"bg-img\" class=\"img-radius\" alt=\"User-Profile-Image\" id=\"ticket_lista\">
+=======
+                    <img src=\"{{ base_url() }}/public/assets/images/user-card/img-round5.jpg\" alt=\"bg-img\" class=\"img-radius\" alt=\"User-Profile-Image\" id=\"anuncio_lista\">
+>>>>>>> eb855b2a8a1664f8d7759169b11da3c6a0e1334e
                 </div>
                 <h6 class=\"f-w-600\">{{datos.nombres}} {{datos.apellidos}}</a> </h6>
                 <h6 class=\"f-w-400\">{{datos.descripcion}}</h6>
                 <h6 class=\"f-w-600\">PERU</h6>
                 {% if datos.estado_persona == '1' %}
+<<<<<<< HEAD
                 <a class=\"btn btn-mat waves-light btn-success\" href=\"{{ base_url() }}/anuncios/{{datos.id_ticket}}\" style=\"background-color: white; color: green;\">APORTAR</a>
                 {% else %}
                 <a class=\"btn btn-mat waves-light btn-danger text-center\" href=\"{{ base_url() }}/anuncios/{{datos.id_ticket}}\" style=\"background-color: white; color: red;\">APORTAR</a>
+=======
+                <a class=\"btn btn-mat waves-light btn-success\" href=\"{{ base_url() }}/anuncios/{{datos.id_anuncio}}\" style=\"background-color: white; color: green;\">APORTAR</a>
+                {% else %}
+                <a class=\"btn btn-mat waves-light btn-danger text-center\" href=\"{{ base_url() }}/anuncios/{{datos.id_anuncio}}\" style=\"background-color: white; color: red;\">APORTAR</a>
+>>>>>>> eb855b2a8a1664f8d7759169b11da3c6a0e1334e
                 {% endif %}
             </div>
         </div>

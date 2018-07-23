@@ -37,7 +37,7 @@ public function get_data( $request, $tabla ){
 		return array();
 	}
 
-public function crear($request){
+public function crear_usuario_fb($request){
 		$return = array(
 				'status' => false,
 				'error' => '',

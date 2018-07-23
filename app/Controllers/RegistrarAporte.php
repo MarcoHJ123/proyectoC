@@ -1,30 +1,23 @@
 <?php
 namespace App\Controllers;
 
-use App\Models\Cita;
-use App\Models\Distrito;
-use App\Models\Horario;
-use App\Models\Motivo;
-use App\Models\Audiencia;
-use App\Models\Feriados;
-use App\Models\Personas;
-
+// use App\Models\;
 
 class RegistrarAporte extends Controller {
 
-	/*
-	|---------------------------------------------------------------------------------------------------
-	| Página programación cita
-	|---------------------------------------------------------------------------------------------------
-*/
-
 	public function inicio( $request, $response, $args ){
+<<<<<<< HEAD
 
 			$id_anuncio = $args['id_anuncio'];
 			d($id_anuncio);
 			$data = array(
 
 	 		);
+=======
+			$id_ticket = $args['id_ticket'];
+			d($id_ticket);
+			$data = array();
+>>>>>>> eb855b2a8a1664f8d7759169b11da3c6a0e1334e
  		return $this->view->render( $response, 'aportar-anuncios/main.twig', $data );
- }
+  }
 }
