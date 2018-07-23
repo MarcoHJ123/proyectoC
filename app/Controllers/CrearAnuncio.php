@@ -11,5 +11,10 @@ class CrearAnuncio extends Controller {
 		return $this->view->render( $response, 'crear-anuncios/master.twig', $data );
 	}
 
+	public function iniciom( $request, $response, $args ){
+		$data = array();
+		return $this->view->render( $response, 'crear-anuncios/inc/mapa.twig', $data );
+	}
+
 }
 ?>

@@ -2,29 +2,27 @@
 
 {% block content %}
 <div class="page-body text-center">
-    <div class="row">
-      <div class="col-sm-12">
-        {% include 'templates/inc/messages.twig' %}
-      </div>
+  <div class="row">
     <div class="col-sm-12">
+      {% include 'templates/inc/messages.twig' %}
+    </div>
+    <div class="col-sm-12" style="    padding-left: 42px;
+    padding-right: 42px;">
       <div class="card card-creacion-ticket">
         <div class="card-header text-center m-t-10">
           <h3>Registra Persona Encontrada</h3>
         </div>
-          <div class="card-block form-crear-ticket">
-
-              {% include 'crear-anuncios/perdido/inc/partes.twig' %}
-
-              <div class="m-b-26 box-mensaje-ticket-creado hide">
-                <div class="alert alert-info icons-alert fix-icon-alert">
-                </div>
-              </div>
-            {# </form> #}
+        <div class="card-block form-crear-ticket">
+          {% include 'crear-anuncios/perdido/inc/partes.twig' %}
+          <div class="m-b-26 box-mensaje-ticket-creado hide">
+            <div class="alert alert-info icons-alert fix-icon-alert">
+            </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
-  </div>
+</div>
 
 
 

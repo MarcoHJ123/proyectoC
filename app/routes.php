@@ -15,6 +15,7 @@ $this->get( '/crear-anuncio/', 'CrearAnuncio:inicio' )->setName( 'Crear_Anuncio'
 $this->get( '/crear-anuncios/desaparecido', 'CrearAnuncioD:inicioD' )->setName( 'Crear_Anuncio_D' );
 $this->post( '/ajax/crear-anuncioD', 'CrearAnuncioD:crear_anuncioD' )->setName( 'Crear_AnuncioD' );
 $this->get( '/crear-anuncios/perdido', 'CrearAnuncioP:inicioP' )->setName( 'CrearAnuncioP' );
+$this->get( '/mapa', 'CrearAnuncio:iniciom' )->setName( 'mapa' );
 // $this->post( '/ajax/crear-anuncioD', 'CrearAnuncioD:crear_anuncioD' )->setName( 'CrearAnuncioD' );
 /*---------------APORTACIONES DE ANUNCIOS PERDIDOS Y DESAPARECIDOS---------------*/
 $this->get( '/anuncios/{id_ticket}', 'RegistrarAporte:inicio' )->setName( 'aportes' );

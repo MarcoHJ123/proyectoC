@@ -15,7 +15,7 @@ class Anuncio extends Model {
 				'tipo_documento' => $request->getParam( 'tipo_documento' ),//ok
 				'estado_anuncio' => 'n',//ok
 				// 'id_usuario' => '1',//ok
-				'fecha_registro' => '2021-07-05',//ok
+				'fecha_registro' => 'now()',//ok
 				// 'fecha_final' => '',//ok--
 				'descripcion' => $request->getParam( 'descripcion' ),//ok
 				'ultima_ubicacion' => $request->getParam( 'ultima_ubicacion' ),//ok
@@ -23,6 +23,10 @@ class Anuncio extends Model {
 				'parentesco' => $request->getParam( 'parentesco' ),//ok
 				'apellidos' => $request->getParam( 'apellidos_persona' ),//ok
 				'numero_documento' => $request->getParam( 'numero_documento' ),//ok
+
+				'ubicacio_lt' => $request->getParam( 'ubicacio_lt' ),//ok
+				'ubicacio_ln' => $request->getParam( 'ubicacio_ln' ),//ok
+
 			);
 		}
 		return array();
