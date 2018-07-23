@@ -70,7 +70,7 @@ $esta_conectado = $container->Login->esta_conectado();
 $logo_inicio_url = $base_url;
 if( $esta_conectado ){
   $user_login = $container->session->user_login;
-  $logo_inicio_url = $menu['cronograma']['url'];
+  $logo_inicio_url = $menu['RegistrarUsuario']['url'];
 }
 
 

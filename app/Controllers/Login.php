@@ -62,7 +62,7 @@ class Login extends Controller {
 		$settings = get_settings_file( 'conexiones.json' );
 		$login_settings = $settings[CONNECTION_LOGIN];
 		$login_settings['username'] = trim( strtoupper( $usuario ) );
-		$login_settings['password'] =  trim(strtoupper( $password ));
+		$login_settings['password'] =  encriptar_password( strtoupper( $password ) );
 
 		//Agregamos la conexión
 		$this->connections->addConnection( CONNECTION_LOGIN, $login_settings );
@@ -103,7 +103,7 @@ class Login extends Controller {
 	public function mostrar_pagina_login( $request, $response, $args ){
 		$data = array(
 			'id_usuario_login' => $this->session->get('id_usuario_login'),
-			// 'login_settings' => $this->session->get('login_settings'),
+			'login_settings' => $this->session->get('login_settings'),
 			'nombres' => $this->session->get('nombres'),
 			'count' => $this->session->get('count'),
 			// 'perfil_usuario' => $this->session->get('perfil_usuario'),

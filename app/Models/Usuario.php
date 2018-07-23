@@ -8,6 +8,27 @@ class Usuario extends Model {
 	| Verifica el usuario
 	|---------------------------------------------------------------------------------------------------
 	*/
+
+	public function logear( $usuario, $contraseña){
+		$return = array(
+			'status' => false,
+		);
+
+		$data = array(
+			'usuario' => $usuario,
+		);
+
+		$sql = "SELECT DISTINCT u.nombres, u.perfil_usuario, u.correo_electronico, u.id_usuario
+														FROM usuario u INNER JOIN usuario_login ul WHERE
+														u.id_usuario = ul.id_usurio and u.estado = '1' and ul.id_usuario_login = :usuario and contaseña = :contraseña";
+		$result = $this->execute_query( CONNECTION_SIJ, false, 'sql', $sql, $data );
+		$return = array_merge( $return, $result );
+		if( $return['status'] ){
+			$return['usuario'] = $this->get_one( $result['stmt'] );
+		}
+		return $return;
+	}
+
 	public function verificar_usuario( $usuario ){
 		$return = array(
 			'status' => false,
@@ -25,7 +46,6 @@ class Usuario extends Model {
 		if( $return['status'] ){
 			$return['usuario'] = $this->get_one( $result['stmt'] );
 		}
-
 		return $return;
 	}
 

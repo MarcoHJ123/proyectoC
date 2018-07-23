@@ -22,10 +22,10 @@ class __TwigTemplate_a435b99814109b416765b23fd4251b545b481b222295e28eb3286962554
   <div class=\"col-md-12 p-t-12\">
   <label class=\"col-form-label\">Ultima vez visto</label>
   <div id=\"map\" style=\"height: 278px\"></div>
-  <form action=\"#\" id=\"posicion\" name=\"posicion\">
-    <input type=\"text\" name=\"ubicacio_lt\"  hidden disabled />
-    <input type=\"text\" name=\"ubicacio_ln\"  hidden disabled />
-  </form>
+    <form action=\"#\" id=\"posicion\" name=\"posicion\">
+      <input type=\"text\" name=\"ubicacio_lt\"  hidden disabled />
+      <input type=\"text\" name=\"ubicacio_ln\"  hidden disabled />
+    </form>
   </div>
 
   <div class=\"col-md-12 p-t-12\" for=\"descripcion\">
@@ -67,10 +67,10 @@ class __TwigTemplate_a435b99814109b416765b23fd4251b545b481b222295e28eb3286962554
   <div class=\"col-md-12 p-t-12\">
   <label class=\"col-form-label\">Ultima vez visto</label>
   <div id=\"map\" style=\"height: 278px\"></div>
-  <form action=\"#\" id=\"posicion\" name=\"posicion\">
-    <input type=\"text\" name=\"ubicacio_lt\"  hidden disabled />
-    <input type=\"text\" name=\"ubicacio_ln\"  hidden disabled />
-  </form>
+    <form action=\"#\" id=\"posicion\" name=\"posicion\">
+      <input type=\"text\" name=\"ubicacio_lt\"  hidden disabled />
+      <input type=\"text\" name=\"ubicacio_ln\"  hidden disabled />
+    </form>
   </div>
 
   <div class=\"col-md-12 p-t-12\" for=\"descripcion\">

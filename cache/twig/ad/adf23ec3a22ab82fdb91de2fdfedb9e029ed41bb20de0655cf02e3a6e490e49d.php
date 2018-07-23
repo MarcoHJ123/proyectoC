@@ -23,7 +23,6 @@ class __TwigTemplate_51c1583b2e0ad42cc5f1a48195999f9696fe0982039a97c2801c66476db
     <input type=\"file\" class=\"form-control\">
   </div>
 
-
   <div class=\"col-md-6 p-t-6\" for=\"sexo_persona\">
     <label class=\"col-form-label\">Sexo</label>
     <select name=\"sexo_persona\" class=\"form-control form-control-inverse\">
@@ -41,7 +40,7 @@ class __TwigTemplate_51c1583b2e0ad42cc5f1a48195999f9696fe0982039a97c2801c66476db
   \t<option value=\"m\">Moreno</option>
   \t<option value=\"tr\">Trigueño</option>
     ";
-        // line 26
+        // line 25
         echo "  \t</select>
   </div>
 
@@ -76,7 +75,7 @@ class __TwigTemplate_51c1583b2e0ad42cc5f1a48195999f9696fe0982039a97c2801c66476db
 
     public function getDebugInfo()
     {
-        return array (  45 => 26,  19 => 1,);
+        return array (  44 => 25,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -95,7 +94,6 @@ class __TwigTemplate_51c1583b2e0ad42cc5f1a48195999f9696fe0982039a97c2801c66476db
     <label for=\"imagen\">Imagen:</label>
     <input type=\"file\" class=\"form-control\">
   </div>
-
 
   <div class=\"col-md-6 p-t-6\" for=\"sexo_persona\">
     <label class=\"col-form-label\">Sexo</label>
