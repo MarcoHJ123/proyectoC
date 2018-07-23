@@ -27,6 +27,13 @@ public function get_data( $request, $tabla ){
 				'id_fb' => $request->getParam( 'id_fb' ),//ok
 			);
 		}
+		// if ($tabla =='usuario_login') {
+		// 	return array(
+		// 		 'id_usuario_login'=>1,
+		// 		 'id_usuario' =>
+		// 	);
+		// 	# code...
+		// }
 		return array();
 	}
 
