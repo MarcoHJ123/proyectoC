@@ -14,21 +14,15 @@ class Anuncio extends Model {
 				'fecha_nacimiento' => '2021-07-05',//ok
 				'tipo_documento' => $request->getParam( 'tipo_documento' ),//ok
 				'estado_anuncio' => 'n',//ok
-				// 'id_usuario' => '1',//ok
 				'fecha_registro' => 'now()',//ok
-				// 'fecha_final' => '',//ok--
 				'descripcion' => $request->getParam( 'descripcion' ),//ok
-				'ultima_ubicacion' => $request->getParam( 'ultima_ubicacion' ),//ok
-				'estado_persona' => $request->getParam( 'estado_persona' ),//ok
+				'estado_persona' => '2',//ok
 				'parentesco' => $request->getParam( 'parentesco' ),//ok
 				'apellidos' => $request->getParam( 'apellidos_persona' ),//ok
 				'numero_documento' => $request->getParam( 'numero_documento' ),//ok
-
 				'ubicacio_lt' => $request->getParam( 'ubicacio_lt' ),//ok
 				'ubicacio_ln' => $request->getParam( 'ubicacio_ln' ),//ok
-
 			);
-	
 		}
 		return array();
 	}
@@ -73,10 +67,6 @@ public function crear($request){
 	    $anuncio = $this->get_data( $request, 'anuncio' );
 	    $anuncio['id_anuncio'] = $id_anuncio;
 			// $anuncio['nombres'] = encriptar_password( $request->getParam( 'nombres_persona' ));
-<<<<<<< HEAD
-
-=======
->>>>>>> eb855b2a8a1664f8d7759169b11da3c6a0e1334e
 
 			try {
 		    $conn_proy->beginTransaction();

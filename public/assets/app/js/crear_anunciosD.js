@@ -117,7 +117,6 @@
     app.$color_piel.val('');
     app.$estatura_persona.val('');
     app.$parentesco.val('');
-    app.$ultima_ubicacion.val('');
     app.$descripcion.val('');
     app.$ubicacio_lt.val('');
     app.$ubicacio_ln.val('');
@@ -183,7 +182,6 @@
     if( parentesco != '0' ){$selected = app.$parentesco.find('option:selected');}
 
     var descripcion = $.trim( app.$descripcion.val() );
-    var ultima_ubicacion = $.trim( app.$ultima_ubicacion.val() );
     var ubicacio_lt = $.trim( app.$ubicacio_lt.val() );
     var ubicacio_ln = $.trim( app.$ubicacio_ln.val() );
 
@@ -196,7 +194,6 @@
       color_piel: color_piel,
       estatura_persona: estatura_persona,
       parentesco: parentesco,
-      ultima_ubicacion: ultima_ubicacion,
       descripcion: descripcion,
       ubicacio_lt: ubicacio_lt,
       ubicacio_ln: ubicacio_ln,
