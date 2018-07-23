@@ -10,7 +10,7 @@ class Personas extends Model {
 
 		$data = array();
 
-		$sql = "SELECT * FROM ticket";
+		$sql = "SELECT * FROM anuncio";
 
 		$result = $this->execute_query( CONNECTION_SIJ, false, 'sql', $sql, $data );
 		$return = array_merge( $return, $result );

@@ -27,7 +27,7 @@ class Connections {
 			$username = ! empty( $data['username'] ) ? $data['username'] : '';
 			$password = ! empty( $data['password'] ) ? $data['password'] : '';
 			$this->settings[$name]['string'] = "$driver:DSN=$dsn;DBN=$database;UID=$username;PWD=$password;
-			    ;charset=utf-8;";
+			    ";
 		} else {
 			$this->settings[$name]['string'] = $data;
 		}
