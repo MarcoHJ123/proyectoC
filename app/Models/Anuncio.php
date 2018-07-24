@@ -69,10 +69,7 @@ public function crear($request){
 	    $anuncio = $this->get_data( $request, 'anuncio' );
 	    $anuncio['id_anuncio'] = $id_anuncio;
 			// $anuncio['nombres'] = encriptar_password( $request->getParam( 'nombres_persona' ));
-<<<<<<< HEAD
 
-=======
->>>>>>> eb855b2a8a1664f8d7759169b11da3c6a0e1334e
 
 			try {
 		    $conn_proy->beginTransaction();
