@@ -33,59 +33,57 @@ class __TwigTemplate_39f60bcb30be2d75f87e377a3f1a923b148be44cfb121213b201a319bb5
         // line 5
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/bower_components/bootstrap/js/bootstrap.min.js\"></script>
-";
-        // line 8
-        echo "
+
 <!-- waves js -->
 <script src=\"";
-        // line 10
+        // line 8
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/pages/waves/js/waves.min.js\"></script>
 
 <!-- jquery slimscroll js -->
 <script type=\"text/javascript\" src=\"";
-        // line 13
+        // line 11
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/bower_components/jquery-slimscroll/js/jquery.slimscroll.js\"></script>
 
 <!-- Switch component js -->
 ";
-        // line 17
+        // line 15
         echo "
 <!-- Tags js -->
 ";
-        // line 21
+        // line 19
         echo "
 <!-- Max-length js -->
 <script type=\"text/javascript\" src=\"";
-        // line 23
+        // line 21
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/bower_components/bootstrap-maxlength/js/bootstrap-maxlength.js\"></script>
 
 
 <!-- Custom js -->
 <script type=\"text/javascript\" src=\"";
-        // line 27
+        // line 25
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/js/classie.js\"></script>
 ";
-        // line 29
+        // line 27
         echo "<script src=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/js/pcoded.min.js\"></script>
 <script src=\"";
-        // line 30
+        // line 28
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/js/vertical/menu/menu-hori-fixed.js\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 31
+        // line 29
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/js/script.js\"></script>
 
 
 <!-- App General JS -->
 <script type=\"text/javascript\" src=\"";
-        // line 35
+        // line 33
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/app/js/app.js\"></script>
 
@@ -104,7 +102,7 @@ class __TwigTemplate_39f60bcb30be2d75f87e377a3f1a923b148be44cfb121213b201a319bb5
 
     public function getDebugInfo()
     {
-        return array (  89 => 35,  82 => 31,  78 => 30,  73 => 29,  69 => 27,  62 => 23,  58 => 21,  54 => 17,  48 => 13,  42 => 10,  38 => 8,  34 => 5,  30 => 4,  26 => 3,  22 => 2,  19 => 1,);
+        return array (  87 => 33,  80 => 29,  76 => 28,  71 => 27,  67 => 25,  60 => 21,  56 => 19,  52 => 15,  46 => 11,  40 => 8,  34 => 5,  30 => 4,  26 => 3,  22 => 2,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -122,8 +120,6 @@ class __TwigTemplate_39f60bcb30be2d75f87e377a3f1a923b148be44cfb121213b201a319bb5
 <script type=\"text/javascript\" src=\"{{ base_url() }}/public/bower_components/jquery-ui/js/jquery-ui.min.js\"></script>
 <script type=\"text/javascript\" src=\"{{ base_url() }}/public/bower_components/popper.js/js/popper.min.js\"></script>
 <script type=\"text/javascript\" src=\"{{ base_url() }}/public/bower_components/bootstrap/js/bootstrap.min.js\"></script>
-{# <script type=\"text/javascript\" src=\"{{ base_url() }}/public/bower_components/bootstrap/js/jquery-1.11.1.min.js\"></script> #}
-{# <script type=\"text/javascript\" src=\"{{ base_url() }}/public/bower_components/bootstrap/js/jquery.backstretch.min.js\"></script> #}
 
 <!-- waves js -->
 <script src=\"{{ base_url() }}/public/assets/pages/waves/js/waves.min.js\"></script>

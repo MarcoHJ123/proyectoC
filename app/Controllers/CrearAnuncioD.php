@@ -5,11 +5,21 @@ use App\Models\Anuncio;
 
 class CrearAnuncioD extends Controller {
 
+		/*
+	|---------------------------------------------------------------------------------------------------
+	| INICIO DE LA VISTA CREAR ANUNCIO DESAPARECIDO
+	|---------------------------------------------------------------------------------------------------
+	*/
 	public function inicioD( $request, $response, $args ){
 		$data = array();
 		return $this->view->render( $response, 'crear-anuncios/desaparecido/main.twig', $data );
 	}
 
+	/*
+	|---------------------------------------------------------------------------------------------------
+	| CREAR ANUNCIO DESAPARECIDO
+	|---------------------------------------------------------------------------------------------------
+	*/
 	public function crear_anuncioD( $request, $response, $args ){
 		$return = array(
 			'success' => false,
@@ -22,7 +32,7 @@ class CrearAnuncioD extends Controller {
 
 		$error = false;
 		$obj_cita = new Anuncio();
-		$resultado = $obj_cita->crear( $request );
+		$resultado = $obj_cita->crearDesaparecido( $request );
 
 		if( $resultado['status'] == true ){
 			$mensaje = "creada ";

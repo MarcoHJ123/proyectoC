@@ -18,9 +18,9 @@ class __TwigTemplate_51c1583b2e0ad42cc5f1a48195999f9696fe0982039a97c2801c66476db
         // line 1
         echo "<h4>Detalles de la persona</h4>
 <div class=\"row\">
-  <div class=\"col-md-12 p-t-12\" for=\"id_imagen\">
-  <label for=\"imagen\">Imagen:</label>
-  <input id=\"id_imagen\" name=\"id_imagen\" size=\"30\" value=\"1\" type=\"file\" />
+  <div class=\"col-sm-6 col-md-6 col-lg-6\">
+    <label for=\"imagen\">Imagen:</label>
+    <input type=\"file\" class=\"form-control\">
   </div>
 
   <div class=\"col-md-6 p-t-6\" for=\"sexo_persona\">
@@ -90,9 +90,9 @@ class __TwigTemplate_51c1583b2e0ad42cc5f1a48195999f9696fe0982039a97c2801c66476db
     {
         return new Twig_Source("<h4>Detalles de la persona</h4>
 <div class=\"row\">
-  <div class=\"col-md-12 p-t-12\" for=\"id_imagen\">
-  <label for=\"imagen\">Imagen:</label>
-  <input id=\"id_imagen\" name=\"id_imagen\" size=\"30\" value=\"1\" type=\"file\" />
+  <div class=\"col-sm-6 col-md-6 col-lg-6\">
+    <label for=\"imagen\">Imagen:</label>
+    <input type=\"file\" class=\"form-control\">
   </div>
 
   <div class=\"col-md-6 p-t-6\" for=\"sexo_persona\">

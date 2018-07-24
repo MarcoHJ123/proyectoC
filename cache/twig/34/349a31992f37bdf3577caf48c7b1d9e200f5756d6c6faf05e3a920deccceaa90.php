@@ -57,12 +57,9 @@ class __TwigTemplate_cd0ea4690d7e7dd118f4fca19fe40354048aef2c573e268d18fc0008715
           <button type=\"submit\" class=\"btn waves-effect waves-light hor-grd btn-grd-inverse btn-block text-center m-b-20\">Iniciar Sesión</button>
         </div>
       </div>
-        <div class=\"row m-t-20\">
-        <div class=\"col-md-12\">
-          < <a href='proyectoC/facebook/login.php'>aqu&iacute;</a>
-        </div>
-      </div>
-
+        ";
+        // line 106
+        echo "
 
     </div>
   </div>
@@ -82,7 +79,7 @@ class __TwigTemplate_cd0ea4690d7e7dd118f4fca19fe40354048aef2c573e268d18fc0008715
 
     public function getDebugInfo()
     {
-        return array (  33 => 74,  31 => 73,  23 => 68,  19 => 66,);
+        return array (  62 => 106,  33 => 74,  31 => 73,  23 => 68,  19 => 66,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -195,11 +192,11 @@ class __TwigTemplate_cd0ea4690d7e7dd118f4fca19fe40354048aef2c573e268d18fc0008715
           <button type=\"submit\" class=\"btn waves-effect waves-light hor-grd btn-grd-inverse btn-block text-center m-b-20\">Iniciar Sesión</button>
         </div>
       </div>
-        <div class=\"row m-t-20\">
+        {# <div class=\"row m-t-20\">
         <div class=\"col-md-12\">
-          < <a href='proyectoC/facebook/login.php'>aqu&iacute;</a>
+          <a href='proyectoC/facebook/login.php'>aqu&iacute;</a>
         </div>
-      </div>
+      </div> #}
 
 
     </div>

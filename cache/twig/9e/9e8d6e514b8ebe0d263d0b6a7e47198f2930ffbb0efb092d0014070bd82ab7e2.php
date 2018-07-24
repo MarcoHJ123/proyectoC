@@ -44,33 +44,13 @@ class __TwigTemplate_c248c3b5afbb17843cbd51a90e5c9cb17c744231596dee58e8863e52b90
         echo "/public/assets/css/pages.css\">
 
 
-<!-- pickadate -->
+<!-- app style -->
 <link rel=\"stylesheet\" type=\"text/css\" href=\"";
         // line 28
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
-        echo "/public/assets/app/libs/pickadate/css/default.css\">
-<link rel=\"stylesheet\" type=\"text/css\" href=\"";
-        // line 29
-        echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
-        echo "/public/assets/app/libs/pickadate/css/default.time.css\">
-<link rel=\"stylesheet\" type=\"text/css\" href=\"";
-        // line 30
-        echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
-        echo "/public/assets/app/libs/pickadate/css/default.date.css\">
-
-<!-- fullcalendar -->
-<link rel=\"stylesheet\" type=\"text/css\" href=\"";
-        // line 33
-        echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
-        echo "/public/assets/app/libs/fullcalendar/css/fullcalendar.css\">
-
-<!-- app style -->
-<link rel=\"stylesheet\" type=\"text/css\" href=\"";
-        // line 36
-        echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/app/css/app.css\">
 <link rel=\"stylesheet\" type=\"text/css\" href=\"";
-        // line 37
+        // line 29
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/app/css/style.css\">
 
@@ -90,7 +70,7 @@ class __TwigTemplate_c248c3b5afbb17843cbd51a90e5c9cb17c744231596dee58e8863e52b90
 
     public function getDebugInfo()
     {
-        return array (  74 => 37,  70 => 36,  64 => 33,  58 => 30,  54 => 29,  50 => 28,  43 => 24,  39 => 23,  32 => 20,  28 => 17,  22 => 2,  19 => 1,);
+        return array (  54 => 29,  50 => 28,  43 => 24,  39 => 23,  32 => 20,  28 => 17,  22 => 2,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -128,14 +108,6 @@ class __TwigTemplate_c248c3b5afbb17843cbd51a90e5c9cb17c744231596dee58e8863e52b90
 <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ base_url() }}/public/assets/css/style.css\">
 <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ base_url() }}/public/assets/css/pages.css\">
 
-
-<!-- pickadate -->
-<link rel=\"stylesheet\" type=\"text/css\" href=\"{{ base_url() }}/public/assets/app/libs/pickadate/css/default.css\">
-<link rel=\"stylesheet\" type=\"text/css\" href=\"{{ base_url() }}/public/assets/app/libs/pickadate/css/default.time.css\">
-<link rel=\"stylesheet\" type=\"text/css\" href=\"{{ base_url() }}/public/assets/app/libs/pickadate/css/default.date.css\">
-
-<!-- fullcalendar -->
-<link rel=\"stylesheet\" type=\"text/css\" href=\"{{ base_url() }}/public/assets/app/libs/fullcalendar/css/fullcalendar.css\">
 
 <!-- app style -->
 <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ base_url() }}/public/assets/app/css/app.css\">

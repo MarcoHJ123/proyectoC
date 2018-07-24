@@ -28,7 +28,7 @@ class __TwigTemplate_66fd1a77963329abb47cf71bb42313c6fb3fa9549a72ca42e170d004fc6
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 
   <!-- Favicon icon -->
-  <link rel=\"icon\" type=\"image/png\" sizes=\"8x4\" href=\"";
+  <link rel=\"icon\" type=\"image/png\" href=\"";
         // line 11
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/app/images/logo.png\">
@@ -219,7 +219,7 @@ class __TwigTemplate_66fd1a77963329abb47cf71bb42313c6fb3fa9549a72ca42e170d004fc6
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 
   <!-- Favicon icon -->
-  <link rel=\"icon\" type=\"image/png\" sizes=\"8x4\" href=\"{{ base_url() }}/public/assets/app/images/logo.png\">
+  <link rel=\"icon\" type=\"image/png\" href=\"{{ base_url() }}/public/assets/app/images/logo.png\">
   <title>PERSONAS PERDIDAS Y DESAPARECIDAS</title>
 
   {% include 'templates/master/inc/css-files.twig' %}

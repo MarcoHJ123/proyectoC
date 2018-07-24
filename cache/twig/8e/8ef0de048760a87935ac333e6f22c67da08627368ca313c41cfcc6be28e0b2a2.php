@@ -88,27 +88,18 @@ class __TwigTemplate_6a8c115e16aabe84d8d99da81c1f90d309187b23e89288cc77fc1fbb308
         echo "  ";
         $this->displayParentBlock("scripts", $context, $blocks);
         echo "
-  <!-- pickadate -->
-  <script type=\"text/javascript\" src=\"";
-        // line 41
-        echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
-        echo "/public/assets/app/libs/pickadate/js/picker.js\"></script>
+  <!-- App JS -->
+  <script type=\"text/javascript\" src=\"http://maps.google.com/maps?file=api&v=2&key=AIzaSyCV-quRftERbHa_3kEUVCTOWPgvl9bA1ao\"></script>
   <script type=\"text/javascript\" src=\"";
         // line 42
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
-        echo "/public/assets/app/libs/pickadate/js/picker.time.js\"></script>
+        echo "/public/assets/app/js/mapa.js\"></script>
   <script type=\"text/javascript\" src=\"";
         // line 43
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
-        echo "/public/assets/app/libs/pickadate/js/picker.date.js\"></script>
-
-  <!-- App JS -->
-  <script type=\"text/javascript\" src=\"";
-        // line 46
-        echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/app/js/crear_anunciosD.js\"></script>
   <script type=\"text/javascript\" src=\"";
-        // line 47
+        // line 44
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/app/js/validar_crear_ticket.js\"></script>
 ";
@@ -126,7 +117,7 @@ class __TwigTemplate_6a8c115e16aabe84d8d99da81c1f90d309187b23e89288cc77fc1fbb308
 
     public function getDebugInfo()
     {
-        return array (  112 => 47,  108 => 46,  102 => 43,  98 => 42,  94 => 41,  88 => 39,  85 => 38,  76 => 32,  68 => 25,  66 => 24,  62 => 22,  60 => 21,  56 => 19,  54 => 18,  51 => 17,  48 => 16,  39 => 8,  37 => 7,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  103 => 44,  99 => 43,  95 => 42,  88 => 39,  85 => 38,  76 => 32,  68 => 25,  66 => 24,  62 => 22,  60 => 21,  56 => 19,  54 => 18,  51 => 17,  48 => 16,  39 => 8,  37 => 7,  32 => 4,  29 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -178,12 +169,9 @@ class __TwigTemplate_6a8c115e16aabe84d8d99da81c1f90d309187b23e89288cc77fc1fbb308
 {% endblock %}
 {% block scripts %}
   {{ parent() }}
-  <!-- pickadate -->
-  <script type=\"text/javascript\" src=\"{{ base_url() }}/public/assets/app/libs/pickadate/js/picker.js\"></script>
-  <script type=\"text/javascript\" src=\"{{ base_url() }}/public/assets/app/libs/pickadate/js/picker.time.js\"></script>
-  <script type=\"text/javascript\" src=\"{{ base_url() }}/public/assets/app/libs/pickadate/js/picker.date.js\"></script>
-
   <!-- App JS -->
+  <script type=\"text/javascript\" src=\"http://maps.google.com/maps?file=api&v=2&key=AIzaSyCV-quRftERbHa_3kEUVCTOWPgvl9bA1ao\"></script>
+  <script type=\"text/javascript\" src=\"{{ base_url() }}/public/assets/app/js/mapa.js\"></script>
   <script type=\"text/javascript\" src=\"{{ base_url() }}/public/assets/app/js/crear_anunciosD.js\"></script>
   <script type=\"text/javascript\" src=\"{{ base_url() }}/public/assets/app/js/validar_crear_ticket.js\"></script>
 {% endblock %}", "crear-anuncios/desaparecido/main.twig", "C:\\xampp\\htdocs\\proyectoC\\app\\Views\\crear-anuncios\\desaparecido\\main.twig");

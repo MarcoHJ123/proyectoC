@@ -31,6 +31,7 @@ APP.functions = {};
    };
 })(jQuery);
 
+//Debug
 function c(msg){
   if( APP.debug ){
     console.log(msg);

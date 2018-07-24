@@ -18,13 +18,14 @@ class __TwigTemplate_a435b99814109b416765b23fd4251b545b481b222295e28eb3286962554
         // line 1
         echo "<h4>Detalles</h4>
 <div class=\"row\">
-  <div class=\"col-md-6 p-t-6\" for=\"estado_persona\">
-    <input type=\"text\" name=\"estado_persona\" value=\"2\" class=\"form-control\" id=\"estado_persona\">
-  </div>
 
-  <div class=\"col-md-12 p-t-12\" for=\"ultima_ubicacion\">
-    <label class=\"col-form-label\">Ultima vez visto</label>
-    <input type=\"text\" name=\"ultima_ubicacion\" placeholder=\"Google maps...\" class=\"form-control\" id=\"ultima_ubicacion\">
+  <div class=\"col-md-12 p-t-12\">
+  <label class=\"col-form-label\">Ultima vez visto</label>
+  <div id=\"map\" style=\"height: 278px\"></div>
+    <form action=\"#\" id=\"posicion\" name=\"posicion\">
+      <input type=\"text\" name=\"ubicacio_lt\"  hidden disabled />
+      <input type=\"text\" name=\"ubicacio_ln\"  hidden disabled />
+    </form>
   </div>
 
   <div class=\"col-md-12 p-t-12\" for=\"descripcion\">
@@ -62,13 +63,14 @@ class __TwigTemplate_a435b99814109b416765b23fd4251b545b481b222295e28eb3286962554
     {
         return new Twig_Source("<h4>Detalles</h4>
 <div class=\"row\">
-  <div class=\"col-md-6 p-t-6\" for=\"estado_persona\">
-    <input type=\"text\" name=\"estado_persona\" value=\"2\" class=\"form-control\" id=\"estado_persona\">
-  </div>
 
-  <div class=\"col-md-12 p-t-12\" for=\"ultima_ubicacion\">
-    <label class=\"col-form-label\">Ultima vez visto</label>
-    <input type=\"text\" name=\"ultima_ubicacion\" placeholder=\"Google maps...\" class=\"form-control\" id=\"ultima_ubicacion\">
+  <div class=\"col-md-12 p-t-12\">
+  <label class=\"col-form-label\">Ultima vez visto</label>
+  <div id=\"map\" style=\"height: 278px\"></div>
+    <form action=\"#\" id=\"posicion\" name=\"posicion\">
+      <input type=\"text\" name=\"ubicacio_lt\"  hidden disabled />
+      <input type=\"text\" name=\"ubicacio_ln\"  hidden disabled />
+    </form>
   </div>
 
   <div class=\"col-md-12 p-t-12\" for=\"descripcion\">

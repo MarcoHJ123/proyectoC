@@ -37,12 +37,9 @@
 {% endblock %}
 {% block scripts %}
   {{ parent() }}
-  <!-- pickadate -->
-  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/libs/pickadate/js/picker.js"></script>
-  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/libs/pickadate/js/picker.time.js"></script>
-  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/libs/pickadate/js/picker.date.js"></script>
-
   <!-- App JS -->
+  <script type="text/javascript" src="http://maps.google.com/maps?file=api&v=2&key=AIzaSyCV-quRftERbHa_3kEUVCTOWPgvl9bA1ao"></script>
+  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/js/mapa.js"></script>
   <script type="text/javascript" src="{{ base_url() }}/public/assets/app/js/crear_anunciosD.js"></script>
   <script type="text/javascript" src="{{ base_url() }}/public/assets/app/js/validar_crear_ticket.js"></script>
 {% endblock %}

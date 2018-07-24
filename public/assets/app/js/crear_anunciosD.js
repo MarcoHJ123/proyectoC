@@ -18,9 +18,11 @@
     app.$estatura_persona = app.$form.find('input[name="estatura_persona"]');
     app.$parentesco = app.$form.find('select[name="parentesco"]');
 
-    app.$estado_persona = app.$form.find('select[name="estado_persona"]');
-    app.$ultima_ubicacion = app.$form.find('input[name="ultima_ubicacion"]');
+    app.$ubicacio_lt = app.$form.find('input[name="ubicacio_lt"]');
+    app.$ubicacio_ln = app.$form.find('input[name="ubicacio_ln"]');
     app.$descripcion = app.$form.find('textarea[name="descripcion"]');
+
+
 
     app.$box_msg_final = app.$form.find('.box-mensaje-anuncio-creado');
     app.$btn_crear_anuncio = app.$form.find('#btn-crear-anuncio');
@@ -115,39 +117,40 @@
     app.$color_piel.val('');
     app.$estatura_persona.val('');
     app.$parentesco.val('');
-    app.$estado_persona.val('');
-    app.$ultima_ubicacion.val('');
     app.$descripcion.val('');
+    app.$ubicacio_lt.val('');
+    app.$ubicacio_ln.val('');
+
   };
 
 
   // app.validadar_num_expediente = function( $campo ){
-  //   var valor = $.trim( $campo.val() );
-  //   var error = false;
-  //   if( valor == '0' || valor.length < 1 ){
-  //     error = true;
-  //     $campo.next('.messages').html('<p class="text-danger error">Ingresa N° Expediente</p>');
-  //   } else {
-  //     $campo.next('.messages').html('');
-  //     var $anio = app.$anio;
-  //     if( $anio.val() == '0' ){
-  //       error = true;
-  //     }
-  //   }
-  //   return error;
-  // };
+    //   var valor = $.trim( $campo.val() );
+    //   var error = false;
+    //   if( valor == '0' || valor.length < 1 ){
+    //     error = true;
+    //     $campo.next('.messages').html('<p class="text-danger error">Ingresa N° Expediente</p>');
+    //   } else {
+    //     $campo.next('.messages').html('');
+    //     var $anio = app.$anio;
+    //     if( $anio.val() == '0' ){
+    //       error = true;
+    //     }
+    //   }
+    //   return error;
+    // };
 
-  // app.validadar_juzgado = function( $campo ){
-  //   var valor = $.trim( $campo.val() );
-  //   var error = false;
-  //   if( valor == '0' || valor == '' ){
-  //     error = true;
-  //     $campo.next('.messages').html('<p class="text-danger error">Seleccione Juzgado</p>');
-  //   } else {
-  //     $campo.next('.messages').html('');
-  //   }
-  //   return error;
-  // };
+    // app.validadar_juzgado = function( $campo ){
+    //   var valor = $.trim( $campo.val() );
+    //   var error = false;
+    //   if( valor == '0' || valor == '' ){
+    //     error = true;
+    //     $campo.next('.messages').html('<p class="text-danger error">Seleccione Juzgado</p>');
+    //   } else {
+    //     $campo.next('.messages').html('');
+    //   }
+    //   return error;
+    // };
 
 
   app.inicializar_elementos_de_formulario = function(){
@@ -178,10 +181,9 @@
     var parentesco = $.trim( app.$parentesco.val() );
     if( parentesco != '0' ){$selected = app.$parentesco.find('option:selected');}
 
-    var estado_persona = $.trim( app.$estado_persona.val() );
-    if( estado_persona != '0' ){$selected = app.$estado_persona.find('option:selected');}
-    var ultima_ubicacion = $.trim( app.$ultima_ubicacion.val() );
     var descripcion = $.trim( app.$descripcion.val() );
+    var ubicacio_lt = $.trim( app.$ubicacio_lt.val() );
+    var ubicacio_ln = $.trim( app.$ubicacio_ln.val() );
 
     return {
       nombres_persona: nombres_persona,
@@ -192,9 +194,9 @@
       color_piel: color_piel,
       estatura_persona: estatura_persona,
       parentesco: parentesco,
-      estado_persona: estado_persona,
-      ultima_ubicacion: ultima_ubicacion,
       descripcion: descripcion,
+      ubicacio_lt: ubicacio_lt,
+      ubicacio_ln: ubicacio_ln,
     };
   };
 
