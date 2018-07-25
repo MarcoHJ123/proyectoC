@@ -7,6 +7,7 @@ use App\Models\Aporte;
 class RegistrarAporte extends Controller {
 
 	public function inicio( $request, $response, $args ){
+<<<<<<< HEAD
 		$id_anuncio = $args['id_anuncio'];
 		$obj = new Anuncio();
 		$resultado = $obj->buscar_anuncio( $id_anuncio );
@@ -18,6 +19,26 @@ class RegistrarAporte extends Controller {
 			'anuncio' => $anuncio,
  		);
  		 d($data);
+=======
+<<<<<<< HEAD
+
+
+			$id_anuncio = $args['id_anuncio'];
+			d($id_anuncio);
+			$data = array(
+
+	 		);
+
+			$id_ticket = $args['id_ticket'];
+			d($id_ticket);
+=======
+
+			$id_anuncio = $args['id_anuncio'];
+			d($id_anuncio);
+>>>>>>> 8b33cb5b7ec7a940f50d56d5451f0bab2d0b81a5
+			$data = array();
+
+>>>>>>> 61590ebb00bee79588ad2a072d0748d54789ff0b
  		return $this->view->render( $response, 'aportar-anuncios/main.twig', $data );
   }
 

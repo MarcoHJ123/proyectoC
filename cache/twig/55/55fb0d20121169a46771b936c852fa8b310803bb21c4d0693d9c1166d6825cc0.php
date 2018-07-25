@@ -19,7 +19,11 @@ class __TwigTemplate_0493eac5c66a0ddb64c698d2541fb7c8489ddd8016a7c73e6f1d42070b6
         echo "<div class=\"col-sm-12\">
 \t<div class=\"col-sm-6 col-md-6 col-lg-6\">
 \t\t<input type=\"file\" class=\"form-control\">
+<<<<<<< HEAD
 \t</div>
+=======
+\t\t</div>
+>>>>>>> 61590ebb00bee79588ad2a072d0748d54789ff0b
 <div class=\"row\">
 \t\t<div class=\"col-sm-6 col-md-6 col-lg-6\">
 \t\t<input type=\"image\" class=\"img-rounded\" src=\"";
@@ -97,7 +101,11 @@ class __TwigTemplate_0493eac5c66a0ddb64c698d2541fb7c8489ddd8016a7c73e6f1d42070b6
         return new Twig_Source("<div class=\"col-sm-12\">
 \t<div class=\"col-sm-6 col-md-6 col-lg-6\">
 \t\t<input type=\"file\" class=\"form-control\">
+<<<<<<< HEAD
 \t</div>
+=======
+\t\t</div>
+>>>>>>> 61590ebb00bee79588ad2a072d0748d54789ff0b
 <div class=\"row\">
 \t\t<div class=\"col-sm-6 col-md-6 col-lg-6\">
 \t\t<input type=\"image\" class=\"img-rounded\" src=\"{{ base_url() }}/public/assets/app/images/add_image.png\" alt=\"Logo\" style=\"height: inherit; width: inherit;\" />

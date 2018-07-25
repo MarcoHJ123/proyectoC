@@ -30,6 +30,7 @@ class __TwigTemplate_c925044b27d7da14c929f94f08932baa8f747a400adf5a5524ba4f97842
     {
         // line 4
         echo "<div class=\"page-body text-center\">
+<<<<<<< HEAD
   <div class=\"row\">
     <div class=\"col-sm-12\">
       ";
@@ -39,10 +40,21 @@ class __TwigTemplate_c925044b27d7da14c929f94f08932baa8f747a400adf5a5524ba4f97842
         echo "    </div>
     <div class=\"col-sm-12\" style=\"    padding-left: 42px;
     padding-right: 42px;\">
+=======
+    <div class=\"row\">
+      <div class=\"col-sm-12\">
+        ";
+        // line 7
+        $this->loadTemplate("templates/inc/messages.twig", "crear-anuncios/perdido/main.twig", 7)->display($context);
+        // line 8
+        echo "      </div>
+    <div class=\"col-sm-12\">
+>>>>>>> 61590ebb00bee79588ad2a072d0748d54789ff0b
       <div class=\"card card-creacion-ticket\">
         <div class=\"card-header text-center m-t-10\">
           <h3>Registra Persona Encontrada</h3>
         </div>
+<<<<<<< HEAD
         <div class=\"card-block form-crear-ticket\">
           ";
         // line 16
@@ -57,14 +69,43 @@ class __TwigTemplate_c925044b27d7da14c929f94f08932baa8f747a400adf5a5524ba4f97842
       </div>
     </div>
 </div>
+=======
+          <div class=\"card-block form-crear-ticket\">
+
+              ";
+        // line 16
+        $this->loadTemplate("crear-anuncios/perdido/inc/partes.twig", "crear-anuncios/perdido/main.twig", 16)->display($context);
+        // line 17
+        echo "
+              <div class=\"m-b-26 box-mensaje-ticket-creado hide\">
+                <div class=\"alert alert-info icons-alert fix-icon-alert\">
+                </div>
+              </div>
+            ";
+        // line 23
+        echo "          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+>>>>>>> 61590ebb00bee79588ad2a072d0748d54789ff0b
 
 ";
     }
 
+<<<<<<< HEAD
     // line 28
     public function block_scripts($context, array $blocks = array())
     {
         // line 29
+=======
+    // line 32
+    public function block_scripts($context, array $blocks = array())
+    {
+        // line 33
+>>>>>>> 61590ebb00bee79588ad2a072d0748d54789ff0b
         echo "  ";
         $this->displayParentBlock("scripts", $context, $blocks);
         echo "
@@ -85,7 +126,11 @@ class __TwigTemplate_c925044b27d7da14c929f94f08932baa8f747a400adf5a5524ba4f97842
 
     public function getDebugInfo()
     {
+<<<<<<< HEAD
         return array (  68 => 29,  65 => 28,  51 => 17,  49 => 16,  39 => 8,  37 => 7,  32 => 4,  29 => 3,  11 => 1,);
+=======
+        return array (  73 => 33,  70 => 32,  58 => 23,  51 => 17,  49 => 16,  39 => 8,  37 => 7,  32 => 4,  29 => 3,  11 => 1,);
+>>>>>>> 61590ebb00bee79588ad2a072d0748d54789ff0b
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -102,16 +147,25 @@ class __TwigTemplate_c925044b27d7da14c929f94f08932baa8f747a400adf5a5524ba4f97842
 
 {% block content %}
 <div class=\"page-body text-center\">
+<<<<<<< HEAD
   <div class=\"row\">
     <div class=\"col-sm-12\">
       {% include 'templates/inc/messages.twig' %}
     </div>
     <div class=\"col-sm-12\" style=\"    padding-left: 42px;
     padding-right: 42px;\">
+=======
+    <div class=\"row\">
+      <div class=\"col-sm-12\">
+        {% include 'templates/inc/messages.twig' %}
+      </div>
+    <div class=\"col-sm-12\">
+>>>>>>> 61590ebb00bee79588ad2a072d0748d54789ff0b
       <div class=\"card card-creacion-ticket\">
         <div class=\"card-header text-center m-t-10\">
           <h3>Registra Persona Encontrada</h3>
         </div>
+<<<<<<< HEAD
         <div class=\"card-block form-crear-ticket\">
           {% include 'crear-anuncios/perdido/inc/partes.twig' %}
           <div class=\"m-b-26 box-mensaje-ticket-creado hide\">
@@ -123,6 +177,24 @@ class __TwigTemplate_c925044b27d7da14c929f94f08932baa8f747a400adf5a5524ba4f97842
       </div>
     </div>
 </div>
+=======
+          <div class=\"card-block form-crear-ticket\">
+
+              {% include 'crear-anuncios/perdido/inc/partes.twig' %}
+
+              <div class=\"m-b-26 box-mensaje-ticket-creado hide\">
+                <div class=\"alert alert-info icons-alert fix-icon-alert\">
+                </div>
+              </div>
+            {# </form> #}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+>>>>>>> 61590ebb00bee79588ad2a072d0748d54789ff0b
 
 {% endblock %}
 {% block scripts %}
