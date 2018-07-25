@@ -12,7 +12,10 @@ class CrearAnuncioD extends Controller {
 	*/
 	public function inicioD( $request, $response, $args ){
 		$data = array();
+			$user_login = $this->session->exists('user_login') ? $this->session->user_login : array();
+			d($user_login);
 		return $this->view->render( $response, 'crear-anuncios/desaparecido/main.twig', $data );
+
 	}
 
 	/*
@@ -30,9 +33,11 @@ class CrearAnuncioD extends Controller {
 			return json_encode( $return );
 		}
 
+		$user_login = $this->session->exists('user_login') ? $this->session->user_login : array();
+
 		$error = false;
 		$obj_cita = new Anuncio();
-		$resultado = $obj_cita->crearDesaparecido( $request );
+		$resultado = $obj_cita->crearDesaparecido( $request, $user_login['id_login'] );
 
 		if( $resultado['status'] == true ){
 			$mensaje = "creada ";

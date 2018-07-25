@@ -219,14 +219,6 @@ class Connections {
     $this->stmt->bindValue( $param, $value, $type );
   }
 
-
 }
-
-
-
-
-
-
-
 
 ?>

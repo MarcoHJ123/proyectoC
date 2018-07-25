@@ -29,6 +29,9 @@ $container['Login'] = function( $container ){
 $container['LoginFb'] = function( $container ){
   return new App\Controllers\LoginFb();
 };
+$container['PerfilUsuario'] = function( $container ){
+  return new App\Controllers\PerfilUsuario();
+};
 $container['RegistrarAporte'] = function( $container ){
   return new App\Controllers\RegistrarAporte();
 };
@@ -51,5 +54,17 @@ $container['connections'] = function( $container ) {
   return $connections;
 };
 
+
+/*
+|---------------------------------------------------------------------------------------------------
+| 404 Page not found
+|---------------------------------------------------------------------------------------------------
+*/
+$container['notFoundHandler'] = function ( $container ) {
+  return function ($request, $response) use ( $container ) {
+    $view = $container['view'];
+    return $view->render( $response->withStatus(404), '404/main.twig', array());
+  };
+};
 
 

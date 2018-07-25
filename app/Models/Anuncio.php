@@ -58,7 +58,7 @@ class Anuncio extends Model {
 	| CREAR ANUNCIO DE PERSONA DESAPARECIDA
 	|---------------------------------------------------------------------------------------------------
 	*/
-public function crearDesaparecido($request){
+	public function crearDesaparecido($request , $user_login){
 		$return = array(
 				'status' => false,
 				'error' => '',
@@ -81,6 +81,7 @@ public function crearDesaparecido($request){
 	    $anuncio = $this->get_data( $request, 'anuncio' );
 	    $anuncio['id_anuncio'] = $id_anuncio;
 	    $anuncio['estado_persona'] = '2';
+	    $anuncio['id_usuario'] = $user_login;
 			// $anuncio['nombres'] = encriptar_password( $request->getParam( 'nombres_persona' ));
 
 			try {
@@ -120,19 +121,44 @@ public function crearDesaparecido($request){
 	| TRAE EL ULTIMO CODIGO DE ANUNCIO
 	|---------------------------------------------------------------------------------------------------
 	*/
-		public function get_anuncio( $request ){
-			$return = array(
-				'status' => false,
-			);
-			$data = array();
-				$sql = "SELECT id_anuncio FROM anuncio ORDER BY id_anuncio DESC LIMIT 1";
-			$result = $this->execute_query( CONNECTION_SIJ, false, 'sql', $sql, $data );
-			$return = array_merge( $return, $result );
-			if( $return['status'] ){
-				$return['item'] = $this->get_one( $result['stmt'] );
-			}
-			return $return;
+	public function get_anuncio( $request ){
+		$return = array(
+			'status' => false,
+		);
+		$data = array();
+			$sql = "SELECT id_anuncio FROM anuncio ORDER BY id_anuncio DESC LIMIT 1";
+		$result = $this->execute_query( CONNECTION_SIJ, false, 'sql', $sql, $data );
+		$return = array_merge( $return, $result );
+		if( $return['status'] ){
+			$return['item'] = $this->get_one( $result['stmt'] );
 		}
+		return $return;
+	}
+
+	/*
+	|---------------------------------------------------------------------------------------------------
+	| BUSCAR ANUNCIO
+	|---------------------------------------------------------------------------------------------------
+	*/
+	public function buscar_anuncio( $id_anuncio ){
+		$return = array(
+			'status' => false,
+		);
+
+		$data = array(
+			'id_anuncio' => $id_anuncio,
+		);
+
+		$sql = "SELECT * FROM anuncio where id_anuncio = :id_anuncio";
+
+		$result = $this->execute_query( CONNECTION_SIJ, false, 'sql', $sql, $data );
+		$return = array_merge( $return, $result );
+		if( $return['status'] ){
+			$return['items'] = $this->get_all( $result['stmt'] );
+		}
+		return $return;
+	}
+
 }
 
 ?>

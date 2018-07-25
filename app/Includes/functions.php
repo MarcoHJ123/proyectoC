@@ -59,23 +59,6 @@ function is_ajax(){
   return false;
 }
 
-/*
-|---------------------------------------------------------------------------------------------------
-| Random string
-|---------------------------------------------------------------------------------------------------
-
-function random_string( $length = 10, $type = 'mixed' ){
-  $letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  $numbers = '0123456789';
-  $str = $letters.$numbers;
-  if( $type == 'letters' ){
-    $str = $letters;
-  } elseif( $type == 'numbers' ){
-    $str = $numbers;
-  }
-  return substr( str_shuffle( $str ), 0, $length );
-}*/
-
 
 // |---------------------------------------------------------------------------------------------------
 // | Encriptar password
@@ -114,73 +97,4 @@ function encriptar_password( $clave ){
     $nueva_clave .= chr( $resta );
   }
   return $nueva_clave;
-}
-
-/*
-|---------------------------------------------------------------------------------------------------
-| Retorna un array con el código cita y el código validador
-|---------------------------------------------------------------------------------------------------
-*/
-function get_codigos_cita( $full_codigo ){
-  $c_validador = substr( $full_codigo, -4, 4);
-  $c_cita = str_replace( $c_validador, '', $full_codigo );
-  return array(
-    'c_cita' => $c_cita,
-    'c_validador' => $c_validador,
-  );
-}
-
-/*
-|---------------------------------------------------------------------------------------------------
-| Envío mensajes por celular
-|---------------------------------------------------------------------------------------------------
-
-function enviar_mensaje_celular( $numero_cel, $mensaje = '' ){
-  $smsMensaje = get_settings_file( 'sms-mensaje.json' );
-  if( ! is_array( $smsMensaje ) ){
-    return null;
-  }
-  $enviado = false;
-  if( isset( $smsMensaje['activo'] ) && $smsMensaje['activo'] && $numero_cel ){
-    $objSms = new \SmsGateway( $smsMensaje['client_email'], $smsMensaje['client_password'] );
-    $resultado = $objSms->sendMessageToNumber( $numero_cel, $mensaje, $smsMensaje['client_id'] );//numero a enviar, mensaje , id dispositivo
-    $enviado = $resultado['response']['success'];
-  }
-  return $enviado;
-}*/
-
-
-function my_array_sort($array, $on, $order=SORT_ASC){
-
-    $new_array = array();
-    $sortable_array = array();
-
-    if (count($array) > 0) {
-        foreach ($array as $k => $v) {
-            if (is_array($v)) {
-                foreach ($v as $k2 => $v2) {
-                    if ($k2 == $on) {
-                        $sortable_array[$k] = $v2;
-                    }
-                }
-            } else {
-                $sortable_array[$k] = $v;
-            }
-        }
-
-        switch ($order) {
-            case SORT_ASC:
-                asort($sortable_array);
-                break;
-            case SORT_DESC:
-                arsort($sortable_array);
-                break;
-        }
-
-        foreach ($sortable_array as $k => $v) {
-            $new_array[$k] = $array[$k];
-        }
-    }
-
-    return $new_array;
 }

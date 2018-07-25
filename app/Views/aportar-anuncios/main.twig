@@ -1,1 +1,85 @@
 {% extends 'templates/master/master.twig' %}
+
+{% block content %}
+{% if anuncio %}
+{% for anuncio in anuncio %}
+<div class="page-body text-center">
+  <div class="row">
+    <div class="col-sm-12">
+      {% include 'templates/inc/messages.twig' %}
+    </div>
+    <div class="col-sm-12" style="padding-left: 42px; padding-right: 42px; text-transform:uppercase;">
+      <div class="card card-creacion-ticket">
+        <div class="card-header text-center" >{#  style="color: white;
+    background-color: #ff5252;" #}
+          <h3>PERSONA DESAPARECIDA</h3>
+      	</div>
+      	<div class="card-block form-crear-aporte">
+      		<div class="row" style="border-bottom:1px solid rgba(0,0,0,.125);">
+
+		    		<div class="col-sm-2 col-md-2 col-lg-2"> {# style="background-color:#233237;" #}
+								<input type="image" class="img-rounded" src="{{ base_url() }}/public/assets/app/images/add_image.png" alt="Logo" style="height: inherit; width: inherit;" />
+								<input type="image" class="img-rounded" src="{{ base_url() }}/public/assets/app/images/add_image.png" alt="Logo" style="height: inherit; width: inherit;" />
+								<input type="image" class="img-rounded" src="{{ base_url() }}/public/assets/app/images/add_image.png" alt="Logo" style="height: inherit; width: inherit;" />
+		    		</div>
+
+		    		<div class="col-sm-6 col-md-6 col-lg-6">
+		    		<input type="image" class="img-rounded" src="{{ base_url() }}/public/assets/app/images/add_image.png" alt="Logo" style="height: inherit; width: inherit;" />
+		    		</div>
+
+		    		<div class="col-sm-4 col-md-4 col-lg-4">
+							<h4>{{ anuncio.nombres }} {{ anuncio.apellidos }}</h4>
+							Sexo : {% if anuncio.sexo == 'h' %}Hombre {% else %} Mujer {% endif %}
+							Color piel : {{ anuncio.color_piel }}<br>
+							estatura : {{ anuncio.estatura }}<br>
+							fecha nacimiento : {{ anuncio.fecha_nacimiento }}<br>
+							tipo documento : {{ anuncio.tipo_documento }}<br>
+							contacto : {{ anuncio.id_usuario }}<br>
+							fecha registro : {{ anuncio.fecha_registro }}<br>
+							descripcion : {{ anuncio.descripcion }}<br>
+							parentezco : {{ anuncio.parentesco }}<br>
+							numero de documento : {{ anuncio.numero_documento }}<br>
+		    		</div>
+      		</div>
+
+      		<div class="col-sm-12 col-md-12 col-lg-12">
+						<h4 style="padding-top: 15px;">REGISTRAR APORTE</h4>
+						<div class="col-md-12 p-t-12">
+					  	<label class="col-form-label">Ultima vez visto</label>
+					  	{# <div id="map" style="height: 278px"></div> #}
+					    {# <form action="#" id="posicion" name="posicion"> #}
+					      <input type="text" name="ubicacio_lt" class="form-control"/>
+					      <input type="text" name="ubicacio_ln" class="form-control"/>
+					      <input type="text" name="id_anuncio" class="form-control" value="{{ anuncio.id_anuncio }}" hidden disabled/>
+							{# </form> #}
+					  </div>
+
+      			<div class="col-md-12 p-t-12" for="descripcion">
+					    <label class="col-form-label">Descripcion</label>
+					    <textarea type="text" name="descripcion" placeholder="Describir breve como ocurrio el acontecimiento" class="form-control" id="descripcion"></textarea>
+					  </div>
+
+						<button type="button" id="btn-crear-aporte" class="btn btn-mat waves-light btn-inverse text-center">Crear aporte</button>
+
+      		</div>
+
+      		<div class="m-b-26 box-mensaje-aporte-creado hide">
+            <div class="alert alert-info icons-alert fix-icon-alert">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endfor %}
+{% else %}
+	<p>No hay datos del anuncio</p>
+{% endif %}
+{% endblock content %}
+
+{% block scripts %}
+  {{ parent() }}
+   <script type="text/javascript" src="{{ base_url() }}/public/assets/app/js/crear_aporte.js"></script>
+{% endblock %}

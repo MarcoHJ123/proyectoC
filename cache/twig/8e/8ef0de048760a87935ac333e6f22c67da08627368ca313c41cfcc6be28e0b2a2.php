@@ -43,36 +43,44 @@ class __TwigTemplate_6a8c115e16aabe84d8d99da81c1f90d309187b23e89288cc77fc1fbb308
           <h3>Registra Persona Desaparecida</h3>
         </div>
           <div class=\"f1 card-block form-crear-anuncio\">
-            ";
-        // line 16
-        echo "              ";
-        $this->loadTemplate("crear-anuncios/desaparecido/inc/pasos.twig", "crear-anuncios/desaparecido/main.twig", 16)->display($context);
+            <div class=\"row\">
+              <div class=\"col-sm-6\" style=\"text-align: -webkit-center; border-right: 1px solid rgba(0,0,0,.125);\">
+                ";
         // line 17
-        echo "              <fieldset>
-              ";
+        $this->loadTemplate("crear-anuncios/desaparecido/inc/foto.twig", "crear-anuncios/desaparecido/main.twig", 17)->display($context);
         // line 18
-        $this->loadTemplate("crear-anuncios/desaparecido/inc/detalle-persona.twig", "crear-anuncios/desaparecido/main.twig", 18)->display($context);
-        // line 19
-        echo "              </fieldset>
-              <fieldset>
-              ";
+        echo "              </div>
+              <div class=\"col-sm-6\">
+                ";
+        // line 20
+        $this->loadTemplate("crear-anuncios/desaparecido/inc/pasos.twig", "crear-anuncios/desaparecido/main.twig", 20)->display($context);
         // line 21
-        $this->loadTemplate("crear-anuncios/desaparecido/inc/detalles-generales.twig", "crear-anuncios/desaparecido/main.twig", 21)->display($context);
+        echo "                <fieldset>
+                ";
         // line 22
-        echo "              </fieldset>
-              <fieldset>
-              ";
-        // line 24
-        $this->loadTemplate("crear-anuncios/desaparecido/inc/datos-Personales.twig", "crear-anuncios/desaparecido/main.twig", 24)->display($context);
+        $this->loadTemplate("crear-anuncios/desaparecido/inc/detalle-persona.twig", "crear-anuncios/desaparecido/main.twig", 22)->display($context);
+        // line 23
+        echo "                </fieldset>
+                <fieldset>
+                ";
         // line 25
-        echo "              </fieldset>
-
+        $this->loadTemplate("crear-anuncios/desaparecido/inc/detalles-generales.twig", "crear-anuncios/desaparecido/main.twig", 25)->display($context);
+        // line 26
+        echo "                </fieldset>
+                <fieldset>
+                ";
+        // line 28
+        $this->loadTemplate("crear-anuncios/desaparecido/inc/datos-Personales.twig", "crear-anuncios/desaparecido/main.twig", 28)->display($context);
+        // line 29
+        echo "                </fieldset>
+              </div>
+            </div>
               <div class=\"m-b-26 box-mensaje-anuncio-creado hide\">
                 <div class=\"alert alert-info icons-alert fix-icon-alert\">
                 </div>
               </div>
             ";
-        // line 32
+        // line 37
         echo "          </div>
         </div>
       </div>
@@ -81,25 +89,25 @@ class __TwigTemplate_6a8c115e16aabe84d8d99da81c1f90d309187b23e89288cc77fc1fbb308
 ";
     }
 
-    // line 38
+    // line 43
     public function block_scripts($context, array $blocks = array())
     {
-        // line 39
+        // line 44
         echo "  ";
         $this->displayParentBlock("scripts", $context, $blocks);
         echo "
   <!-- App JS -->
   <script type=\"text/javascript\" src=\"http://maps.google.com/maps?file=api&v=2&key=AIzaSyCV-quRftERbHa_3kEUVCTOWPgvl9bA1ao\"></script>
   <script type=\"text/javascript\" src=\"";
-        // line 42
+        // line 47
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/app/js/mapa.js\"></script>
   <script type=\"text/javascript\" src=\"";
-        // line 43
+        // line 48
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/app/js/crear_anunciosD.js\"></script>
   <script type=\"text/javascript\" src=\"";
-        // line 44
+        // line 49
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/app/js/validar_crear_ticket.js\"></script>
 ";
@@ -117,7 +125,7 @@ class __TwigTemplate_6a8c115e16aabe84d8d99da81c1f90d309187b23e89288cc77fc1fbb308
 
     public function getDebugInfo()
     {
-        return array (  103 => 44,  99 => 43,  95 => 42,  88 => 39,  85 => 38,  76 => 32,  68 => 25,  66 => 24,  62 => 22,  60 => 21,  56 => 19,  54 => 18,  51 => 17,  48 => 16,  39 => 8,  37 => 7,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  111 => 49,  107 => 48,  103 => 47,  96 => 44,  93 => 43,  84 => 37,  75 => 29,  73 => 28,  69 => 26,  67 => 25,  63 => 23,  61 => 22,  58 => 21,  56 => 20,  52 => 18,  50 => 17,  39 => 8,  37 => 7,  32 => 4,  29 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -144,18 +152,23 @@ class __TwigTemplate_6a8c115e16aabe84d8d99da81c1f90d309187b23e89288cc77fc1fbb308
           <h3>Registra Persona Desaparecida</h3>
         </div>
           <div class=\"f1 card-block form-crear-anuncio\">
-            {# <form role=\"form\" action=\"\" class=\"f1\"> #}
-              {% include 'crear-anuncios/desaparecido/inc/pasos.twig' %}
-              <fieldset>
-              {% include 'crear-anuncios/desaparecido/inc/detalle-persona.twig' %}
-              </fieldset>
-              <fieldset>
-              {% include 'crear-anuncios/desaparecido/inc/detalles-generales.twig' %}
-              </fieldset>
-              <fieldset>
-              {% include 'crear-anuncios/desaparecido/inc/datos-Personales.twig' %}
-              </fieldset>
-
+            <div class=\"row\">
+              <div class=\"col-sm-6\" style=\"text-align: -webkit-center; border-right: 1px solid rgba(0,0,0,.125);\">
+                {% include 'crear-anuncios/desaparecido/inc/foto.twig' %}
+              </div>
+              <div class=\"col-sm-6\">
+                {% include 'crear-anuncios/desaparecido/inc/pasos.twig' %}
+                <fieldset>
+                {% include 'crear-anuncios/desaparecido/inc/detalle-persona.twig' %}
+                </fieldset>
+                <fieldset>
+                {% include 'crear-anuncios/desaparecido/inc/detalles-generales.twig' %}
+                </fieldset>
+                <fieldset>
+                {% include 'crear-anuncios/desaparecido/inc/datos-Personales.twig' %}
+                </fieldset>
+              </div>
+            </div>
               <div class=\"m-b-26 box-mensaje-anuncio-creado hide\">
                 <div class=\"alert alert-info icons-alert fix-icon-alert\">
                 </div>

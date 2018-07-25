@@ -4,7 +4,7 @@ namespace App\Controllers;
 use App\Models\Usuario;
 
 class Login extends Controller {
-	// private $perfil = 'ad';
+	private $perfil = 'ad';
 
 	/*
 	|---------------------------------------------------------------------------------------------------
@@ -13,7 +13,7 @@ class Login extends Controller {
 	*/
 	public function get_codigo_usuario(){
 		if( $this->esta_conectado() ){
-			return $this->session->user_login['id_usuario_login'];
+			return $this->session->user_login['id_login'];
 		}
 		return null;
 	}
@@ -36,7 +36,7 @@ class Login extends Controller {
 	|---------------------------------------------------------------------------------------------------
 	*/
 	public function esta_conectado(){
-		return isset( $this->session->user_login ) && ! empty( $this->session->user_login['id_usuario_login'] );
+		return isset( $this->session->user_login ) && ! empty( $this->session->user_login['id_login'] );
 	}
 
 	/*
@@ -62,7 +62,7 @@ class Login extends Controller {
 		$settings = get_settings_file( 'conexiones.json' );
 		$login_settings = $settings[CONNECTION_LOGIN];
 		$login_settings['username'] = trim( strtoupper( $usuario ) );
-		$login_settings['password'] =  encriptar_password( strtoupper( $password ) );
+		 $login_settings['password'] =  strtoupper( $password ); // encriptar_password( strtoupper( $password ) );
 
 		//Agregamos la conexión
 		$this->connections->addConnection( CONNECTION_LOGIN, $login_settings );
@@ -78,8 +78,8 @@ class Login extends Controller {
 			//Si existe usuario y es el perfil permitido, entonces creamos la sesión
 			if( $resultado['status'] && ! empty( $resultado['usuario'] ) ){
 				$session_login = array(
-					'id_usuario_login' => $login_settings['username'],
-					'nombres' => $resultado['usuario']['nombres'],
+					'id_login' => $login_settings['username'],
+					'nombres' => $resultado['usuario']['nombres'].' '. $resultado['usuario']['apellidos'],
 					'perfil_usuario' => $resultado['usuario']['perfil_usuario'],
 					'correo_electronico' => $resultado['usuario']['correo_electronico'],
 					'settings' => $login_settings,
@@ -102,12 +102,13 @@ class Login extends Controller {
 	*/
 	public function mostrar_pagina_login( $request, $response, $args ){
 		$data = array(
-			'id_usuario_login' => $this->session->get('id_usuario_login'),
+			'id_login' => $this->session->get('id_login'),
 			'login_settings' => $this->session->get('login_settings'),
 			'nombres' => $this->session->get('nombres'),
 			'count' => $this->session->get('count'),
-			// 'perfil_usuario' => $this->session->get('perfil_usuario'),
+			'perfil_usuario' => $this->session->get('perfil_usuario'),
 		);
+		d($data);
 		return $this->view->render( $response, 'login/login.twig', $data );
 	}
 
@@ -129,10 +130,16 @@ class Login extends Controller {
 
 			$this->flash->addMessage( 'success', 'Bienvenido(a): '.$user_login['nombres'] );
 
-			return $this->response->withRedirect( $this->router->pathFor( 'Anuncios' ) );
-
+			if( $user_login['perfil_usuario'] == $this->perfil ){
+				return $this->response->withRedirect( $this->router->pathFor( 'Anuncios' ) );
+			// } else if( $user_login['perfil'] == $this->perfil_admin ) {
+			// 	return $this->response->withRedirect( $this->router->pathFor( 'ajustes' ) );
+			} else {
+				//Si no tiene el perfil requerido cerramos la sesión y lo enviamos fuera del admin
+				$this->cerrar_sesion();
+				return $this->response->withRedirect( $this->router->pathFor( 'inicio' ) );
+			}
 		}
-
 	}
 
 }
