@@ -37,6 +37,7 @@ $this->get( '/crear-anuncios/perdido', 'CrearAnuncioP:inicioP' )->setName( 'Crea
 /*---------------APORTACIONES DE ANUNCIOS PERDIDOS Y DESAPARECIDOS---------------*/
 $this->get( '/anuncios/{id_anuncio}', 'RegistrarAporte:inicio' )->setName( 'aportes' );
 $this->post( '/ajax/crear-aporte', 'RegistrarAporte:crearAporte' )->setName( 'Crear_aporte' );
+$this->get( '/aportar/{id_anuncio}', 'RegistrarAporte:Aportar' )->setName( 'Aportar' );
 
 /*---------------CERRAR SESION---------------*/
 $this->get( '/cerrar-sesion', 'Login:cerrar_sesion' )->setName( 'cerrar_sesion' );

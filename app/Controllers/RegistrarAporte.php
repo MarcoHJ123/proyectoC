@@ -55,5 +55,16 @@ class RegistrarAporte extends Controller {
 		return json_encode( $return );
 
 	}
-
+	public function aportar( $request, $response, $args ){
+		$id_anuncio = $args['id_anuncio'];
+		$obj = new Anuncio();
+		$resultado = $obj->buscar_anuncio( $id_anuncio );
+		if( $resultado['status'] ){
+			$anuncio = $resultado['items'];
+		}
+		$data = array(
+			'anuncio' => $anuncio,
+ 		);
+ 		return $this->view->render( $response, 'aportar-anuncios/inc/aportar.twig', $data );
+  }
 }

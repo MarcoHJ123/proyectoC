@@ -59,9 +59,9 @@
                 <h6 class="f-w-400">{{datos.descripcion}}</h6>
                 <h6 class="f-w-600">PERU</h6>
                 {% if datos.estado_persona == '1' %}
-                <a class="btn btn-mat waves-light btn-success" href="{{ base_url() }}/anuncios/{{datos.id_anuncio}}" style="background-color: white; color: green;">APORTAR</a>
+                <a class="btn btn-mat waves-light btn-success" href="{{ base_url() }}/anuncios/{{datos.id_anuncio}}" style="background-color: white; color: green;">DETALLES</a>
                 {% else %}
-                <a class="btn btn-mat waves-light btn-danger text-center" href="{{ base_url() }}/anuncios/{{datos.id_anuncio}}" style="background-color: white; color: red;">APORTAR</a>
+                <a class="btn btn-mat waves-light btn-danger text-center" href="{{ base_url() }}/anuncios/{{datos.id_anuncio}}" style="background-color: white; color: red;">DETALLES</a>
                 {% endif %}
             </div>
         </div>

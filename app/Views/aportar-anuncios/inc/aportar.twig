@@ -1,0 +1,49 @@
+{% extends 'templates/master/master.twig' %}
+{% block content %}
+{% if anuncio %}
+{% for anuncio in anuncio %}
+<div class="card card-creacion-detalle">
+  <div class="card-header text-center" >{#  style="color: white;
+background-color: #ff5252;" #}
+    <h3>PERSONA DESAPARECIDA</h3>
+	</div>
+	<div class="card-block form-crear-aporte">
+		<div class="col-sm-12 col-md-12 col-lg-12">
+			<h4 style="padding-top: 15px;">REGISTRAR APORTE</h4>
+			<div class="col-md-12 p-t-12">
+		  	<label class="col-form-label">Seleccionar lugar donde fue visto</label>
+		  	<div id="map" style="height: 278px"></div>
+		    <form action="#" id="posicion" name="posicion">
+		      <input type="text" name="ubicacio_lt" class="form-control" hidden disabled/>
+		      <input type="text" name="ubicacio_ln" class="form-control" hidden disabled/>
+				</form>
+		  </div>
+
+			<div class="col-md-12 p-t-12" for="descripcion">
+		    <label class="col-form-label">Descripcion</label>
+		    <textarea type="text" name="descripcion" placeholder="Describir breve como ocurrio el acontecimiento" class="form-control" id="descripcion"></textarea>
+		  </div>
+
+			<div class="col-md-12 p-t-12 text-center"><br>
+			<input type="text" name="id_anuncio" class="form-control" value="{{ anuncio.id_anuncio }}" hidden disabled/>
+			<button type="button" id="btn-crear-aporte" class="btn btn-mat waves-light btn-inverse text-center">Crear aporte</button>
+			</div>
+		</div>
+		<div class="m-b-26 box-mensaje-aporte-creado hide">
+		  <div class="alert alert-info icons-alert fix-icon-alert">
+		  </div>
+		</div>
+	</div>
+</div>
+{% endfor %}
+{% else %}
+	<p>No hay datos del anuncio</p>
+{% endif %}
+{% endblock content %}
+
+{% block scripts %}
+  {{ parent() }}
+  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/js/mapa.js"></script>
+  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/js/crear_aporte.js"></script>
+  <script type="text/javascript" src="http://maps.google.com/maps?file=api&v=2&key=AIzaSyCV-quRftERbHa_3kEUVCTOWPgvl9bA1ao"></script>
+{% endblock %}
