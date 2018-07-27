@@ -1,49 +1,52 @@
-{# <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
-        <i class="ti-menu">M</i>
-      </a> #}
 <nav class="pcoded-navbar">
   <div class="pcoded-inner-navbar main-menu"style="background-color: #233237;">
     <div class="boxed-layout">
       <ul class="pcoded-item">
-         {#  <li class="active">
-            <a href="">
-              <span class="pcoded-mtext">INICIO</span>
-            </a>
-          </li> #}
-          {% if not user_login.c_usuario %}
+          {# {% if not user_login.id_login %} #}
           <li class="{% if current_url == main_menu.Anuncios.url %} active {% endif %}">
             <a href="{{ main_menu.Anuncios.url }}" class=" ">
               <span class="pcoded-mtext">{{ main_menu.Anuncios.title }}</span>
             </a>
           </li>
-          {% endif %}
-          {% if not user_login.c_usuario %}
+          {# {% endif %} #}
+
+          {% if user_login.id_login %}
           <li class="{% if current_url == main_menu.Crear_Anuncio.url %} active {% endif %}">
             <a href="{{ main_menu.Crear_Anuncio.url }}" class=" ">
               <span class="pcoded-mtext">{{ main_menu.Crear_Anuncio.title }}</span>
             </a>
           </li>
           {% endif %}
-          {% if not user_login.c_usuario %}
+
+          {% if not user_login.id_login %}
           <li class="{% if current_url == main_menu.RegistrarUsuario.url %} active {% endif %}">
             <a href="{{ main_menu.RegistrarUsuario.url }}" class=" ">
               <span class="pcoded-mtext">{{ main_menu.RegistrarUsuario.title }}</span>
             </a>
           </li>
           {% endif %}
-          {% if user_login.c_usuario %}
+
+          {% if user_login.id_login %}
+          <li class="{% if current_url == main_menu.PerfilUsuario.url %} active {% endif %}">
+            <a href="{{ main_menu.PerfilUsuario.url }}" class="">
+              <span class="pcoded-mtext">{{ main_menu.PerfilUsuario.title }}</span>
+            </a>
+          </li>
+          {% endif %}
+
+          {% if user_login.id_login %}
           <li class="{% if current_url == main_menu.cerrar_sesion.url %} active {% endif %}">
-            <a href="{{ main_menu.cerrar_sesion.url }}" class=" ">
+            <a href="{{ main_menu.cerrar_sesion.url }}" class="">
               <span class="pcoded-mtext">{{ main_menu.cerrar_sesion.title }}</span>
             </a>
           </li>
-        {% else %}
+          {% else %}
           <li class="{% if current_url == main_menu.login.url %} active {% endif %}">
-            <a href="{{ main_menu.login.url }}" class=" ">
+            <a href="{{ main_menu.login.url }}" class="">
               <span class="pcoded-mtext">{{ main_menu.login.title }}</span>
             </a>
           </li>
-        {% endif %}
+          {% endif %}
 
       </ul><!--.pcoded-item-->
     </div><!--  .boxed-layout -->

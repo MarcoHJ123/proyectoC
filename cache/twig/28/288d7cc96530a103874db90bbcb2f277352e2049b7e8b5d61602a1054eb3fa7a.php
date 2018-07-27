@@ -27,17 +27,16 @@ class __TwigTemplate_66fd1a77963329abb47cf71bb42313c6fb3fa9549a72ca42e170d004fc6
   <!-- Tell the browser to be responsive to screen width -->
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 
-  <!-- Favicon icon -->
   <link rel=\"icon\" type=\"image/png\" href=\"";
-        // line 11
+        // line 10
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/app/images/logo.png\">
   <title>PERSONAS PERDIDAS Y DESAPARECIDAS</title>
 
   ";
+        // line 13
+        $this->loadTemplate("templates/master/inc/css-files.twig", "templates/master/master.twig", 13)->display($context);
         // line 14
-        $this->loadTemplate("templates/master/inc/css-files.twig", "templates/master/master.twig", 14)->display($context);
-        // line 15
         echo "
 </head>
 
@@ -45,9 +44,9 @@ class __TwigTemplate_66fd1a77963329abb47cf71bb42313c6fb3fa9549a72ca42e170d004fc6
 
   <!-- [ Pre-loader ] start -->
   ";
+        // line 20
+        $this->loadTemplate("templates/master/inc/preloader.twig", "templates/master/master.twig", 20)->display($context);
         // line 21
-        $this->loadTemplate("templates/master/inc/preloader.twig", "templates/master/master.twig", 21)->display($context);
-        // line 22
         echo "  <!-- [ Pre-loader ] end -->
 
   <div id=\"pcoded\" class=\"pcoded\">
@@ -55,36 +54,36 @@ class __TwigTemplate_66fd1a77963329abb47cf71bb42313c6fb3fa9549a72ca42e170d004fc6
     <div class=\"pcoded-container navbar-wrapper\">
 
       ";
+        // line 27
+        $this->loadTemplate("templates/master/inc/header.twig", "templates/master/master.twig", 27)->display($context);
         // line 28
-        $this->loadTemplate("templates/master/inc/header.twig", "templates/master/master.twig", 28)->display($context);
-        // line 29
         echo "
       <div class=\"pcoded-main-container\">
         <div class=\"pcoded-wrapper\">
 
           <!-- [ navigation menu ] start -->
           ";
+        // line 33
+        $this->loadTemplate("templates/master/inc/main-nav.twig", "templates/master/master.twig", 33)->display($context);
         // line 34
-        $this->loadTemplate("templates/master/inc/main-nav.twig", "templates/master/master.twig", 34)->display($context);
-        // line 35
         echo "          <!-- [ navigation menu ] end -->
 
           <div class=\"pcoded-content\">
 
               <!-- [ breadcrumb ] start -->
               ";
+        // line 39
+        $this->loadTemplate("templates/master/inc/breadcrumb.twig", "templates/master/master.twig", 39)->display($context);
         // line 40
-        $this->loadTemplate("templates/master/inc/breadcrumb.twig", "templates/master/master.twig", 40)->display($context);
-        // line 41
         echo "              <!-- [ breadcrumb ] end -->
 
               <div class=\"pcoded-inner-content\" >
                 <div class=\"main-body\">
                   <div class=\"page-wrapper\">
                     ";
-        // line 46
+        // line 45
         $this->displayBlock('content', $context, $blocks);
-        // line 49
+        // line 48
         echo "                <button class=\"btn waves-light btn-icon back-to-top\"><i class=\"icofont icofont-caret-up\" style=\"color:#ecf0f5; margin-right: 0px;\"></i></button>
                   </div><!-- .page-wrapper -->
 
@@ -93,7 +92,7 @@ class __TwigTemplate_66fd1a77963329abb47cf71bb42313c6fb3fa9549a72ca42e170d004fc6
               </div><!-- .pcoded-inner-content-->
           </div><!-- .pcoded-content-->
 ";
-        // line 57
+        // line 56
         echo "
         </div>
       </div>
@@ -101,9 +100,9 @@ class __TwigTemplate_66fd1a77963329abb47cf71bb42313c6fb3fa9549a72ca42e170d004fc6
   </div>
 
   ";
-        // line 63
+        // line 62
         $this->displayBlock('scripts', $context, $blocks);
-        // line 111
+        // line 110
         echo "
 </body>
 
@@ -111,40 +110,40 @@ class __TwigTemplate_66fd1a77963329abb47cf71bb42313c6fb3fa9549a72ca42e170d004fc6
 ";
     }
 
-    // line 46
+    // line 45
     public function block_content($context, array $blocks = array())
     {
-        // line 47
+        // line 46
         echo "
                     ";
     }
 
-    // line 63
+    // line 62
     public function block_scripts($context, array $blocks = array())
     {
-        // line 64
+        // line 63
         echo "    <script type=\"text/javascript\">
     var APP = {
       en_produccion: '";
-        // line 66
+        // line 65
         echo twig_escape_filter($this->env, (isset($context["en_produccion"]) ? $context["en_produccion"] : null), "html", null, true);
         echo "',
       url: {
         inicio: '";
-        // line 68
+        // line 67
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "',
-        cronograma: '";
-        // line 69
+        Anuncios: '";
+        // line 68
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->pathFor("Anuncios"), "html", null, true);
         echo "',
       }
     };
     </script>
     ";
+        // line 72
+        $this->loadTemplate("templates/master/inc/js-files.twig", "templates/master/master.twig", 72)->display($context);
         // line 73
-        $this->loadTemplate("templates/master/inc/js-files.twig", "templates/master/master.twig", 73)->display($context);
-        // line 74
         echo "  <style type=\"text/css\">
 .back-to-top {
       position: fixed;
@@ -196,7 +195,7 @@ class __TwigTemplate_66fd1a77963329abb47cf71bb42313c6fb3fa9549a72ca42e170d004fc6
 
     public function getDebugInfo()
     {
-        return array (  148 => 74,  146 => 73,  139 => 69,  135 => 68,  130 => 66,  126 => 64,  123 => 63,  118 => 47,  115 => 46,  107 => 111,  105 => 63,  97 => 57,  88 => 49,  86 => 46,  79 => 41,  77 => 40,  70 => 35,  68 => 34,  61 => 29,  59 => 28,  51 => 22,  49 => 21,  41 => 15,  39 => 14,  33 => 11,  21 => 1,);
+        return array (  147 => 73,  145 => 72,  138 => 68,  134 => 67,  129 => 65,  125 => 63,  122 => 62,  117 => 46,  114 => 45,  106 => 110,  104 => 62,  96 => 56,  87 => 48,  85 => 45,  78 => 40,  76 => 39,  69 => 34,  67 => 33,  60 => 28,  58 => 27,  50 => 21,  48 => 20,  40 => 14,  38 => 13,  32 => 10,  21 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -218,7 +217,6 @@ class __TwigTemplate_66fd1a77963329abb47cf71bb42313c6fb3fa9549a72ca42e170d004fc6
   <!-- Tell the browser to be responsive to screen width -->
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 
-  <!-- Favicon icon -->
   <link rel=\"icon\" type=\"image/png\" href=\"{{ base_url() }}/public/assets/app/images/logo.png\">
   <title>PERSONAS PERDIDAS Y DESAPARECIDAS</title>
 
@@ -277,7 +275,7 @@ class __TwigTemplate_66fd1a77963329abb47cf71bb42313c6fb3fa9549a72ca42e170d004fc6
       en_produccion: '{{ en_produccion }}',
       url: {
         inicio: '{{ base_url() }}',
-        cronograma: '{{ path_for(\"Anuncios\") }}',
+        Anuncios: '{{ path_for(\"Anuncios\") }}',
       }
     };
     </script>

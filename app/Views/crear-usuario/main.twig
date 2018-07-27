@@ -15,7 +15,6 @@
             {# <form role="form" action="" class="f1"> #}
            {#    {% include 'crear-usuario/inc/pasos.twig' %}
                <fieldset> #}
-
               {% include 'crear-usuario/inc/detalle-persona.twig' %}
             {#   </fieldset> #}
               <div class="m-b-26 box-mensaje-usuario-creado hide">
@@ -31,11 +30,6 @@
 {% endblock %}
 {% block scripts %}
   {{ parent() }}
-  <!-- pickadate -->
-  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/libs/pickadate/js/picker.js"></script>
-  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/libs/pickadate/js/picker.time.js"></script>
-  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/libs/pickadate/js/picker.date.js"></script>
-
   <!-- App JS -->
   <script type="text/javascript" src="{{ base_url() }}/public/assets/app/js/crear_usuario.js"></script>
 

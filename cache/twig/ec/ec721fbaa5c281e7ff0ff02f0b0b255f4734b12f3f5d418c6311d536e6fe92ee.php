@@ -15,115 +15,140 @@ class __TwigTemplate_92f5059e4112c9e861e9db2300b9b013e2ad7dbd686f92b0b368ce75e16
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        // line 4
+        // line 1
         echo "<nav class=\"pcoded-navbar\">
   <div class=\"pcoded-inner-navbar main-menu\"style=\"background-color: #233237;\">
     <div class=\"boxed-layout\">
       <ul class=\"pcoded-item\">
-         ";
-        // line 13
-        echo "          ";
-        if ( !$this->getAttribute((isset($context["user_login"]) ? $context["user_login"] : null), "c_usuario", array())) {
-            // line 14
-            echo "          <li class=\"";
-            if (((isset($context["current_url"]) ? $context["current_url"] : null) == $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "Anuncios", array()), "url", array()))) {
-                echo " active ";
-            }
-            echo "\">
+          ";
+        // line 6
+        echo "          <li class=\"";
+        if (((isset($context["current_url"]) ? $context["current_url"] : null) == $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "Anuncios", array()), "url", array()))) {
+            echo " active ";
+        }
+        echo "\">
             <a href=\"";
-            // line 15
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "Anuncios", array()), "url", array()), "html", null, true);
-            echo "\" class=\" \">
+        // line 7
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "Anuncios", array()), "url", array()), "html", null, true);
+        echo "\" class=\" \">
               <span class=\"pcoded-mtext\">";
-            // line 16
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "Anuncios", array()), "title", array()), "html", null, true);
-            echo "</span>
+        // line 8
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "Anuncios", array()), "title", array()), "html", null, true);
+        echo "</span>
             </a>
           </li>
           ";
-        }
-        // line 20
-        echo "          ";
-        if ( !$this->getAttribute((isset($context["user_login"]) ? $context["user_login"] : null), "c_usuario", array())) {
-            // line 21
+        // line 12
+        echo "
+          ";
+        // line 13
+        if ($this->getAttribute((isset($context["user_login"]) ? $context["user_login"] : null), "id_login", array())) {
+            // line 14
             echo "          <li class=\"";
             if (((isset($context["current_url"]) ? $context["current_url"] : null) == $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "Crear_Anuncio", array()), "url", array()))) {
                 echo " active ";
             }
             echo "\">
             <a href=\"";
-            // line 22
+            // line 15
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "Crear_Anuncio", array()), "url", array()), "html", null, true);
             echo "\" class=\" \">
               <span class=\"pcoded-mtext\">";
-            // line 23
+            // line 16
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "Crear_Anuncio", array()), "title", array()), "html", null, true);
             echo "</span>
             </a>
           </li>
           ";
         }
-        // line 27
-        echo "          ";
-        if ( !$this->getAttribute((isset($context["user_login"]) ? $context["user_login"] : null), "c_usuario", array())) {
-            // line 28
+        // line 20
+        echo "
+          ";
+        // line 21
+        if ( !$this->getAttribute((isset($context["user_login"]) ? $context["user_login"] : null), "id_login", array())) {
+            // line 22
             echo "          <li class=\"";
             if (((isset($context["current_url"]) ? $context["current_url"] : null) == $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "RegistrarUsuario", array()), "url", array()))) {
                 echo " active ";
             }
             echo "\">
             <a href=\"";
-            // line 29
+            // line 23
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "RegistrarUsuario", array()), "url", array()), "html", null, true);
             echo "\" class=\" \">
               <span class=\"pcoded-mtext\">";
-            // line 30
+            // line 24
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "RegistrarUsuario", array()), "title", array()), "html", null, true);
             echo "</span>
             </a>
           </li>
           ";
         }
-        // line 34
-        echo "          ";
-        if ($this->getAttribute((isset($context["user_login"]) ? $context["user_login"] : null), "c_usuario", array())) {
-            // line 35
+        // line 28
+        echo "
+          ";
+        // line 29
+        if ($this->getAttribute((isset($context["user_login"]) ? $context["user_login"] : null), "id_login", array())) {
+            // line 30
+            echo "          <li class=\"";
+            if (((isset($context["current_url"]) ? $context["current_url"] : null) == $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "PerfilUsuario", array()), "url", array()))) {
+                echo " active ";
+            }
+            echo "\">
+            <a href=\"";
+            // line 31
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "PerfilUsuario", array()), "url", array()), "html", null, true);
+            echo "\" class=\"\">
+              <span class=\"pcoded-mtext\">";
+            // line 32
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "PerfilUsuario", array()), "title", array()), "html", null, true);
+            echo "</span>
+            </a>
+          </li>
+          ";
+        }
+        // line 36
+        echo "
+          ";
+        // line 37
+        if ($this->getAttribute((isset($context["user_login"]) ? $context["user_login"] : null), "id_login", array())) {
+            // line 38
             echo "          <li class=\"";
             if (((isset($context["current_url"]) ? $context["current_url"] : null) == $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "cerrar_sesion", array()), "url", array()))) {
                 echo " active ";
             }
             echo "\">
             <a href=\"";
-            // line 36
+            // line 39
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "cerrar_sesion", array()), "url", array()), "html", null, true);
-            echo "\" class=\" \">
+            echo "\" class=\"\">
               <span class=\"pcoded-mtext\">";
-            // line 37
+            // line 40
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "cerrar_sesion", array()), "title", array()), "html", null, true);
             echo "</span>
             </a>
           </li>
-        ";
+          ";
         } else {
-            // line 41
+            // line 44
             echo "          <li class=\"";
             if (((isset($context["current_url"]) ? $context["current_url"] : null) == $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "login", array()), "url", array()))) {
                 echo " active ";
             }
             echo "\">
             <a href=\"";
-            // line 42
+            // line 45
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "login", array()), "url", array()), "html", null, true);
-            echo "\" class=\" \">
+            echo "\" class=\"\">
               <span class=\"pcoded-mtext\">";
-            // line 43
+            // line 46
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "login", array()), "title", array()), "html", null, true);
             echo "</span>
             </a>
           </li>
-        ";
+          ";
         }
-        // line 47
+        // line 50
         echo "
       </ul><!--.pcoded-item-->
     </div><!--  .boxed-layout -->
@@ -144,7 +169,7 @@ class __TwigTemplate_92f5059e4112c9e861e9db2300b9b013e2ad7dbd686f92b0b368ce75e16
 
     public function getDebugInfo()
     {
-        return array (  127 => 47,  120 => 43,  116 => 42,  109 => 41,  102 => 37,  98 => 36,  91 => 35,  88 => 34,  81 => 30,  77 => 29,  70 => 28,  67 => 27,  60 => 23,  56 => 22,  49 => 21,  46 => 20,  39 => 16,  35 => 15,  28 => 14,  25 => 13,  19 => 4,);
+        return array (  152 => 50,  145 => 46,  141 => 45,  134 => 44,  127 => 40,  123 => 39,  116 => 38,  114 => 37,  111 => 36,  104 => 32,  100 => 31,  93 => 30,  91 => 29,  88 => 28,  81 => 24,  77 => 23,  70 => 22,  68 => 21,  65 => 20,  58 => 16,  54 => 15,  47 => 14,  45 => 13,  42 => 12,  36 => 8,  32 => 7,  25 => 6,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -157,52 +182,55 @@ class __TwigTemplate_92f5059e4112c9e861e9db2300b9b013e2ad7dbd686f92b0b368ce75e16
 
     public function getSourceContext()
     {
-        return new Twig_Source("{# <a class=\"mobile-menu waves-effect waves-light\" id=\"mobile-collapse\" href=\"#!\">
-        <i class=\"ti-menu\">M</i>
-      </a> #}
-<nav class=\"pcoded-navbar\">
+        return new Twig_Source("<nav class=\"pcoded-navbar\">
   <div class=\"pcoded-inner-navbar main-menu\"style=\"background-color: #233237;\">
     <div class=\"boxed-layout\">
       <ul class=\"pcoded-item\">
-         {#  <li class=\"active\">
-            <a href=\"\">
-              <span class=\"pcoded-mtext\">INICIO</span>
-            </a>
-          </li> #}
-          {% if not user_login.c_usuario %}
+          {# {% if not user_login.id_login %} #}
           <li class=\"{% if current_url == main_menu.Anuncios.url %} active {% endif %}\">
             <a href=\"{{ main_menu.Anuncios.url }}\" class=\" \">
               <span class=\"pcoded-mtext\">{{ main_menu.Anuncios.title }}</span>
             </a>
           </li>
-          {% endif %}
-          {% if not user_login.c_usuario %}
+          {# {% endif %} #}
+
+          {% if user_login.id_login %}
           <li class=\"{% if current_url == main_menu.Crear_Anuncio.url %} active {% endif %}\">
             <a href=\"{{ main_menu.Crear_Anuncio.url }}\" class=\" \">
               <span class=\"pcoded-mtext\">{{ main_menu.Crear_Anuncio.title }}</span>
             </a>
           </li>
           {% endif %}
-          {% if not user_login.c_usuario %}
+
+          {% if not user_login.id_login %}
           <li class=\"{% if current_url == main_menu.RegistrarUsuario.url %} active {% endif %}\">
             <a href=\"{{ main_menu.RegistrarUsuario.url }}\" class=\" \">
               <span class=\"pcoded-mtext\">{{ main_menu.RegistrarUsuario.title }}</span>
             </a>
           </li>
           {% endif %}
-          {% if user_login.c_usuario %}
+
+          {% if user_login.id_login %}
+          <li class=\"{% if current_url == main_menu.PerfilUsuario.url %} active {% endif %}\">
+            <a href=\"{{ main_menu.PerfilUsuario.url }}\" class=\"\">
+              <span class=\"pcoded-mtext\">{{ main_menu.PerfilUsuario.title }}</span>
+            </a>
+          </li>
+          {% endif %}
+
+          {% if user_login.id_login %}
           <li class=\"{% if current_url == main_menu.cerrar_sesion.url %} active {% endif %}\">
-            <a href=\"{{ main_menu.cerrar_sesion.url }}\" class=\" \">
+            <a href=\"{{ main_menu.cerrar_sesion.url }}\" class=\"\">
               <span class=\"pcoded-mtext\">{{ main_menu.cerrar_sesion.title }}</span>
             </a>
           </li>
-        {% else %}
+          {% else %}
           <li class=\"{% if current_url == main_menu.login.url %} active {% endif %}\">
-            <a href=\"{{ main_menu.login.url }}\" class=\" \">
+            <a href=\"{{ main_menu.login.url }}\" class=\"\">
               <span class=\"pcoded-mtext\">{{ main_menu.login.title }}</span>
             </a>
           </li>
-        {% endif %}
+          {% endif %}
 
       </ul><!--.pcoded-item-->
     </div><!--  .boxed-layout -->

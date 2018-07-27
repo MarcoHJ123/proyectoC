@@ -38,9 +38,17 @@ $menu = array(
     'title' => 'Iniciar Sesión',
     'url'   => $base_url.$router->pathFor('pagina_login'),
   ),
+  'cerrar_sesion' => array(
+    'title' => 'Cerrar Sesión',
+    'url'   => $base_url.$router->pathFor('cerrar_sesion'),
+  ),
   'RegistrarUsuario' => array(
     'title' => 'Registrar Usuario',
     'url'   => $base_url.$router->pathFor('RegistrarUsuario'),
+  ),
+  'PerfilUsuario' => array(
+    'title' => 'Perfil',
+    'url'   => $base_url.$router->pathFor('PerfilUsuario'),
   ),
 );
 

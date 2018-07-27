@@ -12,18 +12,23 @@
           <h3>Registra Persona Desaparecida</h3>
         </div>
           <div class="f1 card-block form-crear-anuncio">
-            {# <form role="form" action="" class="f1"> #}
-              {% include 'crear-anuncios/desaparecido/inc/pasos.twig' %}
-              <fieldset>
-              {% include 'crear-anuncios/desaparecido/inc/detalle-persona.twig' %}
-              </fieldset>
-              <fieldset>
-              {% include 'crear-anuncios/desaparecido/inc/detalles-generales.twig' %}
-              </fieldset>
-              <fieldset>
-              {% include 'crear-anuncios/desaparecido/inc/datos-Personales.twig' %}
-              </fieldset>
-
+            <div class="row">
+              <div class="col-sm-6" style="text-align: -webkit-center; border-right: 1px solid rgba(0,0,0,.125);">
+                {% include 'crear-anuncios/desaparecido/inc/foto.twig' %}
+              </div>
+              <div class="col-sm-6">
+                {% include 'crear-anuncios/desaparecido/inc/pasos.twig' %}
+                <fieldset>
+                {% include 'crear-anuncios/desaparecido/inc/detalle-persona.twig' %}
+                </fieldset>
+                <fieldset>
+                {% include 'crear-anuncios/desaparecido/inc/detalles-generales.twig' %}
+                </fieldset>
+                <fieldset>
+                {% include 'crear-anuncios/desaparecido/inc/datos-Personales.twig' %}
+                </fieldset>
+              </div>
+            </div>
               <div class="m-b-26 box-mensaje-anuncio-creado hide">
                 <div class="alert alert-info icons-alert fix-icon-alert">
                 </div>

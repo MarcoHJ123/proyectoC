@@ -85,7 +85,6 @@ class __TwigTemplate_489b4ae44f6f31475317b83380598926d675bad3889aa17b405ce87d174
         $this->displayParentBlock("scripts", $context, $blocks);
         echo "
   <!-- App JS -->
-
 ";
     }
 
@@ -155,7 +154,6 @@ class __TwigTemplate_489b4ae44f6f31475317b83380598926d675bad3889aa17b405ce87d174
 {% block scripts %}
   {{ parent() }}
   <!-- App JS -->
-
 {% endblock %}", "crear-anuncios/master.twig", "C:\\xampp\\htdocs\\proyectoC\\app\\Views\\crear-anuncios\\master.twig");
     }
 }

@@ -22,14 +22,18 @@ class __TwigTemplate_cd0ea4690d7e7dd118f4fca19fe40354048aef2c573e268d18fc0008715
         // line 68
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->pathFor("procesar_login"), "html", null, true);
         echo "\">
+  <div class=\"text-center m-b-50 m-t-20\">
+    ";
+        // line 71
+        echo "  </div>
   <div class=\"auth-box card\">
 
     <div class=\"card-block m-t-20\" style=\"padding: 30px;\">
 
       ";
-        // line 73
-        $this->loadTemplate("templates/inc/messages.twig", "login/inc/login-form.twig", 73)->display($context);
-        // line 74
+        // line 76
+        $this->loadTemplate("templates/inc/messages.twig", "login/inc/login-form.twig", 76)->display($context);
+        // line 77
         echo "
       <div class=\"row m-b-20\">
         <div class=\"col-md-12\">
@@ -57,13 +61,11 @@ class __TwigTemplate_cd0ea4690d7e7dd118f4fca19fe40354048aef2c573e268d18fc0008715
           <button type=\"submit\" class=\"btn waves-effect waves-light hor-grd btn-grd-inverse btn-block text-center m-b-20\">Iniciar Sesión</button>
         </div>
       </div>
-        ";
-        // line 106
-        echo "
 
     </div>
   </div>
 </form>
+
 ";
     }
 
@@ -79,7 +81,7 @@ class __TwigTemplate_cd0ea4690d7e7dd118f4fca19fe40354048aef2c573e268d18fc0008715
 
     public function getDebugInfo()
     {
-        return array (  62 => 106,  33 => 74,  31 => 73,  23 => 68,  19 => 66,);
+        return array (  37 => 77,  35 => 76,  28 => 71,  23 => 68,  19 => 66,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -160,6 +162,9 @@ class __TwigTemplate_cd0ea4690d7e7dd118f4fca19fe40354048aef2c573e268d18fc0008715
 
 
 <form class=\"\" method=\"post\" action=\"{{ path_for('procesar_login') }}\">
+  <div class=\"text-center m-b-50 m-t-20\">
+    {# <a href=\"{{ base_url() }}\"><img class=\"img-fluid\" src=\"{{ base_url() }}/public/assets/app/images/logo.png\" alt=\"Logo\" /></a> #}
+  </div>
   <div class=\"auth-box card\">
 
     <div class=\"card-block m-t-20\" style=\"padding: 30px;\">
@@ -192,16 +197,11 @@ class __TwigTemplate_cd0ea4690d7e7dd118f4fca19fe40354048aef2c573e268d18fc0008715
           <button type=\"submit\" class=\"btn waves-effect waves-light hor-grd btn-grd-inverse btn-block text-center m-b-20\">Iniciar Sesión</button>
         </div>
       </div>
-        {# <div class=\"row m-t-20\">
-        <div class=\"col-md-12\">
-          <a href='proyectoC/facebook/login.php'>aqu&iacute;</a>
-        </div>
-      </div> #}
-
 
     </div>
   </div>
 </form>
+
 ", "login/inc/login-form.twig", "C:\\xampp\\htdocs\\proyectoC\\app\\Views\\login\\inc\\login-form.twig");
     }
 }

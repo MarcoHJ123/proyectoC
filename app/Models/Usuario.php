@@ -9,25 +9,25 @@ class Usuario extends Model {
 	|---------------------------------------------------------------------------------------------------
 	*/
 
-	public function logear( $usuario, $contraseña){
-		$return = array(
-			'status' => false,
-		);
+	// public function logear( $usuario, $contraseña){
+	// 	$return = array(
+	// 		'status' => false,
+	// 	);
 
-		$data = array(
-			'usuario' => $usuario,
-		);
+	// 	$data = array(
+	// 		'usuario' => $usuario,
+	// 	);
 
-		$sql = "SELECT DISTINCT u.nombres, u.perfil_usuario, u.correo_electronico, u.id_usuario
-														FROM usuario u INNER JOIN usuario_login ul WHERE
-														u.id_usuario = ul.id_usurio and u.estado = '1' and ul.id_usuario_login = :usuario and contaseña = :contraseña";
-		$result = $this->execute_query( CONNECTION_SIJ, false, 'sql', $sql, $data );
-		$return = array_merge( $return, $result );
-		if( $return['status'] ){
-			$return['usuario'] = $this->get_one( $result['stmt'] );
-		}
-		return $return;
-	}
+	// 	$sql = "SELECT DISTINCT u.nombres, u.perfil_usuario, u.correo_electronico, u.id_usuario
+	// 													FROM usuario u INNER JOIN usuario_login ul WHERE
+	// 													u.id_usuario = ul.id_usurio and u.estado = '1' and ul.id_usuario_login = :usuario and contaseña = :contraseña";
+	// 	$result = $this->execute_query( CONNECTION_SIJ, false, 'sql', $sql, $data );
+	// 	$return = array_merge( $return, $result );
+	// 	if( $return['status'] ){
+	// 		$return['usuario'] = $this->get_one( $result['stmt'] );
+	// 	}
+	// 	return $return;
+	// }
 
 	public function verificar_usuario( $usuario ){
 		$return = array(
@@ -37,8 +37,8 @@ class Usuario extends Model {
 		$data = array(
 			'usuario' => $usuario,
 		);
-
-		$sql = "SELECT DISTINCT u.nombres, u.perfil_usuario, u.correo_electronico, u.id_usuario
+// BCDEFG --- contraseña
+		$sql = "SELECT DISTINCT u.nombres,u.apellidos, u.perfil_usuario, u.correo_electronico, u.id_usuario
 														FROM usuario u INNER JOIN usuario_login ul WHERE
 														u.id_usuario = ul.id_usurio and u.estado = '1' and ul.id_usuario_login = :usuario";
 		$result = $this->execute_query( CONNECTION_SIJ, false, 'sql', $sql, $data );
@@ -49,6 +49,24 @@ class Usuario extends Model {
 		return $return;
 	}
 
+	public function datos_usuario( $usuario ){
+		$return = array(
+			'status' => false,
+		);
+
+		$data = array(
+			'usuario' => $usuario,
+		);
+// BCDEFG --- contraseña
+		$sql = "SELECT DISTINCT * FROM usuario u INNER JOIN usuario_login ul WHERE
+														u.id_usuario = ul.id_usurio and u.estado = '1' and ul.id_usuario_login = :usuario";
+		$result = $this->execute_query( CONNECTION_SIJ, false, 'sql', $sql, $data );
+		$return = array_merge( $return, $result );
+		if( $return['status'] ){
+			$return['item'] = $this->get_one( $result['stmt'] );
+		}
+		return $return;
+	}
 
 public function get_data( $request, $tabla ){
 		if( $tabla == 'usuario' ){

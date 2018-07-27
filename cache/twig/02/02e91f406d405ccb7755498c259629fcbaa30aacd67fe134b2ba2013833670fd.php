@@ -24,20 +24,18 @@ class __TwigTemplate_49933f7368f79478bccf1235b223793c1dc2ba81d12d088c97d310a2d9a
 <head>
   <meta charset=\"utf-8\">
   <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
-  <!-- Tell the browser to be responsive to screen width -->
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 
-  <!-- Favicon icon -->
+  <link rel=\"icon\" type=\"image/png\" href=\"";
+        // line 9
+        echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
+        echo "/public/assets/app/images/logo.png\">
+  <title>PERSONAS</title>
   ";
+        // line 11
+        $this->loadTemplate("templates/master/inc/css-files.twig", "templates/login/login.twig", 11)->display($context);
         // line 12
-        echo "  <title>PERSONAS</title>
-
-  ";
-        // line 14
-        $this->loadTemplate("templates/master/inc/css-files.twig", "templates/login/login.twig", 14)->display($context);
-        // line 15
         echo "
-
 </head>
 
 <body>
@@ -45,23 +43,23 @@ class __TwigTemplate_49933f7368f79478bccf1235b223793c1dc2ba81d12d088c97d310a2d9a
   <div class=\"login-block\">
     <div class=\"container\">
       ";
-        // line 23
+        // line 19
         $this->displayBlock('content', $context, $blocks);
-        // line 26
+        // line 22
         echo "    </div><!-- .container -->
   </div><!-- .login-block -->
 
 
 
   ";
-        // line 31
+        // line 27
         $this->displayBlock('scripts', $context, $blocks);
-        // line 38
+        // line 34
         echo "
   ";
-        // line 39
-        $this->loadTemplate("templates/master/inc/js-files.twig", "templates/login/login.twig", 39)->display($context);
-        // line 40
+        // line 35
+        $this->loadTemplate("templates/master/inc/js-files.twig", "templates/login/login.twig", 35)->display($context);
+        // line 36
         echo "
 
 </body>
@@ -70,22 +68,22 @@ class __TwigTemplate_49933f7368f79478bccf1235b223793c1dc2ba81d12d088c97d310a2d9a
 ";
     }
 
-    // line 23
+    // line 19
     public function block_content($context, array $blocks = array())
     {
-        // line 24
+        // line 20
         echo "
       ";
     }
 
-    // line 31
+    // line 27
     public function block_scripts($context, array $blocks = array())
     {
-        // line 32
+        // line 28
         echo "    <script type=\"text/javascript\">
     var APP = {
       site_url: '";
-        // line 34
+        // line 30
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "'
     };
@@ -105,7 +103,7 @@ class __TwigTemplate_49933f7368f79478bccf1235b223793c1dc2ba81d12d088c97d310a2d9a
 
     public function getDebugInfo()
     {
-        return array (  89 => 34,  85 => 32,  82 => 31,  77 => 24,  74 => 23,  65 => 40,  63 => 39,  60 => 38,  58 => 31,  51 => 26,  49 => 23,  39 => 15,  37 => 14,  33 => 12,  21 => 1,);
+        return array (  87 => 30,  83 => 28,  80 => 27,  75 => 20,  72 => 19,  63 => 36,  61 => 35,  58 => 34,  56 => 27,  49 => 22,  47 => 19,  38 => 12,  36 => 11,  31 => 9,  21 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -124,15 +122,11 @@ class __TwigTemplate_49933f7368f79478bccf1235b223793c1dc2ba81d12d088c97d310a2d9a
 <head>
   <meta charset=\"utf-8\">
   <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
-  <!-- Tell the browser to be responsive to screen width -->
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 
-  <!-- Favicon icon -->
-  {# <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"{{ base_url() }}/public/assets/app/images/favicon.png\"> #}
+  <link rel=\"icon\" type=\"image/png\" href=\"{{ base_url() }}/public/assets/app/images/logo.png\">
   <title>PERSONAS</title>
-
   {% include 'templates/master/inc/css-files.twig' %}
-
 
 </head>
 

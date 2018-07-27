@@ -2,33 +2,19 @@
 
 {% block content %}
 <div class="page-body boxed-layout-padding">
-
-  <!-- [ page content ] start -->
   <div class="row">
     <div class="col-sm-12">
       {% include 'templates/inc/messages.twig' %}
     </div>
-  	<div class="col-sm-12">
-  		<p>Página no encontrada</p>
-  	</div>
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-block error-404" style="text-align: center;">
+          <img class="img-fluid error-img " src="{{ base_url() }}/public/assets/app/images/error404.png" alt="404"  style="max-height: 540px;" />
+          {# <h1>404</h1> #}
+          {# <h4>Página no encontrada</h4> #}
+        </div>
+      </div>
+    </div>
   </div>
-  <!-- [ page content ] end -->
-
-</div><!-- .page-body -->
-
-{% endblock %}
-
-
-{% block scripts %}
-  {{ parent() }}
-
-  <!-- pickadate -->
-  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/libs/pickadate/js/picker.js"></script>
-  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/libs/pickadate/js/picker.time.js"></script>
-  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/libs/pickadate/js/picker.date.js"></script>
-
-  <!-- App JS -->
-  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/js/programacion-citas.js"></script>
-
-
+</div>
 {% endblock %}

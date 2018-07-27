@@ -115,7 +115,7 @@ class __TwigTemplate_97474d4acea53bcfaede24517d8a83b1e630c83e6b33931129486025a67
                     echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
                     echo "/anuncios/";
                     echo twig_escape_filter($this->env, $this->getAttribute($context["datos"], "id_anuncio", array()), "html", null, true);
-                    echo "\" style=\"background-color: white; color: green;\">APORTAR</a>
+                    echo "\" style=\"background-color: white; color: green;\">DETALLES</a>
                 ";
                 } else {
                     // line 64
@@ -123,7 +123,7 @@ class __TwigTemplate_97474d4acea53bcfaede24517d8a83b1e630c83e6b33931129486025a67
                     echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
                     echo "/anuncios/";
                     echo twig_escape_filter($this->env, $this->getAttribute($context["datos"], "id_anuncio", array()), "html", null, true);
-                    echo "\" style=\"background-color: white; color: red;\">APORTAR</a>
+                    echo "\" style=\"background-color: white; color: red;\">DETALLES</a>
                 ";
                 }
                 // line 66
@@ -243,9 +243,9 @@ class __TwigTemplate_97474d4acea53bcfaede24517d8a83b1e630c83e6b33931129486025a67
                 <h6 class=\"f-w-400\">{{datos.descripcion}}</h6>
                 <h6 class=\"f-w-600\">PERU</h6>
                 {% if datos.estado_persona == '1' %}
-                <a class=\"btn btn-mat waves-light btn-success\" href=\"{{ base_url() }}/anuncios/{{datos.id_anuncio}}\" style=\"background-color: white; color: green;\">APORTAR</a>
+                <a class=\"btn btn-mat waves-light btn-success\" href=\"{{ base_url() }}/anuncios/{{datos.id_anuncio}}\" style=\"background-color: white; color: green;\">DETALLES</a>
                 {% else %}
-                <a class=\"btn btn-mat waves-light btn-danger text-center\" href=\"{{ base_url() }}/anuncios/{{datos.id_anuncio}}\" style=\"background-color: white; color: red;\">APORTAR</a>
+                <a class=\"btn btn-mat waves-light btn-danger text-center\" href=\"{{ base_url() }}/anuncios/{{datos.id_anuncio}}\" style=\"background-color: white; color: red;\">DETALLES</a>
                 {% endif %}
             </div>
         </div>
