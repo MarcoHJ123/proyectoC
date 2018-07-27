@@ -82,10 +82,6 @@ public function crearDesaparecido($request){
 	    $anuncio['id_anuncio'] = $id_anuncio;
 	    $anuncio['estado_persona'] = '2';
 			// $anuncio['nombres'] = encriptar_password( $request->getParam( 'nombres_persona' ));
-<<<<<<< HEAD
-
-=======
->>>>>>> 8b33cb5b7ec7a940f50d56d5451f0bab2d0b81a5
 
 			try {
 		    $conn_proy->beginTransaction();

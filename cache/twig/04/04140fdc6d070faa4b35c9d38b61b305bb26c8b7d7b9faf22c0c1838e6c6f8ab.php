@@ -30,46 +30,43 @@ class __TwigTemplate_c925044b27d7da14c929f94f08932baa8f747a400adf5a5524ba4f97842
     {
         // line 4
         echo "<div class=\"page-body text-center\">
-    <div class=\"row\">
-      <div class=\"col-sm-12\">
-        ";
+  <div class=\"row\">
+    <div class=\"col-sm-12\">
+      ";
         // line 7
         $this->loadTemplate("templates/inc/messages.twig", "crear-anuncios/perdido/main.twig", 7)->display($context);
         // line 8
-        echo "      </div>
-    <div class=\"col-sm-12\">
+        echo "    </div>
+    <div class=\"col-sm-12\" style=\"    padding-left: 42px;
+    padding-right: 42px;\">
       <div class=\"card card-creacion-ticket\">
         <div class=\"card-header text-center m-t-10\">
           <h3>Registra Persona Encontrada</h3>
         </div>
-          <div class=\"card-block form-crear-ticket\">
-
-              ";
+        <div class=\"card-block form-crear-ticket\">
+          ";
         // line 16
         $this->loadTemplate("crear-anuncios/perdido/inc/partes.twig", "crear-anuncios/perdido/main.twig", 16)->display($context);
         // line 17
-        echo "
-              <div class=\"m-b-26 box-mensaje-ticket-creado hide\">
-                <div class=\"alert alert-info icons-alert fix-icon-alert\">
-                </div>
-              </div>
-            ";
-        // line 23
-        echo "          </div>
+        echo "          <div class=\"m-b-26 box-mensaje-ticket-creado hide\">
+            <div class=\"alert alert-info icons-alert fix-icon-alert\">
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </div>
-  </div>
+</div>
 
 
 
 ";
     }
 
-    // line 32
+    // line 30
     public function block_scripts($context, array $blocks = array())
     {
-        // line 33
+        // line 31
         echo "  ";
         $this->displayParentBlock("scripts", $context, $blocks);
         echo "
@@ -90,7 +87,7 @@ class __TwigTemplate_c925044b27d7da14c929f94f08932baa8f747a400adf5a5524ba4f97842
 
     public function getDebugInfo()
     {
-        return array (  73 => 33,  70 => 32,  58 => 23,  51 => 17,  49 => 16,  39 => 8,  37 => 7,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  70 => 31,  67 => 30,  51 => 17,  49 => 16,  39 => 8,  37 => 7,  32 => 4,  29 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -107,29 +104,27 @@ class __TwigTemplate_c925044b27d7da14c929f94f08932baa8f747a400adf5a5524ba4f97842
 
 {% block content %}
 <div class=\"page-body text-center\">
-    <div class=\"row\">
-      <div class=\"col-sm-12\">
-        {% include 'templates/inc/messages.twig' %}
-      </div>
+  <div class=\"row\">
     <div class=\"col-sm-12\">
+      {% include 'templates/inc/messages.twig' %}
+    </div>
+    <div class=\"col-sm-12\" style=\"    padding-left: 42px;
+    padding-right: 42px;\">
       <div class=\"card card-creacion-ticket\">
         <div class=\"card-header text-center m-t-10\">
           <h3>Registra Persona Encontrada</h3>
         </div>
-          <div class=\"card-block form-crear-ticket\">
-
-              {% include 'crear-anuncios/perdido/inc/partes.twig' %}
-
-              <div class=\"m-b-26 box-mensaje-ticket-creado hide\">
-                <div class=\"alert alert-info icons-alert fix-icon-alert\">
-                </div>
-              </div>
-            {# </form> #}
+        <div class=\"card-block form-crear-ticket\">
+          {% include 'crear-anuncios/perdido/inc/partes.twig' %}
+          <div class=\"m-b-26 box-mensaje-ticket-creado hide\">
+            <div class=\"alert alert-info icons-alert fix-icon-alert\">
+            </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
-  </div>
+</div>
 
 
 
