@@ -41,7 +41,7 @@ class __TwigTemplate_c925044b27d7da14c929f94f08932baa8f747a400adf5a5524ba4f97842
     padding-right: 42px;\">
       <div class=\"card card-creacion-ticket\">
         <div class=\"card-header text-center m-t-10\">
-          <h3>Registra Persona Encontrada</h3>
+          <h3>Registra Persona Desaparecidas</h3>
         </div>
         <div class=\"card-block form-crear-ticket\">
           ";
@@ -58,15 +58,13 @@ class __TwigTemplate_c925044b27d7da14c929f94f08932baa8f747a400adf5a5524ba4f97842
     </div>
 </div>
 
-
-
 ";
     }
 
-    // line 30
+    // line 28
     public function block_scripts($context, array $blocks = array())
     {
-        // line 31
+        // line 29
         echo "  ";
         $this->displayParentBlock("scripts", $context, $blocks);
         echo "
@@ -87,7 +85,7 @@ class __TwigTemplate_c925044b27d7da14c929f94f08932baa8f747a400adf5a5524ba4f97842
 
     public function getDebugInfo()
     {
-        return array (  70 => 31,  67 => 30,  51 => 17,  49 => 16,  39 => 8,  37 => 7,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  68 => 29,  65 => 28,  51 => 17,  49 => 16,  39 => 8,  37 => 7,  32 => 4,  29 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -112,7 +110,7 @@ class __TwigTemplate_c925044b27d7da14c929f94f08932baa8f747a400adf5a5524ba4f97842
     padding-right: 42px;\">
       <div class=\"card card-creacion-ticket\">
         <div class=\"card-header text-center m-t-10\">
-          <h3>Registra Persona Encontrada</h3>
+          <h3>Registra Persona Desaparecidas</h3>
         </div>
         <div class=\"card-block form-crear-ticket\">
           {% include 'crear-anuncios/perdido/inc/partes.twig' %}
@@ -125,8 +123,6 @@ class __TwigTemplate_c925044b27d7da14c929f94f08932baa8f747a400adf5a5524ba4f97842
       </div>
     </div>
 </div>
-
-
 
 {% endblock %}
 {% block scripts %}

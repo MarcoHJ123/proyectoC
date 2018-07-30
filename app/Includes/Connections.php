@@ -26,15 +26,14 @@ class Connections {
 			$database = ! empty( $data['database'] ) ? $data['database'] : '';
 			$username = ! empty( $data['username'] ) ? $data['username'] : '';
 			$password = ! empty( $data['password'] ) ? $data['password'] : '';
-<<<<<<< HEAD
 
 			
 
 			$this->settings[$name]['string'] = "$driver:DSN=$dsn;DBN=$database;UID=$username;PWD=$password;";
 
-=======
-			$this->settings[$name]['string'] = "$driver:DSN=$dsn;DBN=$database;UID=$username;PWD=$password;";
->>>>>>> 1b12b565350dd3d483dab85a5ef8a6450723fdb6
+// =======
+// 			$this->settings[$name]['string'] = "$driver:DSN=$dsn;DBN=$database;UID=$username;PWD=$password;";
+// >>>>>>> 1b12b565350dd3d483dab85a5ef8a6450723fdb6
 		} else {
 			$this->settings[$name]['string'] = $data;
 		}
