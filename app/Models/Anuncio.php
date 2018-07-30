@@ -83,10 +83,6 @@ class Anuncio extends Model {
 	    $anuncio['estado_persona'] = '2';
 	    $anuncio['id_usuario'] = $user_login;
 			// $anuncio['nombres'] = encriptar_password( $request->getParam( 'nombres_persona' ));
-<<<<<<< HEAD
-
-=======
->>>>>>> 1b12b565350dd3d483dab85a5ef8a6450723fdb6
 			try {
 		    $conn_proy->beginTransaction();
 

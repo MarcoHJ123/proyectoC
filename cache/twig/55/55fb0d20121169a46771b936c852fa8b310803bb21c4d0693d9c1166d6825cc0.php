@@ -16,17 +16,34 @@ class __TwigTemplate_0493eac5c66a0ddb64c698d2541fb7c8489ddd8016a7c73e6f1d42070b6
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<div class=\"col-sm-12\">
+        echo "<script type=\"text/javascript\">
+
+\t  WinJS.UI.processAll().done(function () {
+                document.getElementById(\"selectImageButton\").addEventListener(\"click\", loadImage, false);
+    });
+
+\t  function loadImage(eventInfo) {
+    var picker = new Windows.Storage.Pickers.FileOpenPicker();
+    picker.fileTypeFilter.replaceAll([\".jpg\", \".bmp\", \".gif\", \".png\"]);
+    picker.pickSingleFileAsync().then(processResults, displayError);
+\t\t}
+</script>
+<div class=\"col-sm-12\">
 \t<div class=\"col-sm-6 col-md-6 col-lg-6\">
-\t\t<input type=\"file\" class=\"form-control\">
-\t</div>
+\t<button id=\"selectImageButton\">Select an image...</button>
+\t";
+        // line 17
+        echo "\t</div>
 <div class=\"row\">
 \t\t<div class=\"col-sm-6 col-md-6 col-lg-6\">
-\t\t<input type=\"image\" class=\"img-rounded\" src=\"";
-        // line 7
+\t\t<img id=\"imageControl\" src=\"";
+        // line 20
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/app/images/add_image.png\" alt=\"Logo\" style=\"height: inherit; width: inherit;\" />
-\t\t</div>
+\t\t<p id=\"imageInformation\"></p>
+";
+        // line 23
+        echo "\t\t</div>
 \t\t<div class=\"col-sm-6 col-md-6 col-lg-6\" for=\"nombres_persona\">
 
   \t<label class=\"col-form-label\">Nombres</label>
@@ -37,7 +54,7 @@ class __TwigTemplate_0493eac5c66a0ddb64c698d2541fb7c8489ddd8016a7c73e6f1d42070b6
   \t<input type=\"date\" name=\"fecha_nacimiento\"  class=\"form-control\" id=\"fecha_nacimiento\">
 \t\t<label class=\"col-form-label\" >Tipo Documento Identidad</label>
     ";
-        // line 19
+        // line 34
         echo "    <select name=\"tipo_documento\"  id=\"tipo_documento\" class=\"form-control form-control-inverse\" >
 \t\t<option value=\"0\">- SELECCIONAR -</option>
 \t\t<option value=\"1\">DNI</option>
@@ -47,7 +64,7 @@ class __TwigTemplate_0493eac5c66a0ddb64c698d2541fb7c8489ddd8016a7c73e6f1d42070b6
   \t<input type=\"text\" name=\"numero_documento\" placeholder=\"Numero de documento\" class=\"form-control\" id=\"numero_documento\">
   \t<label class=\"col-form-label\">Sexo</label>
 \t  ";
-        // line 28
+        // line 43
         echo "\t  <select name=\"sexo_persona\" class=\"form-control form-control-inverse\">
 \t\t<option value=\"0\">- SELECCIONAR -</option>
 \t\t<option value=\"h\">Hombre</option>
@@ -55,7 +72,7 @@ class __TwigTemplate_0493eac5c66a0ddb64c698d2541fb7c8489ddd8016a7c73e6f1d42070b6
 \t\t</select>
 \t\t<label class=\"col-form-label\">Color Piel</label>
 \t  ";
-        // line 35
+        // line 50
         echo "\t  <select name=\"color_piel\" class=\"form-control form-control-inverse\">
 \t\t<option value=\"0\">- SELECCIONAR -</option>
 \t\t<option value=\"bl\">Blanco</option>
@@ -66,7 +83,8 @@ class __TwigTemplate_0493eac5c66a0ddb64c698d2541fb7c8489ddd8016a7c73e6f1d42070b6
   \t<input type=\"number\" name=\"estatura_persona\" placeholder=\"Estatura de la persona\" class=\"form-control\" id=\"estatura_persona\">
 \t  </div>
 \t</div>
-</div>";
+</div>
+";
     }
 
     public function getTemplateName()
@@ -81,7 +99,7 @@ class __TwigTemplate_0493eac5c66a0ddb64c698d2541fb7c8489ddd8016a7c73e6f1d42070b6
 
     public function getDebugInfo()
     {
-        return array (  59 => 35,  51 => 28,  41 => 19,  27 => 7,  19 => 1,);
+        return array (  76 => 50,  68 => 43,  58 => 34,  46 => 23,  41 => 20,  36 => 17,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -94,13 +112,28 @@ class __TwigTemplate_0493eac5c66a0ddb64c698d2541fb7c8489ddd8016a7c73e6f1d42070b6
 
     public function getSourceContext()
     {
-        return new Twig_Source("<div class=\"col-sm-12\">
+        return new Twig_Source("<script type=\"text/javascript\">
+
+\t  WinJS.UI.processAll().done(function () {
+                document.getElementById(\"selectImageButton\").addEventListener(\"click\", loadImage, false);
+    });
+
+\t  function loadImage(eventInfo) {
+    var picker = new Windows.Storage.Pickers.FileOpenPicker();
+    picker.fileTypeFilter.replaceAll([\".jpg\", \".bmp\", \".gif\", \".png\"]);
+    picker.pickSingleFileAsync().then(processResults, displayError);
+\t\t}
+</script>
+<div class=\"col-sm-12\">
 \t<div class=\"col-sm-6 col-md-6 col-lg-6\">
-\t\t<input type=\"file\" class=\"form-control\">
+\t<button id=\"selectImageButton\">Select an image...</button>
+\t{# <input type=\"file\" class=\"form-control\"> #}
 \t</div>
 <div class=\"row\">
 \t\t<div class=\"col-sm-6 col-md-6 col-lg-6\">
-\t\t<input type=\"image\" class=\"img-rounded\" src=\"{{ base_url() }}/public/assets/app/images/add_image.png\" alt=\"Logo\" style=\"height: inherit; width: inherit;\" />
+\t\t<img id=\"imageControl\" src=\"{{ base_url() }}/public/assets/app/images/add_image.png\" alt=\"Logo\" style=\"height: inherit; width: inherit;\" />
+\t\t<p id=\"imageInformation\"></p>
+{# <input type=\"image\" class=\"img-rounded\" src=\"{{ base_url() }}/public/assets/app/images/add_image.png\" alt=\"Logo\" style=\"height: inherit; width: inherit;\" /> #}
 \t\t</div>
 \t\t<div class=\"col-sm-6 col-md-6 col-lg-6\" for=\"nombres_persona\">
 
@@ -138,6 +171,7 @@ class __TwigTemplate_0493eac5c66a0ddb64c698d2541fb7c8489ddd8016a7c73e6f1d42070b6
   \t<input type=\"number\" name=\"estatura_persona\" placeholder=\"Estatura de la persona\" class=\"form-control\" id=\"estatura_persona\">
 \t  </div>
 \t</div>
-</div>", "crear-anuncios/perdido/inc/partes.twig", "C:\\xampp\\htdocs\\proyectoC\\app\\Views\\crear-anuncios\\perdido\\inc\\partes.twig");
+</div>
+", "crear-anuncios/perdido/inc/partes.twig", "C:\\xampp\\htdocs\\proyectoC\\app\\Views\\crear-anuncios\\perdido\\inc\\partes.twig");
     }
 }
