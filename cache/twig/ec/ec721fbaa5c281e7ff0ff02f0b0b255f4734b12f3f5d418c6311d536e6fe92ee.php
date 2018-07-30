@@ -63,27 +63,7 @@ class __TwigTemplate_92f5059e4112c9e861e9db2300b9b013e2ad7dbd686f92b0b368ce75e16
         }
         // line 20
         echo "
-          ";
-        // line 21
-        if ( !$this->getAttribute((isset($context["user_login"]) ? $context["user_login"] : null), "id_login", array())) {
-            // line 22
-            echo "          <li class=\"";
-            if (((isset($context["current_url"]) ? $context["current_url"] : null) == $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "RegistrarUsuario", array()), "url", array()))) {
-                echo " active ";
-            }
-            echo "\">
-            <a href=\"";
-            // line 23
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "RegistrarUsuario", array()), "url", array()), "html", null, true);
-            echo "\" class=\" \">
-              <span class=\"pcoded-mtext\">";
-            // line 24
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["main_menu"]) ? $context["main_menu"] : null), "RegistrarUsuario", array()), "title", array()), "html", null, true);
-            echo "</span>
-            </a>
-          </li>
-          ";
-        }
+         ";
         // line 28
         echo "
           ";
@@ -169,7 +149,7 @@ class __TwigTemplate_92f5059e4112c9e861e9db2300b9b013e2ad7dbd686f92b0b368ce75e16
 
     public function getDebugInfo()
     {
-        return array (  152 => 50,  145 => 46,  141 => 45,  134 => 44,  127 => 40,  123 => 39,  116 => 38,  114 => 37,  111 => 36,  104 => 32,  100 => 31,  93 => 30,  91 => 29,  88 => 28,  81 => 24,  77 => 23,  70 => 22,  68 => 21,  65 => 20,  58 => 16,  54 => 15,  47 => 14,  45 => 13,  42 => 12,  36 => 8,  32 => 7,  25 => 6,  19 => 1,);
+        return array (  132 => 50,  125 => 46,  121 => 45,  114 => 44,  107 => 40,  103 => 39,  96 => 38,  94 => 37,  91 => 36,  84 => 32,  80 => 31,  73 => 30,  71 => 29,  68 => 28,  65 => 20,  58 => 16,  54 => 15,  47 => 14,  45 => 13,  42 => 12,  36 => 8,  32 => 7,  25 => 6,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -202,13 +182,13 @@ class __TwigTemplate_92f5059e4112c9e861e9db2300b9b013e2ad7dbd686f92b0b368ce75e16
           </li>
           {% endif %}
 
-          {% if not user_login.id_login %}
+         {#  {% if not user_login.id_login %}
           <li class=\"{% if current_url == main_menu.RegistrarUsuario.url %} active {% endif %}\">
             <a href=\"{{ main_menu.RegistrarUsuario.url }}\" class=\" \">
               <span class=\"pcoded-mtext\">{{ main_menu.RegistrarUsuario.title }}</span>
             </a>
           </li>
-          {% endif %}
+          {% endif %} #}
 
           {% if user_login.id_login %}
           <li class=\"{% if current_url == main_menu.PerfilUsuario.url %} active {% endif %}\">

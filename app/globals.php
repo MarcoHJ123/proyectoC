@@ -42,10 +42,10 @@ $menu = array(
     'title' => 'Cerrar Sesión',
     'url'   => $base_url.$router->pathFor('cerrar_sesion'),
   ),
-  'RegistrarUsuario' => array(
-    'title' => 'Registrar Usuario',
-    'url'   => $base_url.$router->pathFor('RegistrarUsuario'),
-  ),
+  // 'RegistrarUsuario' => array(
+  //   'title' => 'Registrar Usuario',
+  //   'url'   => $base_url.$router->pathFor('RegistrarUsuario'),
+  // ),
   'PerfilUsuario' => array(
     'title' => 'Perfil',
     'url'   => $base_url.$router->pathFor('PerfilUsuario'),

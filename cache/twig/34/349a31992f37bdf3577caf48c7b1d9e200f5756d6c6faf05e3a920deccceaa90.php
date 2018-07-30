@@ -23,9 +23,13 @@ class __TwigTemplate_cd0ea4690d7e7dd118f4fca19fe40354048aef2c573e268d18fc0008715
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->pathFor("procesar_login"), "html", null, true);
         echo "\">
   <div class=\"text-center m-b-50 m-t-20\">
-    ";
-        // line 71
-        echo "  </div>
+    <a href=\"";
+        // line 70
+        echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
+        echo "\"><img class=\"img-fluid\" src=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
+        echo "/public/assets/app/images/favicon.png\" alt=\"Logo\" style=\"max-height:100px;\" /></a>
+  </div>
   <div class=\"auth-box card\">
 
     <div class=\"card-block m-t-20\" style=\"padding: 30px;\">
@@ -59,7 +63,16 @@ class __TwigTemplate_cd0ea4690d7e7dd118f4fca19fe40354048aef2c573e268d18fc0008715
       <div class=\"row m-t-20\">
         <div class=\"col-md-12\">
           <button type=\"submit\" class=\"btn waves-effect waves-light hor-grd btn-grd-inverse btn-block text-center m-b-20\">Iniciar Sesión</button>
-        </div>
+          <div class=\"text-center\">
+          <a type=\"registrar\" class=\"btn waves-effect waves-light text-center\" style=\"background-color:#cfcad0;\" href=\"";
+        // line 103
+        echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
+        echo "/crear-usuario/\">Crear Usuario</a>
+          <a type=\"registrar\" class=\"btn waves-effect waves-light text-center\" style=\"background-color:#cfcad0;\" href=\"";
+        // line 104
+        echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
+        echo "\">Pagina Inicio</a>
+        </div></div>
       </div>
 
     </div>
@@ -81,7 +94,7 @@ class __TwigTemplate_cd0ea4690d7e7dd118f4fca19fe40354048aef2c573e268d18fc0008715
 
     public function getDebugInfo()
     {
-        return array (  37 => 77,  35 => 76,  28 => 71,  23 => 68,  19 => 66,);
+        return array (  73 => 104,  69 => 103,  41 => 77,  39 => 76,  28 => 70,  23 => 68,  19 => 66,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -163,7 +176,7 @@ class __TwigTemplate_cd0ea4690d7e7dd118f4fca19fe40354048aef2c573e268d18fc0008715
 
 <form class=\"\" method=\"post\" action=\"{{ path_for('procesar_login') }}\">
   <div class=\"text-center m-b-50 m-t-20\">
-    {# <a href=\"{{ base_url() }}\"><img class=\"img-fluid\" src=\"{{ base_url() }}/public/assets/app/images/logo.png\" alt=\"Logo\" /></a> #}
+    <a href=\"{{ base_url() }}\"><img class=\"img-fluid\" src=\"{{ base_url() }}/public/assets/app/images/favicon.png\" alt=\"Logo\" style=\"max-height:100px;\" /></a>
   </div>
   <div class=\"auth-box card\">
 
@@ -195,7 +208,10 @@ class __TwigTemplate_cd0ea4690d7e7dd118f4fca19fe40354048aef2c573e268d18fc0008715
       <div class=\"row m-t-20\">
         <div class=\"col-md-12\">
           <button type=\"submit\" class=\"btn waves-effect waves-light hor-grd btn-grd-inverse btn-block text-center m-b-20\">Iniciar Sesión</button>
-        </div>
+          <div class=\"text-center\">
+          <a type=\"registrar\" class=\"btn waves-effect waves-light text-center\" style=\"background-color:#cfcad0;\" href=\"{{ base_url() }}/crear-usuario/\">Crear Usuario</a>
+          <a type=\"registrar\" class=\"btn waves-effect waves-light text-center\" style=\"background-color:#cfcad0;\" href=\"{{ base_url() }}\">Pagina Inicio</a>
+        </div></div>
       </div>
 
     </div>

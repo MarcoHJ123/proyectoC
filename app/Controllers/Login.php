@@ -62,8 +62,8 @@ class Login extends Controller {
 		$settings = get_settings_file( 'conexiones.json' );
 		$login_settings = $settings[CONNECTION_LOGIN];
 		$login_settings['username'] = trim( strtoupper( $usuario ) );
-		 $login_settings['password'] =  strtoupper( $password ); 
-  //encriptar_password( strtoupper( $password ) ); 
+		 $login_settings['password'] =  strtoupper( $password );
+  //encriptar_password( strtoupper( $password ) );
 		//Agregamos la conexión
 		$this->connections->addConnection( CONNECTION_LOGIN, $login_settings );
 
@@ -108,7 +108,7 @@ class Login extends Controller {
 			'count' => $this->session->get('count'),
 			'perfil_usuario' => $this->session->get('perfil_usuario'),
 		);
-		d($data);
+		// d($data);
 		return $this->view->render( $response, 'login/login.twig', $data );
 	}
 
