@@ -7,9 +7,6 @@ use App\Models\Aporte;
 class RegistrarAporte extends Controller {
 
 	public function inicio( $request, $response, $args ){
-<<<<<<< HEAD
-
-=======
 		$id_anuncio = $args['id_anuncio'];
 		$obj = new Anuncio();
 		$resultado = $obj->buscar_anuncio( $id_anuncio );
@@ -22,7 +19,6 @@ class RegistrarAporte extends Controller {
 		// d($data);
  		return $this->view->render( $response, 'aportar-anuncios/main.twig', $data );
   }
->>>>>>> 1b12b565350dd3d483dab85a5ef8a6450723fdb6
 
 	public function crearAporte( $request, $response, $args ){
 		// $id_anuncio = $request->getParam('id_anuncio');
@@ -38,16 +34,6 @@ class RegistrarAporte extends Controller {
 
 		$user_login = $this->session->exists('user_login') ? $this->session->user_login : array();
 
-<<<<<<< HEAD
-			$id_ticket = $args['id_ticket'];
-			d($id_ticket);
-
-
-			$id_anuncio = $args['id_anuncio'];
-			d($id_anuncio);
-
-			$data = array();
-=======
 		$error = false;
 		$obj_cita = new Aporte();
 		$resultado = $obj_cita->crearA( $request, $user_login['id_login'] );
@@ -58,7 +44,6 @@ class RegistrarAporte extends Controller {
 		} else {
 			$error = true;
 		}
->>>>>>> 1b12b565350dd3d483dab85a5ef8a6450723fdb6
 
 		if( $error ){
 			$return['error'] = $resultado['error'];

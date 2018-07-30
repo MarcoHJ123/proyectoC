@@ -183,7 +183,7 @@ class __TwigTemplate_6d8d07e1d6fe906ea1ecb13355a871ddc7d1a90e271a8bd8355c1aa2454
     <script async defer
     src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyCV-quRftERbHa_3kEUVCTOWPgvl9bA1ao&callback=initMap\">
     </script>
-<script type=\"text/javascript\" src=\"";
+\t\t<script type=\"text/javascript\" src=\"";
         // line 64
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
         echo "/public/assets/app/js/detalle.js\"></script>
@@ -278,7 +278,7 @@ class __TwigTemplate_6d8d07e1d6fe906ea1ecb13355a871ddc7d1a90e271a8bd8355c1aa2454
     <script async defer
     src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyCV-quRftERbHa_3kEUVCTOWPgvl9bA1ao&callback=initMap\">
     </script>
-<script type=\"text/javascript\" src=\"{{ base_url() }}/public/assets/app/js/detalle.js\"></script>
+\t\t<script type=\"text/javascript\" src=\"{{ base_url() }}/public/assets/app/js/detalle.js\"></script>
 {% endblock %}", "aportar-anuncios/main.twig", "C:\\xampp\\htdocs\\proyectoC\\app\\Views\\aportar-anuncios\\main.twig");
     }
 }
