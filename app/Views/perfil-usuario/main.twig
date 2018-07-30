@@ -2,10 +2,10 @@
 {% block content %}
 <style type="text/css">
 #perfilf {
-  min-height: 145px;
-  min-width: 145px;
-  max-width: 145px;
-  max-height: 145px;
+  min-height: 165px;
+  min-width: 165px;
+  max-width: 165px;
+  max-height: 165px;
 }
 </style>
 {% if datosu %}
@@ -14,22 +14,20 @@
 <div class="col-sm-12 col-md-12 col-lg-12">
     <div class="cover-profile">
         <div class="profile-bg-img">
-            <img class="profile-bg-img img-fluid" style="max-height: 200px; margin-bottom: 0px;    min-height: 250px;
-    min-width: 290px;" src="{{ base_url() }}/public/assets/images/social/img1.jpg" alt="bg-img" >
-            <div class="card-block user-info">
-                <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="card-block user-info" style="position: inherit; background-color:#233237;">
+                <div class="col-sm-12 col-md-12 col-lg-12" style="text-align: -webkit-center;">
                     <div class="media-left">
                         <a href="#" class="profile-image">
-                            <img class="user-img img-radius" src="{{ base_url() }}/public/assets/images/social/pro_icon.jpg" alt="user-img" id="perfilf">
+                            <img class="user-img img-radius" src="{{ base_url() }}/public/assets/images/PERFIL/{{datosu.id_usuario}}.jpg" alt="user-img" id="perfilf">
                         </a>
                     </div>
-                    <div class="media-body row">
+                    {# <div class="media-body row">
                         <div class="col-sm-12 col-md-12 col-lg-12">
                             <div class="user-title" style="bottom: 0px;">
-                                <h2>{{ datosu.nombres }} {{ datosu.apellidos }}</h2>
+                                <h2>{{ datosu.nombres }}</h2>
                             </div>
                         </div>
-                    </div>
+                    </div> #}
                 </div>
             </div>
         </div>
@@ -39,11 +37,11 @@
 <div class="tab-header card">
 <ul class="nav nav-tabs md-tabs tab-timeline" role="tablist" id="mytab">
     <li class="nav-item">
-        <a class="nav-link active show" data-toggle="tab" href="#personal" role="tab" aria-selected="true">Informacion Personal</a>
+        <a class="nav-link active show" data-toggle="tab" href="#personal" role="tab" aria-selected="true">Mis Anuncios</a>
         <div class="slide"></div>
     </li>
     <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#binfo" role="tab" aria-selected="false">Mis Anuncios</a>
+        <a class="nav-link" data-toggle="tab" href="#binfo" role="tab" aria-selected="false">Informacion Personal</a>
         <div class="slide"></div>
     </li>
     {# <li class="nav-item">
@@ -60,6 +58,57 @@
 <div class="tab-content">
 <div class="tab-pane active show" id="personal" role="tabpanel">
   <div class="card">
+        <div class="card-header">
+            <h5 class="card-header-text">Mis anuncios</h5>
+        </div>
+        <div class="card-block">
+            <div class="row">
+{% if anuncioU %}
+    {% for datos in anuncioU %}
+                <div class="col-md-6">
+                   {% if datos.estado_persona == '1' %} <div class="card b-l-success business-info services m-b-20">{% else %} <div class="card b-l-danger business-info services m-b-20"> {% endif %}
+                        <div class="card-header">
+                            <div class="service-header">
+                                <a href="#">
+                                    <h5 class="card-header-text">{% if datos.estado_persona == '1' %} PERDIDA </td>{% else %} DESAPARECIDA {% endif %}</h5>
+                                </a>
+                            </div>
+                            <span class="dropdown-toggle addon-btn text-muted float-right service-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="tooltip">
+                            </span>
+                            <div class="dropdown-menu dropdown-menu-right b-none services-list">
+                                <a class="dropdown-item" href="{{ base_url() }}/editar/{{datos.id_anuncio}}"><i class="icofont icofont-edit"></i> Editar</a>
+                                <a class="dropdown-item" href="{{ base_url() }}/detalle/{{datos.id_anuncio}}"><i class="icofont icofont-eye-alt"></i> Ver Aportes</a>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <p class="task-detail">Persona:{{ datos.nombres }} {{ datos.apellidos }}</p>
+                                    <p class="task-detail">Descripcion:{{ datos.descripcion }} </p>
+                                    <p class="task-detail">Fecha de Registro:{{ datos.fecha_registro }} </p>
+                                    <p class="task-detail">Estado Anuncio:{% if datos.estado_anuncio == 'n' %} Publicado </td>{% else %} Desactivado {% endif %} </p>
+                                </div>
+                                <!-- end of col-sm-8 -->
+                            </div>
+                            <!-- end of row -->
+                        </div>
+                        <!-- end of card-block -->
+                    </div>
+                </div>
+                    {% endfor %}
+    {% else %}
+        <p>No hay anuncios</p>
+    {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- tab pane personal end -->
+
+<!-- tab pane info start -->
+<div class="tab-pane" id="binfo" role="tabpanel">
+    <!-- info card start -->
+    <div class="card">
     <div class="card-header">
       <h5 class="card-header-text">Mi Informacion</h5>
         <button id="edit-btn" type="button" class="btn btn-sm btn-primary waves-effect waves-light float-right">
@@ -75,11 +124,11 @@
                 <div class="table-responsive">
                   <table class="table m-0">
                     <tbody>
-                      <tr><th scope="row">Nombres</th><td>Pedro Gonzales</td></tr>
-                      <tr><th scope="row">Sexo</th><td>Hombre</td></tr>
-                      <tr><th scope="row">Cumpleaños</th><td>20-04-1996</td></tr>
-                      <tr><th scope="row">Profesión</th><td>Estudiante</td></tr>
-                      <tr><th scope="row">Localización</th><td>Chiclayo, Lambayeque</td></tr>
+                      <tr><th scope="row">Nombres</th><td>{{ datosu.nombres }}</td></tr>
+                      <tr><th scope="row">Sexo</th><td>{% if datosu.sexo == 'h' %} Hombre {% else %} Mujer {% endif %}</td></tr>
+                      <tr><th scope="row">Cumpleaños</th><td>{{ datosu.fecha_nacimiento }}</td></tr>
+                      <tr><th scope="row">Profesión</th><td></td></tr>
+                      <tr><th scope="row">Localización</th><td></td></tr>
                     </tbody>
                   </table>
                 </div>
@@ -88,11 +137,11 @@
                 <div class="table-responsive">
                   <table class="table">
                     <tbody>
-                      <tr><th scope="row">Email</th><td>PedroG@example.com</td></tr>
-                      <tr><th scope="row">Numero Telefono</th><td>979955259</td></tr>
-                      <tr><th scope="row">Twitter</th><td><a href="//twitter.com">@GonzalesP</a></td></tr>
-                      <tr><th scope="row">Skype</th><td><a href="//twitter.com">GonzalesP.skype</a></td></tr>
-                      <tr><th scope="row">Facebook</th><td><a href="//fb.com">www.facebook.com/GonzalesP</a></td></tr>
+                      <tr><th scope="row">Correo Electronico</th><td>{{ datosu.correo_electronico }}</td></tr>
+                      <tr><th scope="row">Numero Telefono</th><td></td></tr>
+                      <tr><th scope="row">Estado Cuenta</th>{% if datosu.estado == '1' %}<td style="color:green;"> Verificado </td>{% else %}<td style="color: red;"> Sin verificar </td>{% endif %}</tr>
+                      <tr><th scope="row">Skype</th><td><a href="//twitter.com"></a></td></tr>
+                      <tr><th scope="row">Facebook</th><td><a href="//fb.com"></a></td></tr>
                     </tbody>
                   </table>
                 </div>
@@ -104,107 +153,7 @@
     </div>
   </div>
 </div>
-<!-- tab pane personal end -->
 
-<!-- tab pane info start -->
-<div class="tab-pane" id="binfo" role="tabpanel">
-    <!-- info card start -->
-    <div class="card">
-        <div class="card-header">
-            <h5 class="card-header-text">Mis anuncios</h5>
-        </div>
-        <div class="card-block">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card b-l-success business-info services m-b-20">
-                        <div class="card-header">
-                            <div class="service-header">
-                                <a href="#">
-                                    <h5 class="card-header-text">PERSONA PERDIDA</h5>
-                                </a>
-                            </div>
-                            <span class="dropdown-toggle addon-btn text-muted float-right service-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="tooltip">
-                            </span>
-                            <div class="dropdown-menu dropdown-menu-right b-none services-list">
-                                <a class="dropdown-item" href="#!"><i class="icofont icofont-edit"></i> Editar</a>
-                                <a class="dropdown-item" href="#!"><i class="icofont icofont-ui-delete"></i> Eliminar</a>
-                                <a class="dropdown-item" href="#!"><i class="icofont icofont-eye-alt"></i> Ver</a>
-                            </div>
-                        </div>
-                        <div class="card-block">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <p class="task-detail">Se encontro tal dia a la hora, lugar, decripcion de como y donde fue encontrado esta persona perdida</p>
-                                </div>
-                                <!-- end of col-sm-8 -->
-                            </div>
-                            <!-- end of row -->
-                        </div>
-                        <!-- end of card-block -->
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card b-l-danger business-info services">
-
-                        <div class="card-header">
-                            <div class="service-header">
-                                <a href="#">
-                                    <h5 class="card-header-text">PERSONA DESAPARECIDA</h5>
-                                </a>
-                            </div>
-                            <span class="dropdown-toggle addon-btn text-muted float-right service-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="tooltip">
-                            </span>
-                            <div class="dropdown-menu dropdown-menu-right b-none services-list">
-                                <a class="dropdown-item" href="#!"><i class="icofont icofont-edit"></i> Edit</a>
-                                <a class="dropdown-item" href="#!"><i class="icofont icofont-ui-delete"></i> Delete</a>
-                                <a class="dropdown-item" href="#!"><i class="icofont icofont-eye-alt"></i> View</a>
-                            </div>
-                        </div>
-                        <div class="card-block">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <p class="task-detail">Desaparecido tal dia a la hora, lugar, decripcion de como y donde fue vista esta persona desaparecida.</p>
-                                </div>
-                                <!-- end of col-sm-8 -->
-                            </div>
-                            <!-- end of row -->
-                        </div>
-                        <!-- end of card-block -->
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card b-l-info business-info services">
-                        <div class="card-header">
-                            <div class="service-header">
-                                <a href="#">
-                                    <h5 class="card-header-text">PERSONA ENCONTRADA</h5>
-                                </a>
-                            </div>
-                            <span class="dropdown-toggle addon-btn text-muted float-right service-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="tooltip">
-                            </span>
-                            <div class="dropdown-menu dropdown-menu-right b-none services-list">
-                                <a class="dropdown-item" href="#!"><i class="icofont icofont-edit"></i> Edit</a>
-                                <a class="dropdown-item" href="#!"><i class="icofont icofont-ui-delete"></i> Delete</a>
-                                <a class="dropdown-item" href="#!"><i class="icofont icofont-eye-alt"></i> View</a>
-                            </div>
-                        </div>
-                        <div class="card-block">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <p class="task-detail">La persona desaparecida ya fue encontrada con tal detalles.</p>
-                                </div>
-                                <!-- end of col-sm-8 -->
-                            </div>
-                            <!-- end of row -->
-                        </div>
-                        <!-- end of card-block -->
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
 <!-- tab pane info end -->
 
 </div>

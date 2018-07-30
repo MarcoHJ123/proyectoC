@@ -1,0 +1,98 @@
+{% extends 'templates/master/master.twig' %}
+{% block content %}
+{% if aportes %}
+<div class="card card-creacion-detalle">
+  <div class="card-header text-center" >{#  style="color: white;
+background-color: #ff5252;" #}
+    <h3>PERSONA DESAPARECIDA</h3>
+	</div>
+	<div class="card-block form-crear-aporte">
+		<div class="col-sm-12 col-md-12 col-lg-12">
+			<h4 style="padding-top: 15px;">APORTES</h4>
+			<div class="col-md-12 p-t-12">
+		  	<label class="col-form-label">Seleccionar lugar donde fue visto</label>
+		  	<div class="col-sm-12 col-md-12 col-lg-12">
+					<div id="capa-mapa" style="height:278px"></div>
+				</div>
+		  </div>
+{% for aportes in aportes %}
+
+            <div class="col-md-12 p-t-12" for="descripcion">
+		    <label class="col-form-label">Descripcion</label>
+		    <textarea type="text" name="descripcion" placeholder="Describir breve como ocurrio el acontecimiento" class="form-control" id="descripcion" disabled>{{aportes.descripcion}}</textarea>
+		  </div>
+
+{% endfor %}
+		</div>
+        <div class="col-md-12 p-t-12 text-center">
+         <a class="btn btn-mat waves-light btn-inverse text-center" href="{{ base_url() }}/perfil">REGRESAR</a>
+        </div>
+	</div>
+</div>
+
+{% else %}
+    <br>
+    <br>
+	<p>No hay datos del aportes</p> <div class="col-md-12 p-t-12 text-center">
+         <a class="btn btn-mat waves-light btn-inverse text-center" href="{{ base_url() }}/perfil">REGRESAR</a>
+        </div>
+{% endif %}
+{% endblock content %}
+
+{% block scripts %}
+  {{ parent() }}
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV-quRftERbHa_3kEUVCTOWPgvl9bA1ao&sensor=false"></script>
+  <script type="text/javascript">
+var misPuntos = [
+    ["Ultima posicion", "-6.7803976203869", "-79.86725174953096", "icon1", "<div>html</div>"],
+    //nombre, latitud, longitud, definir nombre icono, etiqueta html
+];
+
+function inicializaGoogleMaps() {
+    // Coordenadas del centro de nuestro recuadro principal
+    var x =-6.7803976203869;
+    var y = -79.86725174953096;
+
+    var mapOptions = {
+        zoom: 18,
+        center: new google.maps.LatLng(x, y),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+
+    var map = new google.maps.Map(document.getElementById("capa-mapa"), mapOptions);
+    setGoogleMarkers(map, misPuntos);
+}
+
+var markers = Array();
+var infowindowActivo = false;
+function setGoogleMarkers(map, locations) {
+    // Definimos los iconos a utilizar con sus medidas
+    var icon1 = new google.maps.MarkerImage(
+        "https://www.vinx.info/uploads/editor/map-green.png",
+        new google.maps.Size(20, 30)
+    );
+
+    for(var i=0; i<locations.length; i++) {
+        var elPunto = locations[i];
+        var myLatLng = new google.maps.LatLng(elPunto[1], elPunto[2]);
+
+        markers[i]=new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            icon: eval(elPunto[3]),
+            title: elPunto[0]
+        });
+        markers[i].infoWindow=new google.maps.InfoWindow({
+            content: elPunto[4]
+        });
+        google.maps.event.addListener(markers[i], 'click', function(){
+            if(infowindowActivo)
+                infowindowActivo.close();
+            infowindowActivo = this.infoWindow;
+            infowindowActivo.open(map, this);
+        });
+    }
+}
+inicializaGoogleMaps();
+</script>
+{% endblock %}

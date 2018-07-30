@@ -54,7 +54,7 @@ class __TwigTemplate_489b4ae44f6f31475317b83380598926d675bad3889aa17b405ce87d174
 \t\t<img src=\"";
         // line 26
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
-        echo "/public/assets/images/user-card/img-round5.jpg\" alt=\"bg-img\" class=\"img-responsive\" alt=\"User-Profile-Image\">
+        echo "/public/assets/images/DATOS/CREARP.png\" alt=\"bg-img\" class=\"img-responsive\" alt=\"User-Profile-Image\">
 \t\t<a class=\"btn btn-success col-sm-12\" href=\"";
         // line 27
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
@@ -66,7 +66,7 @@ class __TwigTemplate_489b4ae44f6f31475317b83380598926d675bad3889aa17b405ce87d174
 \t\t<img src=\"";
         // line 32
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
-        echo "/public/assets/images/user-card/img-round5.jpg\" alt=\"bg-img\" class=\"img-responsive\" alt=\"User-Profile-Image\">
+        echo "/public/assets/images/DATOS/CREARD.png\" alt=\"bg-img\" class=\"img-responsive\" alt=\"User-Profile-Image\">
 \t\t<a class=\"btn btn-danger col-sm-12\"  href=\"";
         // line 33
         echo twig_escape_filter($this->env, $this->env->getExtension('Slim\Views\TwigExtension')->baseUrl(), "html", null, true);
@@ -138,13 +138,13 @@ class __TwigTemplate_489b4ae44f6f31475317b83380598926d675bad3889aa17b405ce87d174
 \t</div>
 \t<div class=\"col-sm-6\" id=\"panele\">
 \t\t<h4>PERSONAS DESAPARECIDAS</h4>
-\t\t<img src=\"{{ base_url() }}/public/assets/images/user-card/img-round5.jpg\" alt=\"bg-img\" class=\"img-responsive\" alt=\"User-Profile-Image\">
+\t\t<img src=\"{{ base_url() }}/public/assets/images/DATOS/CREARP.png\" alt=\"bg-img\" class=\"img-responsive\" alt=\"User-Profile-Image\">
 \t\t<a class=\"btn btn-success col-sm-12\" href=\"{{ base_url() }}/crear-anuncios/perdido\" id=\"buttone\">CREAR</a>
 \t</div>
 
 \t<div class=\"col-sm-6\" id=\"panele\">
 \t\t<h4>PERSONAS ENCONTRADAS</h4>
-\t\t<img src=\"{{ base_url() }}/public/assets/images/user-card/img-round5.jpg\" alt=\"bg-img\" class=\"img-responsive\" alt=\"User-Profile-Image\">
+\t\t<img src=\"{{ base_url() }}/public/assets/images/DATOS/CREARD.png\" alt=\"bg-img\" class=\"img-responsive\" alt=\"User-Profile-Image\">
 \t\t<a class=\"btn btn-danger col-sm-12\"  href=\"{{ base_url() }}/crear-anuncios/desaparecido\" id=\"buttone\" >CREAR</a>
 \t</div>
 

@@ -13,7 +13,7 @@ class CrearAnuncioD extends Controller {
 	public function inicioD( $request, $response, $args ){
 		$data = array();
 			$user_login = $this->session->exists('user_login') ? $this->session->user_login : array();
-			d($user_login);
+			// d($user_login);
 		return $this->view->render( $response, 'crear-anuncios/desaparecido/main.twig', $data );
 
 	}

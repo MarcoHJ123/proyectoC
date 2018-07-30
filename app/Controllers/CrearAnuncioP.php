@@ -31,7 +31,7 @@ class CrearAnuncioP extends Controller {
 
 		$error = false;
 		$obj_cita = new Anuncio();
-		$resultado = $obj_cita->crearDesaparecido( $request );
+		$resultado = $obj_cita->crearPerdido( $request );
 
 		if( $resultado['status'] == true ){
 			$mensaje = "creada ";
@@ -48,5 +48,6 @@ class CrearAnuncioP extends Controller {
 		}
 		return json_encode( $return );
 	}
+
 }
 ?>

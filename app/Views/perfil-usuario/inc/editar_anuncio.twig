@@ -1,0 +1,206 @@
+{% extends 'templates/master/master.twig' %}
+
+{% block content %}
+   {% if anuncio %}
+  {% for datos in anuncio %}
+  <div class="page-body text-center">
+    <div class="row">
+      <div class="col-sm-12">
+        {% include 'templates/inc/messages.twig' %}
+      </div>
+    <div class="col-sm-12">
+      <div class="card card-edicion-anuncio">
+        <div class="card-header text-center m-t-10">
+          <h3>Registra Persona Encontradas</h3>
+                      <a class="btn btn-mat waves-light btn-inverse text-center" href="{{ base_url() }}/perfil">REGRESAR</a>
+        </div>
+          <div class="f1 card-block form-editar-anuncio">
+            <div class="row">
+              <div class="col-sm-6" style="text-align: -webkit-center; border-right: 1px solid rgba(0,0,0,.125);">
+                {% include 'crear-anuncios/desaparecido/inc/foto.twig' %}
+              </div>
+              <div class="col-sm-6">
+                {% include 'crear-anuncios/desaparecido/inc/pasos.twig' %}
+                <fieldset>
+                  <h4>Detalles de la persona</h4>
+                  <div class="row">
+                    <div class="col-md-6 p-t-6" for="sexo_persona">
+                      <label class="col-form-label">Sexo</label>
+                      <select name="sexo_persona" class="form-control form-control-inverse">
+                      <option value="0">- SELECCIONAR -</option>
+                      {% if datos.sexo == 'h' %}
+                        <option value="h" selected>Hombre</option>
+                        <option value="m">Mujer</option>
+                      {% else %}
+                        <option value="h">Hombre</option>
+                        <option value="m" selected>Mujer</option>
+                      {% endif %}
+                      </select>
+                    </div>
+
+                      <div class="col-md-6 p-t-6" for="color_piel">
+                        <label class="col-form-label">Color Piel</label>
+                        <select name="color_piel" class="form-control form-control-inverse">
+                        <option value="0">- SELECCIONAR -</option>
+                        {% if datos.colo_piel == 'bl' %}
+                        <option value="bl" selected>Blanco</option>
+                        <option value="m">Moreno</option>
+                        <option value="tr">Trigueño</option>
+                        {% elseif datos.colo_piel == 'm' %}
+                        <option value="bl">Blanco</option>
+                        <option value="m" selected>Moreno</option>
+                        <option value="tr">Trigueño</option>
+                        {% elseif datos.colo_piel == 'tr' %}
+                        <option value="bl">Blanco</option>
+                        <option value="m">Moreno</option>
+                        <option value="tr" selected>Trigueño</option>
+                        {% endif %}
+                        {# Poner una paleta para que la gente escoja el color #}
+                        </select>
+                      </div>
+
+                      <div class="col-md-6 p-t-6" for="estatura_persona">
+                        <label class="col-form-label">Estatura</label>
+                        <input type="number" name="estatura_persona" placeholder="Estatura de la persona" class="form-control" id="estatura_persona" value="{{datos.estatura }}">
+                      </div>
+
+                      <div class="col-md-6 p-t-6" for="parentesco">
+                        <label class="col-form-label">Parentesco con Persona</label>
+                        <select name="parentesco" class="form-control form-control-inverse">
+                        <option value="0">- SELECCIONAR -</option>
+                        {% if datos.parentesco == '1' %}
+                        <option value="1" selected>Padre / Madre</option>
+                        <option value="2">Tío / Tía</option>
+                        <option value="3">Primo / Prima</option>
+                        <option value="4">Amigo / Amiga</option>
+                        <option value="5">Conocido</option>
+                        {% elseif datos.parentesco == '2' %}
+                        <option value="1">Padre / Madre</option>
+                        <option value="2"selected>Tío / Tía</option>
+                        <option value="3">Primo / Prima</option>
+                        <option value="4">Amigo / Amiga</option>
+                        <option value="5">Conocido</option>
+                        {% elseif datos.parentesco == '3' %}
+                        <option value="1">Padre / Madre</option>
+                        <option value="2">Tío / Tía</option>
+                        <option value="3" selected>Primo / Prima</option>
+                        <option value="4">Amigo / Amiga</option>
+                        <option value="5">Conocido</option>
+                        {% elseif datos.parentesco == '4' %}
+                        <option value="1">Padre / Madre</option>
+                        <option value="2">Tío / Tía</option>
+                        <option value="3" selected>Primo / Prima</option>
+                        <option value="4">Amigo / Amiga</option>
+                        <option value="5">Conocido</option>
+                        {% elseif datos.parentesco == '5' %}
+                        <option value="1">Padre / Madre</option>
+                        <option value="2">Tío / Tía</option>
+                        <option value="3">Primo / Prima</option>
+                        <option value="4">Amigo / Amiga</option>
+                        <option value="5"selected>Conocido</option>
+                        {% endif %}
+                        </select>
+                      </div>
+                    </div>
+                    <div class="f1-buttons">
+                      <button type="button" class="btn btn-next">Siguiente</button>
+                    </div>
+                </fieldset>
+                <fieldset>
+                  <h4>Detalles</h4>
+                  <div class="row">
+
+                  <div class="col-md-12 p-t-12">
+                  <label class="col-form-label">Ultima vez visto</label>
+                  <div id="map" style="height: 278px"></div>
+                    <form action="#" id="posicion" name="posicion">
+                      <input type="text" name="ubicacio_lt"  hidden disabled value="{{datos.ubicacio_lt}}"/>
+                      <input type="text" name="ubicacio_ln"  hidden disabled value="{{datos.ubicacio_ln}}" />
+                    </form>
+                  </div>
+
+                  <div class="col-md-12 p-t-12" for="descripcion">
+                    <label class="col-form-label">Descripcion</label>
+                    <textarea type="text" name="descripcion" placeholder="Describir breve como ocurrio el acontecimiento" class="form-control" id="descripcion" >{{datos.descripcion}}</textarea>
+                  </div>
+
+                  </div>
+
+                  <div class="f1-buttons">
+                  <button type="button" class="btn btn-previous">Anterior</button>
+                  <button type="button" class="btn btn-next">Siguiente</button>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <h4>Datos Personales</h4>
+                  <div class="row">
+
+                    <div class="col-md-6 p-t-6" for="nombres_persona">
+                      <label class="col-form-label">Nombres</label>
+                      <input type="text" name="nombres_persona" class="form-control" id="nombres_persona" value="{{datos.nombres}}">
+                    </div>
+
+                    <div class="col-md-6 p-t-6" for="apellidos_persona">
+                      <label class="col-form-label">Apellidos</label>
+                      <input type="text" name="apellidos_persona"  class="form-control" id="apellidos_persona" value="{{datos.apellidos}}">
+                    </div>
+
+                    <div class="col-md-6 p-t-6" for="fecha_nacimiento">
+                      <label class="col-form-label">Fecha Nacimiento</label>
+                      <input type="date" name="fecha_nacimiento"  class="form-control" id="fecha_nacimiento" value="{{datos.fecha_nacimiento}}">
+                    </div>
+
+                    <div class="col-md-6 p-t-6" for="tipo_documento">
+                      <label class="col-form-label" >Tipo Documento Identidad</label>
+                      {# <input type="text" name="tipo_documento"  class="form-control" id="tipo_documento"> #}
+                      <select name="tipo_documento"  id="tipo_documento" class="form-control form-control-inverse" >
+                      <option value="0">- SELECCIONAR -</option>
+                      {% if datos.numero_documento == '1' %}
+                      <option value="1" selected>DNI</option>
+                      <option value="2">PASAPORTE</option>
+                     {% else %}
+                      <option value="1">DNI</option>
+                      <option value="2" selected>PASAPORTE</option>
+                      {% endif %}
+                    </select>
+                    </div>
+
+                    <div class="col-md-6 p-t-6" for="numero_documento">
+                      <label class="col-form-label" >Numero Documento</label>
+                      <input type="text" name="numero_documento" placeholder="Numero de documento" class="form-control" id="numero_documento" value="{{datos.numero_documento}}">
+                    </div>
+
+                  </div>
+
+                  <div class="f1-buttons">
+                    <input type="text" name="id_anuncio" class="form-control" id="id_anuncio" value="{{datos.id_anuncio}}"disable hidden>
+                    <button type="button" class="btn btn-previous">Anterior</button>
+                    <button type="button" id="btn-editar-anuncio" class="btn btn-mat waves-light btn-inverse text-center">Editar Anuncio</button>
+                  </div>
+
+                </fieldset>
+              </div>
+            </div>
+              <div class="m-b-26 box-mensaje-anuncio-creado hide">
+                <div class="alert alert-info icons-alert fix-icon-alert">
+                </div>
+              </div>
+            {# </form> #}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+    {% else %}
+        <p>No hay anuncios</p>
+    {% endif %}
+{% endblock %}
+{% block scripts %}
+  {{ parent() }}
+  <!-- App JS -->
+  <script type="text/javascript" src="http://maps.google.com/maps?file=api&v=2&key=AIzaSyCV-quRftERbHa_3kEUVCTOWPgvl9bA1ao"></script>
+  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/js/mapa.js"></script>
+  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/js/edicionA.js"></script>
+  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/js/validar_crear_ticket.js"></script>
+{% endblock %}

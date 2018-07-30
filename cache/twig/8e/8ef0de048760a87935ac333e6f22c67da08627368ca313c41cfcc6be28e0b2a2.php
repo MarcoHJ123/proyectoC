@@ -1,14 +1,14 @@
 <?php
 
-/* crear-anuncios/perdido/main.twig */
-class __TwigTemplate_c925044b27d7da14c929f94f08932baa8f747a400adf5a5524ba4f9784273883 extends Twig_Template
+/* crear-anuncios/desaparecido/main.twig */
+class __TwigTemplate_6a8c115e16aabe84d8d99da81c1f90d309187b23e89288cc77fc1fbb3081b6c3 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("templates/master/master.twig", "crear-anuncios/perdido/main.twig", 1);
+        $this->parent = $this->loadTemplate("templates/master/master.twig", "crear-anuncios/desaparecido/main.twig", 1);
         $this->blocks = array(
             'content' => array($this, 'block_content'),
             'scripts' => array($this, 'block_scripts'),
@@ -34,43 +34,43 @@ class __TwigTemplate_c925044b27d7da14c929f94f08932baa8f747a400adf5a5524ba4f97842
       <div class=\"col-sm-12\">
         ";
         // line 7
-        $this->loadTemplate("templates/inc/messages.twig", "crear-anuncios/perdido/main.twig", 7)->display($context);
+        $this->loadTemplate("templates/inc/messages.twig", "crear-anuncios/desaparecido/main.twig", 7)->display($context);
         // line 8
         echo "      </div>
     <div class=\"col-sm-12\">
       <div class=\"card card-creacion-anuncio\">
         <div class=\"card-header text-center m-t-10\">
-          <h3>Registra Persona Desaparecidas</h3>
+          <h3>Registra Persona Encontradas</h3>
         </div>
           <div class=\"f1 card-block form-crear-anuncio\">
             <div class=\"row\">
               <div class=\"col-sm-6\" style=\"text-align: -webkit-center; border-right: 1px solid rgba(0,0,0,.125);\">
                 ";
         // line 17
-        $this->loadTemplate("crear-anuncios/desaparecido/inc/foto.twig", "crear-anuncios/perdido/main.twig", 17)->display($context);
+        $this->loadTemplate("crear-anuncios/desaparecido/inc/foto.twig", "crear-anuncios/desaparecido/main.twig", 17)->display($context);
         // line 18
         echo "              </div>
               <div class=\"col-sm-6\">
                 ";
         // line 20
-        $this->loadTemplate("crear-anuncios/desaparecido/inc/pasos.twig", "crear-anuncios/perdido/main.twig", 20)->display($context);
+        $this->loadTemplate("crear-anuncios/desaparecido/inc/pasos.twig", "crear-anuncios/desaparecido/main.twig", 20)->display($context);
         // line 21
         echo "                <fieldset>
                 ";
         // line 22
-        $this->loadTemplate("crear-anuncios/desaparecido/inc/detalle-persona.twig", "crear-anuncios/perdido/main.twig", 22)->display($context);
+        $this->loadTemplate("crear-anuncios/desaparecido/inc/detalle-persona.twig", "crear-anuncios/desaparecido/main.twig", 22)->display($context);
         // line 23
         echo "                </fieldset>
                 <fieldset>
                 ";
         // line 25
-        $this->loadTemplate("crear-anuncios/desaparecido/inc/detalles-generales.twig", "crear-anuncios/perdido/main.twig", 25)->display($context);
+        $this->loadTemplate("crear-anuncios/desaparecido/inc/detalles-generales.twig", "crear-anuncios/desaparecido/main.twig", 25)->display($context);
         // line 26
         echo "                </fieldset>
                 <fieldset>
                 ";
         // line 28
-        $this->loadTemplate("crear-anuncios/desaparecido/inc/datos-Personales.twig", "crear-anuncios/perdido/main.twig", 28)->display($context);
+        $this->loadTemplate("crear-anuncios/desaparecido/inc/datos-Personales.twig", "crear-anuncios/desaparecido/main.twig", 28)->display($context);
         // line 29
         echo "                </fieldset>
               </div>
@@ -115,7 +115,7 @@ class __TwigTemplate_c925044b27d7da14c929f94f08932baa8f747a400adf5a5524ba4f97842
 
     public function getTemplateName()
     {
-        return "crear-anuncios/perdido/main.twig";
+        return "crear-anuncios/desaparecido/main.twig";
     }
 
     public function isTraitable()
@@ -149,7 +149,7 @@ class __TwigTemplate_c925044b27d7da14c929f94f08932baa8f747a400adf5a5524ba4f97842
     <div class=\"col-sm-12\">
       <div class=\"card card-creacion-anuncio\">
         <div class=\"card-header text-center m-t-10\">
-          <h3>Registra Persona Desaparecidas</h3>
+          <h3>Registra Persona Encontradas</h3>
         </div>
           <div class=\"f1 card-block form-crear-anuncio\">
             <div class=\"row\">
@@ -187,6 +187,6 @@ class __TwigTemplate_c925044b27d7da14c929f94f08932baa8f747a400adf5a5524ba4f97842
   <script type=\"text/javascript\" src=\"{{ base_url() }}/public/assets/app/js/mapa.js\"></script>
   <script type=\"text/javascript\" src=\"{{ base_url() }}/public/assets/app/js/crear_anunciosD.js\"></script>
   <script type=\"text/javascript\" src=\"{{ base_url() }}/public/assets/app/js/validar_crear_ticket.js\"></script>
-{% endblock %}", "crear-anuncios/perdido/main.twig", "C:\\xampp\\htdocs\\proyectoC\\app\\Views\\crear-anuncios\\perdido\\main.twig");
+{% endblock %}", "crear-anuncios/desaparecido/main.twig", "C:\\xampp\\htdocs\\proyectoC\\app\\Views\\crear-anuncios\\desaparecido\\main.twig");
     }
 }

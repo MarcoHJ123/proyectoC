@@ -102,4 +102,20 @@ class Aporte extends Model {
 		}
 		return $return;
 	}
+
+	public function aporte_anuncio( $id_anuncio ){
+		$return = array(
+			'status' => false,
+		);
+		$data = array(
+			'id_anuncio' => $id_anuncio,
+		);
+			$sql = "SELECT * FROM incidencia where id_anuncio = :id_anuncio";
+		$result = $this->execute_query( CONNECTION_SIJ, false, 'sql', $sql, $data );
+		$return = array_merge( $return, $result );
+		if( $return['status'] ){
+			$return['items'] = $this->get_all( $result['stmt'] );
+		}
+		return $return;
+	}
 }

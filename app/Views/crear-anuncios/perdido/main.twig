@@ -1,32 +1,50 @@
 {% extends 'templates/master/master.twig' %}
 
 {% block content %}
-<div class="page-body text-center">
-  <div class="row">
+  <div class="page-body text-center">
+    <div class="row">
+      <div class="col-sm-12">
+        {% include 'templates/inc/messages.twig' %}
+      </div>
     <div class="col-sm-12">
-      {% include 'templates/inc/messages.twig' %}
-    </div>
-    <div class="col-sm-12" style="    padding-left: 42px;
-    padding-right: 42px;">
-      <div class="card card-creacion-ticket">
+      <div class="card card-creacion-anuncio">
         <div class="card-header text-center m-t-10">
           <h3>Registra Persona Desaparecidas</h3>
         </div>
-        <div class="card-block form-crear-ticket">
-          {% include 'crear-anuncios/perdido/inc/partes.twig' %}
-          <div class="m-b-26 box-mensaje-ticket-creado hide">
-            <div class="alert alert-info icons-alert fix-icon-alert">
+          <div class="f1 card-block form-crear-anuncio">
+            <div class="row">
+              <div class="col-sm-6" style="text-align: -webkit-center; border-right: 1px solid rgba(0,0,0,.125);">
+                {% include 'crear-anuncios/desaparecido/inc/foto.twig' %}
+              </div>
+              <div class="col-sm-6">
+                {% include 'crear-anuncios/desaparecido/inc/pasos.twig' %}
+                <fieldset>
+                {% include 'crear-anuncios/desaparecido/inc/detalle-persona.twig' %}
+                </fieldset>
+                <fieldset>
+                {% include 'crear-anuncios/desaparecido/inc/detalles-generales.twig' %}
+                </fieldset>
+                <fieldset>
+                {% include 'crear-anuncios/desaparecido/inc/datos-Personales.twig' %}
+                </fieldset>
+              </div>
             </div>
+              <div class="m-b-26 box-mensaje-anuncio-creado hide">
+                <div class="alert alert-info icons-alert fix-icon-alert">
+                </div>
+              </div>
+            {# </form> #}
           </div>
-        </div>
         </div>
       </div>
     </div>
-</div>
-
+  </div>
 {% endblock %}
 {% block scripts %}
   {{ parent() }}
-
   <!-- App JS -->
+  <script type="text/javascript" src="http://maps.google.com/maps?file=api&v=2&key=AIzaSyCV-quRftERbHa_3kEUVCTOWPgvl9bA1ao"></script>
+  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/js/mapa.js"></script>
+  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/js/crear_anunciosD.js"></script>
+  <script type="text/javascript" src="{{ base_url() }}/public/assets/app/js/validar_crear_ticket.js"></script>
 {% endblock %}
